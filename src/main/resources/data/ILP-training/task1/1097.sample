@@ -1,0 +1,16 @@
+happensAt(travel(john,office),1).
+happensAt(move(daniel,kitchen),2).
+#example holdsAt(location(john,office),3).
+happensAt(move(mary,bathroom),4).
+happensAt(move(sandra,hallway),5).
+#example holdsAt(location(john,office),6).
+happensAt(move(daniel,garden),7).
+happensAt(go_back(sandra,bathroom),8).
+#example holdsAt(location(daniel,garden),9).
+happensAt(journey(daniel,hallway),10).
+happensAt(journey(daniel,bedroom),11).
+#example holdsAt(location(daniel,bedroom),12).
+#example not holdsAt(location(daniel,garden),12).
+happensAt(move(mary,bedroom),13).
+happensAt(travel(john,hallway),14).
+#example holdsAt(location(sandra,bathroom),15).
