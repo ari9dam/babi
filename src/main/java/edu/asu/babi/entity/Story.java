@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class Story implements Comparable{
+public class Story implements Comparable<Story>{
 	private List<Sentence> sentences;
 	
 	public Story() {
@@ -25,10 +25,10 @@ public class Story implements Comparable{
 	/* (non-Javadoc)
 	 * @see java.lang.Comparable#compareTo(java.lang.Object)
 	 */
-	@Override
-	public int compareTo(Object arg0) {
+	
+	public int compareTo(Story arg0) {
 		Integer a = this.sentences.size();
-		Integer b = ((Story)arg0).sentences.size();
+		Integer b = arg0.sentences.size();
 		return a.compareTo(b);
 	}
 }
