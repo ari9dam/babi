@@ -1,0 +1,59 @@
+happensAt(travel(mary,kitchen),1).
+happensAt(goback(jeff,office),2).
+happensAt(goback(fred,office),3).
+happensAt(go(jeff,bedroom),4).
+happensAt(get(fred,apple),5).
+happensAt(goback(mary,hallway),6).
+happensAt(move(bill,bathroom),7).
+happensAt(journey(jeff,office),8).
+happensAt(discard(fred,apple),9).
+happensAt(go(mary,office),10).
+happensAt(take(fred,apple),11).
+happensAt(go(jeff,hallway),12).
+happensAt(leave(fred,apple),13).
+happensAt(go(fred,kitchen),14).
+happensAt(pickup(mary,apple),15).
+happensAt(leave(mary,apple),16).
+happensAt(grab(jeff,football),17).
+happensAt(goback(mary,garden),18).
+happensAt(goback(bill,kitchen),19).
+happensAt(putdown(jeff,football),20).
+happensAt(journey(fred,garden),21).
+happensAt(journey(bill,bedroom),22).
+happensAt(go(mary,bedroom),23).
+happensAt(grab(jeff,football),24).
+happensAt(take(fred,milk),25).
+happensAt(drop(fred,milk),26).
+happensAt(move(fred,bedroom),27).
+happensAt(journey(bill,office),28).
+happensAt(putdown(jeff,football),29).
+happensAt(journey(mary,hallway),30).
+happensAt(pickup(mary,football),31).
+happensAt(go(fred,garden),32).
+happensAt(go(mary,garden),33).
+happensAt(take(fred,milk),34).
+happensAt(grab(bill,apple),35).
+happensAt(give(mary,football,fred),36).
+#example holdsAt(fobjgive(mary,football,fred),37).
+:- not initiatedAt(fobjgive(mary,football,fred),36).
+
+happensAt(discard(fred,milk),38).
+happensAt(get(mary,milk),39).
+#example holdsAt(fobjgive(mary,football,fred),40).
+:- not initiatedAt(fobjgive(mary,football,fred),36).
+
+happensAt(putdown(mary,milk),41).
+happensAt(pickup(fred,milk),42).
+#example holdsAt(fobjgive(mary,football,fred),43).
+:- not initiatedAt(fobjgive(mary,football,fred),36).
+
+happensAt(give(fred,football,mary),44).
+happensAt(give(mary,football,fred),45).
+#example holdsAt(frecgive(mary,football,fred),46).
+:- not initiatedAt(frecgive(mary,football,fred),45).
+
+happensAt(discard(bill,apple),47).
+happensAt(putdown(fred,football),48).
+#example holdsAt(fobjgive(mary,football,fred),49).
+:- not initiatedAt(fobjgive(mary,football,fred),45).
+

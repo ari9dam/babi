@@ -1,0 +1,17 @@
+holdsAt(domain(greg,lion),1).
+holdsAt(domain(bernhard,swan),1).
+holdsAt(color(bernhard,yellow),1).
+holdsAt(color(greg,gray),1).
+holdsAt(domain(brian,lion),1).
+holdsAt(domain(lily,swan),1).
+holdsAt(color(lily,green),1).
+holdsAt(domain(julius,frog),1).
+holdsAt(color(julius,white),1).
+#example holdsAt(color(brian,gray),1).
+#example not holdsAt(color(brian,green),1).
+#example not holdsAt(color(brian,rhino),1).
+#example not holdsAt(color(brian,frog),1).
+#example not holdsAt(color(brian,white),1).
+#example not holdsAt(color(brian,swan),1).
+#example not holdsAt(color(brian,yellow),1).
+#example not holdsAt(color(brian,lion),1).

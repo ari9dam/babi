@@ -1,0 +1,63 @@
+happensAt(journey(mary,garden),1).
+happensAt(journey(fred,bedroom),2).
+happensAt(move(fred,bathroom),3).
+happensAt(take(mary,milk),4).
+happensAt(journey(bill,office),5).
+happensAt(go(fred,office),6).
+happensAt(leave(mary,milk),7).
+happensAt(get(mary,milk),8).
+happensAt(goback(bill,bathroom),9).
+happensAt(move(jeff,office),10).
+happensAt(drop(mary,milk),11).
+happensAt(journey(mary,bathroom),12).
+happensAt(goback(bill,office),13).
+happensAt(travel(bill,kitchen),14).
+happensAt(take(bill,football),15).
+happensAt(discard(bill,football),16).
+happensAt(journey(mary,office),17).
+happensAt(take(bill,football),18).
+happensAt(goback(mary,hallway),19).
+happensAt(travel(mary,office),20).
+happensAt(journey(fred,bathroom),21).
+happensAt(goback(fred,bedroom),22).
+happensAt(travel(fred,hallway),23).
+happensAt(discard(bill,football),24).
+happensAt(take(fred,apple),25).
+happensAt(goback(bill,office),26).
+happensAt(journey(fred,bathroom),27).
+happensAt(drop(fred,apple),28).
+happensAt(take(fred,apple),29).
+happensAt(move(jeff,hallway),30).
+happensAt(go(bill,bedroom),31).
+happensAt(go(jeff,garden),32).
+happensAt(move(mary,hallway),33).
+happensAt(move(mary,kitchen),34).
+happensAt(grab(jeff,milk),35).
+happensAt(leave(jeff,milk),36).
+happensAt(travel(mary,office),37).
+happensAt(journey(mary,hallway),38).
+happensAt(move(fred,bedroom),39).
+happensAt(give(fred,apple,bill),40).
+#example holdsAt(fsubjgive(fred,apple,bill),41).
+:- not initiatedAt(fsubjgive(fred,apple,bill),40).
+
+happensAt(grab(jeff,milk),42).
+happensAt(pass(bill,apple,fred),43).
+#example holdsAt(fobjgive(bill,apple,fred),44).
+:- not initiatedAt(fobjgive(bill,apple,fred),43).
+
+happensAt(hand(fred,apple,bill),45).
+happensAt(give(bill,apple,fred),46).
+#example holdsAt(frecgive(bill,apple,fred),47).
+:- not initiatedAt(frecgive(bill,apple,fred),46).
+
+happensAt(drop(jeff,milk),48).
+happensAt(give(fred,apple,bill),49).
+#example holdsAt(freceive(bill,apple),50).
+:- not initiatedAt(freceive(bill,apple),49).
+
+happensAt(give(bill,apple,fred),51).
+happensAt(move(bill,kitchen),52).
+#example holdsAt(fsubjgive(bill,apple,fred),53).
+:- not initiatedAt(fsubjgive(bill,apple,fred),51).
+

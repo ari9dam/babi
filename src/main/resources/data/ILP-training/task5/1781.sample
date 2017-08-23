@@ -1,0 +1,60 @@
+happensAt(go(mary,bathroom),1).
+happensAt(go(bill,hallway),2).
+happensAt(goback(mary,bedroom),3).
+happensAt(grab(fred,apple),4).
+happensAt(travel(jeff,office),5).
+happensAt(give(fred,apple,jeff),6).
+#example holdsAt(fgive(fred,apple),7).
+:- not initiatedAt(fgive(fred,apple),6).
+
+happensAt(goback(bill,garden),8).
+happensAt(move(bill,bedroom),9).
+#example holdsAt(fgive(fred,apple),10).
+:- not initiatedAt(fgive(fred,apple),6).
+
+happensAt(hand(jeff,apple,fred),11).
+happensAt(journey(fred,kitchen),12).
+#example holdsAt(frecgive(jeff,apple,fred),13).
+:- not initiatedAt(frecgive(jeff,apple,fred),11).
+
+happensAt(go(jeff,hallway),14).
+happensAt(leave(fred,apple),15).
+#example holdsAt(fsubjgive(jeff,apple,fred),16).
+:- not initiatedAt(fsubjgive(jeff,apple,fred),11).
+
+happensAt(go(bill,bathroom),17).
+happensAt(journey(fred,office),18).
+happensAt(move(fred,hallway),19).
+happensAt(travel(fred,garden),20).
+happensAt(travel(bill,garden),21).
+happensAt(journey(mary,kitchen),22).
+happensAt(travel(jeff,office),23).
+happensAt(goback(bill,bathroom),24).
+happensAt(travel(mary,hallway),25).
+happensAt(move(bill,hallway),26).
+happensAt(journey(jeff,garden),27).
+happensAt(go(fred,office),28).
+happensAt(go(fred,garden),29).
+happensAt(journey(mary,bathroom),30).
+happensAt(move(mary,bedroom),31).
+happensAt(move(fred,hallway),32).
+happensAt(go(mary,bathroom),33).
+happensAt(travel(mary,hallway),34).
+happensAt(go(bill,bedroom),35).
+happensAt(move(bill,office),36).
+happensAt(goback(fred,kitchen),37).
+happensAt(go(bill,bedroom),38).
+happensAt(goback(fred,bedroom),39).
+happensAt(go(jeff,hallway),40).
+happensAt(journey(mary,kitchen),41).
+happensAt(go(fred,office),42).
+happensAt(goback(fred,kitchen),43).
+happensAt(pickup(fred,apple),44).
+happensAt(move(mary,garden),45).
+happensAt(journey(jeff,kitchen),46).
+happensAt(give(fred,apple,jeff),47).
+happensAt(pass(jeff,apple,fred),48).
+#example holdsAt(fgive(jeff,apple),49).
+ #example not holdsAt(fgive(fred,apple),49).
+:- not initiatedAt(fgive(jeff,apple),48).
+

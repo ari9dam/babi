@@ -1,0 +1,63 @@
+happensAt(journey(bill,garden),1).
+happensAt(get(bill,apple),2).
+happensAt(goback(fred,bedroom),3).
+happensAt(move(mary,bathroom),4).
+happensAt(leave(bill,apple),5).
+happensAt(move(bill,kitchen),6).
+happensAt(go(mary,bedroom),7).
+happensAt(move(jeff,kitchen),8).
+happensAt(move(bill,garden),9).
+happensAt(travel(jeff,bedroom),10).
+happensAt(go(jeff,office),11).
+happensAt(take(mary,milk),12).
+happensAt(go(fred,kitchen),13).
+happensAt(travel(bill,bedroom),14).
+happensAt(pass(mary,milk,bill),15).
+happensAt(give(bill,milk,mary),16).
+#example holdsAt(fgive(bill,milk),17).
+:- not initiatedAt(fgive(bill,milk),16).
+
+happensAt(travel(mary,bathroom),18).
+happensAt(journey(bill,kitchen),19).
+#example holdsAt(fgive(bill,milk),20).
+:- not initiatedAt(fgive(bill,milk),16).
+
+happensAt(travel(mary,bedroom),21).
+happensAt(travel(fred,garden),22).
+#example holdsAt(fobjgive(bill,milk,mary),23).
+:- not initiatedAt(fobjgive(bill,milk,mary),16).
+
+happensAt(get(fred,apple),24).
+happensAt(leave(mary,milk),25).
+happensAt(journey(mary,office),26).
+happensAt(goback(fred,hallway),27).
+happensAt(journey(jeff,garden),28).
+happensAt(move(mary,hallway),29).
+happensAt(drop(fred,apple),30).
+happensAt(goback(bill,hallway),31).
+happensAt(journey(jeff,bathroom),32).
+happensAt(go(bill,bedroom),33).
+happensAt(pickup(bill,milk),34).
+happensAt(go(fred,garden),35).
+happensAt(travel(mary,garden),36).
+happensAt(drop(bill,milk),37).
+happensAt(journey(mary,bedroom),38).
+happensAt(pickup(mary,milk),39).
+happensAt(leave(mary,milk),40).
+happensAt(move(mary,office),41).
+happensAt(move(mary,hallway),42).
+happensAt(go(jeff,office),43).
+happensAt(move(jeff,kitchen),44).
+happensAt(go(fred,bathroom),45).
+happensAt(pickup(mary,apple),46).
+happensAt(go(mary,kitchen),47).
+happensAt(give(mary,apple,jeff),48).
+happensAt(hand(jeff,apple,mary),49).
+#example holdsAt(fsubjgive(jeff,apple,mary),50).
+:- not initiatedAt(fsubjgive(jeff,apple,mary),49).
+
+happensAt(pass(mary,apple,jeff),51).
+happensAt(travel(fred,bedroom),52).
+#example holdsAt(fobjgive(mary,apple,jeff),53).
+:- not initiatedAt(fobjgive(mary,apple,jeff),51).
+

@@ -1,0 +1,59 @@
+happensAt(travel(bill,garden),1).
+happensAt(goback(mary,kitchen),2).
+happensAt(travel(fred,bathroom),3).
+happensAt(take(bill,milk),4).
+happensAt(journey(fred,office),5).
+happensAt(move(bill,hallway),6).
+happensAt(journey(jeff,bathroom),7).
+happensAt(drop(bill,milk),8).
+happensAt(go(mary,office),9).
+happensAt(goback(bill,kitchen),10).
+happensAt(grab(jeff,apple),11).
+happensAt(move(jeff,garden),12).
+happensAt(move(bill,hallway),13).
+happensAt(move(jeff,kitchen),14).
+happensAt(drop(jeff,apple),15).
+happensAt(goback(jeff,bathroom),16).
+happensAt(goback(bill,kitchen),17).
+happensAt(go(jeff,garden),18).
+happensAt(take(bill,apple),19).
+happensAt(discard(bill,apple),20).
+happensAt(travel(bill,hallway),21).
+happensAt(journey(bill,office),22).
+happensAt(go(jeff,bathroom),23).
+happensAt(goback(jeff,hallway),24).
+happensAt(journey(fred,hallway),25).
+happensAt(take(jeff,milk),26).
+happensAt(drop(jeff,milk),27).
+happensAt(go(fred,kitchen),28).
+happensAt(take(jeff,milk),29).
+happensAt(journey(bill,bathroom),30).
+happensAt(go(bill,garden),31).
+happensAt(move(bill,hallway),32).
+happensAt(take(fred,apple),33).
+happensAt(travel(fred,office),34).
+happensAt(travel(bill,bedroom),35).
+happensAt(pass(fred,apple,mary),36).
+#example holdsAt(fobjgive(fred,apple,mary),37).
+:- not initiatedAt(fobjgive(fred,apple,mary),36).
+
+happensAt(go(jeff,kitchen),38).
+happensAt(pass(mary,apple,fred),39).
+#example holdsAt(frecgive(mary,apple,fred),40).
+:- not initiatedAt(frecgive(mary,apple,fred),39).
+
+happensAt(goback(bill,bathroom),41).
+happensAt(goback(bill,hallway),42).
+#example holdsAt(fobjgive(mary,apple,fred),43).
+:- not initiatedAt(fobjgive(mary,apple,fred),39).
+
+happensAt(hand(fred,apple,mary),44).
+happensAt(move(jeff,garden),45).
+#example holdsAt(fgive(fred,apple),46).
+:- not initiatedAt(fgive(fred,apple),44).
+
+happensAt(give(mary,apple,fred),47).
+happensAt(goback(jeff,office),48).
+#example holdsAt(fobjgive(mary,apple,fred),49).
+:- not initiatedAt(fobjgive(mary,apple,fred),47).
+

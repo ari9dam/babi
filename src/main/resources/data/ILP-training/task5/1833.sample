@@ -1,0 +1,64 @@
+happensAt(move(bill,kitchen),1).
+happensAt(get(bill,apple),2).
+happensAt(goback(jeff,bedroom),3).
+happensAt(travel(fred,bedroom),4).
+happensAt(leave(bill,apple),5).
+happensAt(move(mary,bedroom),6).
+happensAt(goback(fred,office),7).
+happensAt(move(bill,bathroom),8).
+happensAt(go(bill,hallway),9).
+happensAt(journey(mary,bathroom),10).
+happensAt(travel(mary,kitchen),11).
+happensAt(journey(fred,bathroom),12).
+happensAt(take(mary,apple),13).
+happensAt(grab(mary,milk),14).
+happensAt(drop(mary,apple),15).
+happensAt(travel(bill,garden),16).
+happensAt(go(jeff,hallway),17).
+happensAt(discard(mary,milk),18).
+happensAt(grab(bill,football),19).
+happensAt(travel(fred,kitchen),20).
+happensAt(goback(fred,bedroom),21).
+happensAt(goback(fred,kitchen),22).
+happensAt(travel(fred,bathroom),23).
+happensAt(journey(mary,bathroom),24).
+happensAt(goback(fred,bedroom),25).
+happensAt(goback(jeff,garden),26).
+happensAt(go(jeff,kitchen),27).
+happensAt(travel(fred,garden),28).
+happensAt(go(bill,bedroom),29).
+happensAt(move(bill,office),30).
+happensAt(drop(bill,football),31).
+happensAt(pickup(bill,football),32).
+happensAt(travel(mary,garden),33).
+happensAt(get(jeff,milk),34).
+happensAt(leave(bill,football),35).
+happensAt(get(bill,football),36).
+happensAt(leave(jeff,milk),37).
+happensAt(move(mary,hallway),38).
+happensAt(go(bill,garden),39).
+happensAt(hand(bill,football,fred),40).
+#example holdsAt(freceive(fred,football),41).
+:- not initiatedAt(freceive(fred,football),40).
+
+happensAt(pass(fred,football,bill),42).
+happensAt(pass(bill,football,fred),43).
+#example holdsAt(freceive(fred,football),44).
+:- not initiatedAt(freceive(fred,football),43).
+
+happensAt(journey(jeff,bathroom),45).
+happensAt(journey(mary,garden),46).
+#example holdsAt(freceive(fred,football),47).
+:- not initiatedAt(freceive(fred,football),43).
+
+happensAt(travel(jeff,bedroom),48).
+happensAt(go(jeff,kitchen),49).
+#example holdsAt(fgive(bill,football),50).
+:- not initiatedAt(fgive(bill,football),43).
+
+happensAt(hand(fred,football,mary),51).
+happensAt(pass(mary,football,fred),52).
+#example holdsAt(fgive(mary,football),53).
+ #example not holdsAt(fgive(bill,football),53).
+:- not initiatedAt(fgive(mary,football),52).
+

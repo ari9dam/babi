@@ -1,0 +1,59 @@
+happensAt(journey(john,hallway),1).
+happensAt(go(daniel,hallway),2).
+happensAt(goback(sandra,office),3).
+happensAt(goback(sandra,bathroom),4).
+happensAt(go(john,bathroom),5).
+happensAt(travel(sandra,hallway),6).
+happensAt(travel(john,bedroom),7).
+happensAt(goback(john,bathroom),8).
+happensAt(goback(daniel,garden),9).
+happensAt(travel(john,garden),10).
+happensAt(move(mary,hallway),11).
+happensAt(travel(sandra,office),12).
+happensAt(go(daniel,office),13).
+happensAt(goback(mary,bathroom),14).
+happensAt(go(mary,office),15).
+happensAt(travel(john,kitchen),16).
+happensAt(travel(sandra,garden),17).
+happensAt(travel(daniel,kitchen),18).
+happensAt(go(daniel,hallway),19).
+happensAt(move(daniel,bedroom),20).
+happensAt(journey(daniel,garden),21).
+happensAt(travel(sandra,office),22).
+happensAt(move(sandra,bathroom),23).
+happensAt(move(john,bathroom),24).
+happensAt(goback(daniel,bedroom),25).
+happensAt(journey(sandra,office),26).
+happensAt(journey(mary,bathroom),27).
+happensAt(travel(john,kitchen),28).
+happensAt(get(daniel,football),29).
+happensAt(move(john,office),30).
+#example count(daniel,1,31).
+#example not count(daniel,1,29).
+#example count(daniel,1,30).
+happensAt(move(daniel,garden),32).
+happensAt(drop(daniel,football),33).
+#example count(daniel,0,34).
+#example not count(daniel,0,33).
+#example count(daniel,0,34).
+happensAt(goback(daniel,hallway),35).
+happensAt(journey(mary,kitchen),36).
+#example count(daniel,0,37).
+#example not count(daniel,0,33).
+#example count(daniel,0,34).
+happensAt(travel(sandra,kitchen),38).
+happensAt(journey(mary,hallway),39).
+#example count(daniel,0,40).
+#example not count(daniel,0,33).
+#example count(daniel,0,34).
+happensAt(go(john,hallway),41).
+happensAt(goback(daniel,office),42).
+happensAt(travel(daniel,hallway),43).
+happensAt(goback(mary,garden),44).
+happensAt(goback(sandra,bathroom),45).
+happensAt(travel(mary,bedroom),46).
+happensAt(take(mary,milk),47).
+happensAt(goback(mary,kitchen),48).
+#example count(mary,1,49).
+#example not count(mary,1,47).
+#example count(mary,1,48).

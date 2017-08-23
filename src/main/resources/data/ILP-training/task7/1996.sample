@@ -1,0 +1,59 @@
+happensAt(travel(john,bathroom),1).
+happensAt(go(sandra,kitchen),2).
+happensAt(travel(mary,bedroom),3).
+happensAt(journey(mary,garden),4).
+happensAt(move(mary,kitchen),5).
+happensAt(go(daniel,bathroom),6).
+happensAt(journey(john,kitchen),7).
+happensAt(travel(daniel,hallway),8).
+happensAt(go(john,bedroom),9).
+happensAt(move(sandra,bathroom),10).
+happensAt(goback(sandra,kitchen),11).
+happensAt(move(daniel,bathroom),12).
+happensAt(travel(sandra,bedroom),13).
+happensAt(travel(mary,garden),14).
+happensAt(goback(mary,bedroom),15).
+happensAt(journey(mary,kitchen),16).
+happensAt(goback(daniel,office),17).
+happensAt(move(daniel,bathroom),18).
+happensAt(move(daniel,bedroom),19).
+happensAt(journey(john,hallway),20).
+happensAt(goback(john,bathroom),21).
+happensAt(journey(john,bedroom),22).
+happensAt(journey(john,bathroom),23).
+happensAt(travel(john,hallway),24).
+happensAt(travel(john,office),25).
+happensAt(travel(sandra,bathroom),26).
+happensAt(go(mary,garden),27).
+happensAt(goback(sandra,kitchen),28).
+happensAt(move(mary,kitchen),29).
+happensAt(journey(john,bedroom),30).
+happensAt(move(john,garden),31).
+happensAt(journey(mary,office),32).
+happensAt(travel(mary,garden),33).
+happensAt(goback(john,office),34).
+happensAt(journey(john,kitchen),35).
+happensAt(grab(mary,apple),36).
+#example count(mary,1,37).
+#example not count(mary,1,36).
+#example count(mary,1,37).
+happensAt(move(sandra,bedroom),38).
+happensAt(goback(daniel,kitchen),39).
+#example count(mary,1,40).
+#example not count(mary,1,36).
+#example count(mary,1,37).
+happensAt(goback(john,garden),41).
+happensAt(goback(sandra,hallway),42).
+#example count(mary,1,43).
+#example not count(mary,1,36).
+#example count(mary,1,37).
+happensAt(drop(mary,apple),44).
+happensAt(journey(sandra,garden),45).
+#example count(mary,0,46).
+#example not count(mary,0,44).
+#example count(mary,0,45).
+happensAt(get(sandra,apple),47).
+happensAt(pass(sandra,apple,john),48).
+#example count(mary,0,49).
+#example not count(mary,0,44).
+#example count(mary,0,45).

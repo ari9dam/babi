@@ -1,0 +1,61 @@
+happensAt(travel(mary,hallway),1).
+happensAt(move(fred,office),2).
+happensAt(move(mary,garden),3).
+happensAt(travel(fred,bathroom),4).
+happensAt(travel(bill,bathroom),5).
+happensAt(move(bill,office),6).
+happensAt(go(fred,garden),7).
+happensAt(move(fred,bedroom),8).
+happensAt(move(bill,kitchen),9).
+happensAt(move(bill,hallway),10).
+happensAt(journey(jeff,bedroom),11).
+happensAt(go(jeff,kitchen),12).
+happensAt(travel(jeff,office),13).
+happensAt(go(jeff,kitchen),14).
+happensAt(goback(fred,kitchen),15).
+happensAt(move(mary,bathroom),16).
+happensAt(take(jeff,apple),17).
+happensAt(putdown(jeff,apple),18).
+happensAt(goback(fred,bedroom),19).
+happensAt(journey(mary,garden),20).
+happensAt(get(bill,football),21).
+happensAt(move(bill,garden),22).
+happensAt(hand(bill,football,mary),23).
+happensAt(give(mary,football,bill),24).
+#example holdsAt(freceive(bill,football),25).
+:- not initiatedAt(freceive(bill,football),24).
+
+happensAt(get(jeff,apple),26).
+happensAt(putdown(jeff,apple),27).
+#example holdsAt(frecgive(mary,football,bill),28).
+:- not initiatedAt(frecgive(mary,football,bill),24).
+
+happensAt(journey(bill,bathroom),29).
+happensAt(goback(jeff,garden),30).
+#example holdsAt(fobjgive(mary,football,bill),31).
+:- not initiatedAt(fobjgive(mary,football,bill),24).
+
+happensAt(move(bill,kitchen),32).
+happensAt(discard(bill,football),33).
+happensAt(move(bill,hallway),34).
+happensAt(goback(mary,bedroom),35).
+happensAt(journey(jeff,bedroom),36).
+happensAt(go(fred,kitchen),37).
+happensAt(go(bill,kitchen),38).
+happensAt(get(bill,football),39).
+happensAt(travel(bill,office),40).
+happensAt(pickup(bill,milk),41).
+happensAt(go(mary,garden),42).
+happensAt(travel(fred,hallway),43).
+happensAt(travel(jeff,office),44).
+happensAt(go(mary,kitchen),45).
+happensAt(give(bill,football,jeff),46).
+happensAt(pass(jeff,football,bill),47).
+#example holdsAt(fobjgive(jeff,football,bill),48).
+:- not initiatedAt(fobjgive(jeff,football,bill),47).
+
+happensAt(pass(bill,football,jeff),49).
+happensAt(move(mary,garden),50).
+#example holdsAt(frecgive(bill,football,jeff),51).
+:- not initiatedAt(frecgive(bill,football,jeff),49).
+

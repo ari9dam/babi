@@ -1,0 +1,60 @@
+happensAt(grab(jeff,milk),1).
+happensAt(move(mary,garden),2).
+happensAt(travel(jeff,office),3).
+happensAt(drop(jeff,milk),4).
+happensAt(get(bill,football),5).
+happensAt(hand(bill,football,mary),6).
+#example holdsAt(frecgive(bill,football,mary),7).
+:- not initiatedAt(frecgive(bill,football,mary),6).
+
+happensAt(journey(mary,hallway),8).
+happensAt(grab(jeff,milk),9).
+#example holdsAt(fsubjgive(bill,football,mary),10).
+:- not initiatedAt(fsubjgive(bill,football,mary),6).
+
+happensAt(drop(mary,football),11).
+happensAt(go(fred,garden),12).
+#example holdsAt(freceive(mary,football),13).
+:- not initiatedAt(freceive(mary,football),6).
+
+happensAt(leave(jeff,milk),14).
+happensAt(grab(jeff,milk),15).
+happensAt(journey(fred,office),16).
+happensAt(journey(jeff,bathroom),17).
+happensAt(travel(jeff,bedroom),18).
+happensAt(goback(fred,kitchen),19).
+happensAt(move(mary,garden),20).
+happensAt(discard(jeff,milk),21).
+happensAt(journey(bill,office),22).
+happensAt(get(jeff,milk),23).
+happensAt(go(mary,bathroom),24).
+happensAt(leave(jeff,milk),25).
+happensAt(travel(fred,bathroom),26).
+happensAt(move(bill,bedroom),27).
+happensAt(grab(bill,milk),28).
+happensAt(move(fred,hallway),29).
+happensAt(goback(jeff,bathroom),30).
+happensAt(drop(bill,milk),31).
+happensAt(journey(jeff,garden),32).
+happensAt(move(mary,bedroom),33).
+happensAt(go(bill,bathroom),34).
+happensAt(take(fred,football),35).
+happensAt(travel(jeff,bathroom),36).
+happensAt(take(bill,apple),37).
+happensAt(journey(bill,bedroom),38).
+happensAt(travel(mary,office),39).
+happensAt(discard(fred,football),40).
+happensAt(travel(mary,hallway),41).
+happensAt(take(mary,football),42).
+happensAt(go(mary,bathroom),43).
+happensAt(give(mary,football,jeff),44).
+happensAt(hand(jeff,football,mary),45).
+#example holdsAt(fsubjgive(jeff,football,mary),46).
+ #example not holdsAt(fsubjgive(bill,football,mary),46).
+:- not initiatedAt(fsubjgive(jeff,football,mary),45).
+
+happensAt(move(fred,bathroom),47).
+happensAt(give(mary,football,fred),48).
+#example holdsAt(fobjgive(mary,football,fred),49).
+:- not initiatedAt(fobjgive(mary,football,fred),48).
+

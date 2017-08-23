@@ -1,0 +1,6 @@
+observed(relative_position(bedroom,office,west),1).
+observed(relative_position(hallway,office,east),1).
+#example holdsAt(relative_position(office,bedroom,east),1).
+#example not holdsAt(relative_position(office,bedroom,south),1).
+#example not holdsAt(relative_position(office,bedroom,north),1).
+#example not holdsAt(relative_position(office,bedroom,west),1).

@@ -1,0 +1,10 @@
+time(1..13).
+arg2(mouse;wolf;cat;sheep).
+arg1(mouse;jessica;wolf;cat;winona;gertrude;emily;sheep).
+direction(east).
+
+fluent(fear(X,Y)):-arg1(X),arg2(Y).
+fluent(domain(X,Y)):-arg1(X),arg2(Y).
+
+holdsAt(F,T+1):- fluent(F),time(T), initiatedAt(F,T).
+holdsAt(F,T+1):- fluent(F),time(T), holdsAt(F,T), not terminatedAt(F,T).

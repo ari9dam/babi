@@ -1,0 +1,59 @@
+happensAt(goback(mary,bathroom),1).
+happensAt(journey(daniel,kitchen),2).
+happensAt(move(sandra,office),3).
+happensAt(goback(mary,office),4).
+happensAt(goback(mary,garden),5).
+happensAt(journey(sandra,garden),6).
+happensAt(move(daniel,garden),7).
+happensAt(go(sandra,office),8).
+happensAt(travel(john,bedroom),9).
+happensAt(goback(daniel,hallway),10).
+happensAt(goback(john,garden),11).
+happensAt(goback(mary,kitchen),12).
+happensAt(go(john,kitchen),13).
+happensAt(travel(mary,bathroom),14).
+happensAt(goback(john,bathroom),15).
+happensAt(move(mary,kitchen),16).
+happensAt(goback(john,bedroom),17).
+happensAt(goback(mary,bedroom),18).
+happensAt(goback(mary,bathroom),19).
+happensAt(travel(daniel,garden),20).
+happensAt(travel(john,office),21).
+happensAt(journey(daniel,hallway),22).
+happensAt(move(sandra,kitchen),23).
+happensAt(travel(daniel,bedroom),24).
+happensAt(go(mary,garden),25).
+happensAt(go(john,bathroom),26).
+happensAt(move(mary,bedroom),27).
+happensAt(grab(john,milk),28).
+#example count(john,1,29).
+#example not count(john,1,28).
+#example count(john,1,29).
+happensAt(travel(mary,hallway),30).
+happensAt(drop(john,milk),31).
+#example count(john,0,32).
+#example not count(john,0,31).
+#example count(john,0,32).
+happensAt(go(john,bedroom),33).
+happensAt(journey(daniel,hallway),34).
+#example count(john,0,35).
+#example not count(john,0,31).
+#example count(john,0,32).
+happensAt(journey(john,garden),36).
+happensAt(journey(daniel,kitchen),37).
+#example count(john,0,38).
+#example not count(john,0,31).
+#example count(john,0,32).
+happensAt(go(john,bedroom),39).
+happensAt(go(sandra,garden),40).
+happensAt(go(mary,office),41).
+happensAt(travel(mary,bedroom),42).
+happensAt(goback(daniel,hallway),43).
+happensAt(go(john,office),44).
+happensAt(goback(sandra,hallway),45).
+happensAt(journey(daniel,bathroom),46).
+happensAt(take(daniel,milk),47).
+happensAt(travel(daniel,kitchen),48).
+#example count(daniel,1,49).
+#example not count(daniel,1,47).
+#example count(daniel,1,48).

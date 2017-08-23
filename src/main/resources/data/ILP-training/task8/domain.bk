@@ -1,0 +1,16 @@
+time(1..58).
+arg3(apple;milk;football).
+arg2(apple;hallway;milk;garden;office;football;kitchen;bathroom;bedroom).
+arg1(daniel;sandra;mary;john).
+
+holdsAt(F,T+1):- fluent(F),time(T), initiatedAt(F,T).
+holdsAt(F,T+1):- fluent(F),time(T), holdsAt(F,T), not terminatedAt(F,T).
+
+count(X,N,T):- N= #count {holdsAt(carrying(X,Y),T):arg3(Y)}, arg1(X),time(T).
+:- count(X,N1,T), count(X,N2,T), N1!=N2.
+
+displayName(0,none;;1,one;;2,two;;3,three;;4,four;;5,five;;6,six;;7,seven;;8,eight;;9,nine;;10,ten).
+fluent(carrying(X,Y)):-arg1(X),arg3(Y).
+
+
+

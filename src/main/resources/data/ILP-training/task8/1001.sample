@@ -1,0 +1,27 @@
+happensAt(go(sandra,kitchen),1).
+happensAt(move(sandra,garden),2).
+happensAt(pickup(sandra,milk),3).
+happensAt(goback(mary,garden),4).
+#example count(sandra,1,5).
+#example not count(sandra,1,3).
+#example count(sandra,1,4).
+happensAt(give(sandra,milk,mary),6).
+happensAt(give(mary,milk,sandra),7).
+#example count(sandra,1,8).
+#example not count(sandra,1,7).
+#example count(sandra,1,8).
+happensAt(go(sandra,hallway),9).
+happensAt(pass(sandra,milk,john),10).
+#example count(sandra,0,11).
+#example not count(sandra,0,10).
+#example count(sandra,0,11).
+happensAt(give(john,milk,sandra),12).
+happensAt(travel(mary,bathroom),13).
+#example count(mary,0,14).
+#example not count(mary,0,7).
+#example count(mary,0,8).
+happensAt(goback(john,bathroom),15).
+happensAt(take(john,football),16).
+#example count(john,1,17).
+#example not count(john,1,16).
+#example count(john,1,17).

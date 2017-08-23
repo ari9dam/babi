@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
@@ -64,7 +65,7 @@ public class JAMRParser {
 		}
 	}
 
-	public ParseOutput getFact(Statement stmt, int t){
+	public ParseOutput getFact(Statement stmt, int t, Map<String, Set<String>> prevValues){
 		String line = stmt.getText();
 		if(line.contains(" and ")){
 			
@@ -74,17 +75,18 @@ public class JAMRParser {
 				common+= words[i]+" ";
 			}
 			common = common.trim();
-			ParseOutput p1 = getFactHelper(words[0]+" "+common,t);
-			ParseOutput p2 = getFactHelper(words[2]+ " " +common,t);
+			ParseOutput p1 = getFactHelper(words[0]+" "+common,t,prevValues);
+			ParseOutput p2 = getFactHelper(words[2]+ " " +common,t,prevValues);
 			
 			String l = p1.getLogicalRepresentation()+"\n"+p2.getLogicalRepresentation();
 			p1.getArgs().get("arg1").addAll(p2.getArgs().get("arg1"));
 			
 			return new ParseOutput(l, p1.getArgs());
 		}else 
-			return getFactHelper(stmt.getText(),t);
+			return getFactHelper(stmt.getText(),t,prevValues);
 	}
-	public ParseOutput getFactHelper(String stmt, int t){
+	public ParseOutput getFactHelper(String stmt, int t, 
+			Map<String, Set<String>> prevValues){
 
 		//System.out.println(stmt.getText());
 		String amrin = stmt.toLowerCase().trim();
@@ -193,6 +195,18 @@ public class JAMRParser {
 				val="";
 			}else if(ch==')' && lookForArg){
 				arg = val.toLowerCase();
+				if(arg.equalsIgnoreCase("pink_rectangle"))
+					arg="pinkRectangle";
+				else if(arg.equalsIgnoreCase("red_sphere"))
+					arg="redSphere";
+				else if(arg.equalsIgnoreCase("blue_square"))
+					arg="blueSquare";
+				else if(arg.equalsIgnoreCase("yellow_square"))
+					arg="yellowSquare";
+				else if(arg.equalsIgnoreCase("red_square"))
+					arg="redSquare";
+				
+				
 				val = "";
 				if(colors.contains(arg)&&"domain".equalsIgnoreCase(predicate))
 					predicate="color";
@@ -233,6 +247,7 @@ public class JAMRParser {
 		boolean coref = false;
 		String log = predicate+"(";
 		boolean isFirst = true;
+		String sarg1="",sarg2="";
 		for(int i=1;i<5;i++){
 			if(args.containsKey("arg"+i)){
 				for(String value: args.get("arg"+i)){
@@ -243,12 +258,20 @@ public class JAMRParser {
 							||value.equalsIgnoreCase("they")){
 						log+="X";
 						coref = true;
-					}else
+					}else{
 						log+= value;
+						if(i==1) sarg1 = value;
+						if(i==2) sarg2 = value;
+					}
 					isFirst = false;
 				}
 			}
 		}
+		
+		if(prevValues.containsKey(sarg1)&&prevValues.get(sarg1).contains(sarg2)){
+			prevValues.get(sarg1).remove(sarg2);
+		}
+		
 		String grp="";
 		if(either){
 			grp="gr_id"+t;
@@ -269,7 +292,7 @@ public class JAMRParser {
 		}else if(this.grabActions.contains(predicate)){
 			args.put("arg3", args.get("arg2"));
 			args.put("arg2", new HashSet<String>());
-		}else if(this.passActions.contains(predicate)){
+		}else if(this.passActions.contains(predicate)){		
 			Set<String> arg1 = args.get("arg1");
 			arg1.addAll(args.get("arg3"));
 			args.put("arg1", arg1);
@@ -290,6 +313,7 @@ public class JAMRParser {
 		
 		if(coref){
 			log = ecpred+"("+log+","+t+"):-holdsAt(coref(id"+t+",X),"+t+"),arg1(X).";
+			log+="\neventId("+ "id"+t+","+(t-1)+").";
 			putArgs("eventId", "id"+t+","+(t-1),args);
 			putArgs("id", "id"+t,args);
 			args.get("arg1").clear();
@@ -309,7 +333,8 @@ public class JAMRParser {
 		if(temporal){
 			log+="\ntimeAt("+t+","+timeVal+").\n";
 		}
-
+		
+		log = log.replace("_", "");
 		ParseOutput ret = new ParseOutput(log, args);
 		ret.setF(predicate);
 		return ret;
@@ -337,10 +362,10 @@ public class JAMRParser {
 	public static void main(String args[]) throws IOException{
 		JAMRParser parser = new JAMRParser();
 		ParseOutput ret = parser.getFact(
-				new Statement("1", "sandra went back to the office"), 1);
+				new Statement("1", "sandra went back to the office"), 1, new HashMap<String,Set<String>>());
 		System.out.println(ret.getLogicalRepresentation());
 		ret = parser.getFact(
-				new Statement("1", "sandra travelled to the hallway "), 1);
+				new Statement("1", "sandra travelled to the hallway "), 1,new HashMap<String,Set<String>>());
 		System.out.println(ret.getLogicalRepresentation());
 	}
 

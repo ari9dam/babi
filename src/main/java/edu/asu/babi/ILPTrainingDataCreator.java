@@ -29,19 +29,21 @@ import edu.asu.babi.parser.Parser;
 public class ILPTrainingDataCreator {
 
 	public static void main(String[] args) throws IOException {
-		String dest="src\\main\\resources\\data\\ILP-training\\task1\\";
+		String dest="src\\main\\resources\\data\\ILP-training\\task20\\";
 		String dir = "src\\main\\resources\\data\\en-10k\\";
-		String task = "qa1_single-supporting-fact_train.txt";
+		String task = "qa20_agents-motivations_train.txt";
 		TrainingCorpusReader tr = new TrainingCorpusReader(dir+task);
 		Iterator<Story> it = tr.iterator();
-		Parser parser = new Parser(false);
+		Parser parser = new Parser(true);
 		JAMRParser jamr = new JAMRParser();
+			
 		
 		//create a folder if not exists
 		//create a subfolder for task
 		//create .sample files for each story
 		Map<String,Set<String>> domains = createEmptyArgsMap();
 		Map<String,Set<String>> prevValues = new HashMap<String,Set<String>>();
+		
 		int maxT = 1;
 		int counter=1;
 		while(it.hasNext()){
@@ -53,22 +55,24 @@ public class ILPTrainingDataCreator {
 				ParseOutput parse = null;
 				if(sen instanceof Statement){
 					//parse the sentence
-					parse = jamr.getFact((Statement)sen,T);
+					parse = jamr.getFact((Statement)sen,T, prevValues);
 					//add domain enties
+					
 					mergeDomains(domains,parse.getArgs());
 				}else{
 					parse = parser.getConstraint((Question)sen, domains,T,false, prevValues);
+					
 				}
 				
+
 				//add to the program
-				if(parse.getLogicalRepresentation()==null)
-					parse.getLogicalRepresentation();
-				data.add(parse.getLogicalRepresentation());
-				//if(parse.isShouldIncrement())
-					//T++;
-				T++;
+				data.add(parse.getLogicalRepresentation().replaceAll("_", "") );
+				if(true)
+					T++;
+				
 				if(T>maxT) maxT = T;
 			}
+			
 			
 			//print the sample
 			FileUtils.writeLines(new File(dest+counter+".sample"), data);

@@ -1,0 +1,31 @@
+happensAt(go(mary,hallway),1).
+happensAt(journey(bill,kitchen),2).
+happensAt(go(fred,bedroom),3).
+happensAt(get(jeff,apple),4).
+happensAt(travel(jeff,bathroom),5).
+happensAt(move(jeff,bedroom),6).
+happensAt(pass(jeff,apple,fred),7).
+happensAt(discard(fred,apple),8).
+#example holdsAt(fobjgive(jeff,apple,fred),9).
+:- not initiatedAt(fobjgive(jeff,apple,fred),7).
+
+happensAt(go(bill,garden),10).
+happensAt(grab(fred,apple),11).
+#example holdsAt(fobjgive(jeff,apple,fred),12).
+:- not initiatedAt(fobjgive(jeff,apple,fred),7).
+
+happensAt(travel(fred,garden),13).
+happensAt(give(fred,apple,bill),14).
+#example holdsAt(fobjgive(fred,apple,bill),15).
+:- not initiatedAt(fobjgive(fred,apple,bill),14).
+
+happensAt(hand(bill,apple,fred),16).
+happensAt(hand(fred,apple,bill),17).
+#example holdsAt(fgive(fred,apple),18).
+:- not initiatedAt(fgive(fred,apple),17).
+
+happensAt(goback(jeff,garden),19).
+happensAt(leave(bill,apple),20).
+#example holdsAt(fsubjgive(fred,apple,bill),21).
+:- not initiatedAt(fsubjgive(fred,apple,bill),17).
+

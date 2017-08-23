@@ -1,0 +1,59 @@
+happensAt(pickup(bill,football),1).
+happensAt(go(mary,garden),2).
+happensAt(drop(bill,football),3).
+happensAt(move(mary,office),4).
+happensAt(grab(bill,football),5).
+happensAt(travel(jeff,kitchen),6).
+happensAt(journey(fred,bedroom),7).
+happensAt(journey(jeff,bathroom),8).
+happensAt(journey(mary,garden),9).
+happensAt(goback(bill,kitchen),10).
+happensAt(journey(jeff,office),11).
+happensAt(journey(fred,hallway),12).
+happensAt(leave(bill,football),13).
+happensAt(go(mary,kitchen),14).
+happensAt(goback(mary,office),15).
+happensAt(move(jeff,bathroom),16).
+happensAt(go(jeff,garden),17).
+happensAt(travel(fred,garden),18).
+happensAt(goback(fred,hallway),19).
+happensAt(goback(mary,hallway),20).
+happensAt(get(bill,football),21).
+happensAt(journey(fred,garden),22).
+happensAt(goback(bill,garden),23).
+happensAt(give(bill,football,fred),24).
+#example holdsAt(fgive(bill,football),25).
+:- not initiatedAt(fgive(bill,football),24).
+
+happensAt(give(fred,football,bill),26).
+happensAt(move(mary,garden),27).
+#example holdsAt(fobjgive(fred,football,bill),28).
+:- not initiatedAt(fobjgive(fred,football,bill),26).
+
+happensAt(pass(bill,football,mary),29).
+happensAt(move(fred,office),30).
+#example holdsAt(fsubjgive(bill,football,mary),31).
+:- not initiatedAt(fsubjgive(bill,football,mary),29).
+
+happensAt(journey(bill,hallway),32).
+happensAt(go(fred,kitchen),33).
+#example holdsAt(fobjgive(bill,football,mary),34).
+:- not initiatedAt(fobjgive(bill,football,mary),29).
+
+happensAt(discard(mary,football),35).
+happensAt(grab(jeff,football),36).
+happensAt(travel(bill,office),37).
+happensAt(journey(mary,office),38).
+happensAt(putdown(jeff,football),39).
+happensAt(journey(fred,hallway),40).
+happensAt(travel(mary,bedroom),41).
+happensAt(journey(mary,office),42).
+happensAt(pickup(jeff,football),43).
+happensAt(goback(fred,kitchen),44).
+happensAt(go(bill,kitchen),45).
+happensAt(grab(fred,milk),46).
+happensAt(pass(fred,milk,bill),47).
+happensAt(move(bill,bedroom),48).
+#example holdsAt(freceive(bill,milk),49).
+:- not initiatedAt(freceive(bill,milk),47).
+

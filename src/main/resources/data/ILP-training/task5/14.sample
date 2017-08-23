@@ -1,0 +1,25 @@
+happensAt(pickup(mary,milk),1).
+happensAt(give(mary,milk,fred),2).
+#example holdsAt(fsubjgive(mary,milk,fred),3).
+:- not initiatedAt(fsubjgive(mary,milk,fred),2).
+
+happensAt(pass(fred,milk,mary),4).
+happensAt(grab(jeff,apple),5).
+#example holdsAt(fobjgive(fred,milk,mary),6).
+:- not initiatedAt(fobjgive(fred,milk,mary),4).
+
+happensAt(give(jeff,apple,bill),7).
+happensAt(travel(jeff,office),8).
+#example holdsAt(fgive(jeff,apple),9).
+:- not initiatedAt(fgive(jeff,apple),7).
+
+happensAt(give(mary,milk,fred),10).
+happensAt(pass(fred,milk,mary),11).
+#example holdsAt(fsubjgive(jeff,apple,bill),12).
+:- not initiatedAt(fsubjgive(jeff,apple,bill),7).
+
+happensAt(hand(mary,milk,fred),13).
+happensAt(putdown(fred,milk),14).
+#example holdsAt(frecgive(mary,milk,fred),15).
+:- not initiatedAt(frecgive(mary,milk,fred),13).
+

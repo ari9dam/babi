@@ -1,0 +1,46 @@
+observed(location(fred,grid1),1).
+orgroup(grid1,cinema).
+orgroup(grid1,kitchen).
+id(grid1).
+
+happensAt(go(julie,office),2).
+
+#example not mayholdsAt(location(fred,school),3).
+#example not holdsAt(location(fred,school),3).
+:- not terminatedAt(location(fred,school),1).
+:- not mterminatedAt(location(fred,school),1).
+happensAt(move(fred,park),4).
+happensAt(travel(mary,cinema),5).
+
+#example not mayholdsAt(location(julie,cinema),6).
+#example not holdsAt(location(julie,cinema),6).
+:- not terminatedAt(location(julie,cinema),2).
+:- not mterminatedAt(location(julie,cinema),2).
+observed(location(julie,grid7),7).
+orgroup(grid7,kitchen).
+orgroup(grid7,bedroom).
+id(grid7).
+
+happensAt(goback(mary,kitchen),8).
+
+#example mayholdsAt(location(julie,kitchen),9).
+:- not minitiatedAt(location(julie,kitchen),7).
+:- not terminatedAt(location(julie,kitchen),7).
+observed(location(bill,grid10),10).
+orgroup(grid10,school).
+orgroup(grid10,bedroom).
+id(grid10).
+
+happensAt(goback(bill,park),11).
+
+#example not mayholdsAt(location(julie,school),12).
+#example not holdsAt(location(julie,school),12).
+:- not terminatedAt(location(julie,school),7).
+:- not mterminatedAt(location(julie,school),7).
+observed(location(mary,office),13).
+happensAt(go(fred,office),14).
+
+#example not mayholdsAt(location(mary,school),15).
+#example not holdsAt(location(mary,school),15).
+:- not terminatedAt(location(mary,school),13).
+:- not mterminatedAt(location(mary,school),13).

@@ -1,0 +1,59 @@
+happensAt(pickup(bill,milk),1).
+happensAt(discard(bill,milk),2).
+happensAt(go(mary,hallway),3).
+happensAt(move(jeff,garden),4).
+happensAt(pickup(bill,milk),5).
+happensAt(journey(bill,bathroom),6).
+happensAt(goback(mary,kitchen),7).
+happensAt(go(jeff,bathroom),8).
+happensAt(travel(mary,office),9).
+happensAt(journey(mary,bathroom),10).
+happensAt(leave(bill,milk),11).
+happensAt(get(mary,milk),12).
+happensAt(pass(mary,milk,bill),13).
+happensAt(give(bill,milk,mary),14).
+#example holdsAt(fgive(bill,milk),15).
+:- not initiatedAt(fgive(bill,milk),14).
+
+happensAt(hand(mary,milk,bill),16).
+happensAt(journey(bill,kitchen),17).
+#example holdsAt(fobjgive(mary,milk,bill),18).
+:- not initiatedAt(fobjgive(mary,milk,bill),16).
+
+happensAt(goback(jeff,hallway),19).
+happensAt(go(mary,office),20).
+#example holdsAt(fobjgive(mary,milk,bill),21).
+:- not initiatedAt(fobjgive(mary,milk,bill),16).
+
+happensAt(pickup(bill,football),22).
+happensAt(putdown(bill,football),23).
+happensAt(move(fred,garden),24).
+happensAt(grab(bill,football),25).
+happensAt(pickup(fred,apple),26).
+happensAt(move(jeff,bathroom),27).
+happensAt(goback(fred,hallway),28).
+happensAt(discard(fred,apple),29).
+happensAt(travel(bill,bedroom),30).
+happensAt(go(fred,garden),31).
+happensAt(goback(bill,kitchen),32).
+happensAt(move(bill,bedroom),33).
+happensAt(go(jeff,hallway),34).
+happensAt(move(bill,bathroom),35).
+happensAt(putdown(bill,football),36).
+happensAt(journey(mary,bedroom),37).
+happensAt(journey(mary,bathroom),38).
+happensAt(pickup(jeff,apple),39).
+happensAt(putdown(jeff,apple),40).
+happensAt(take(mary,football),41).
+happensAt(drop(bill,milk),42).
+happensAt(pickup(mary,milk),43).
+happensAt(get(jeff,apple),44).
+happensAt(give(mary,football,bill),45).
+#example holdsAt(freceive(bill,football),46).
+:- not initiatedAt(freceive(bill,football),45).
+
+happensAt(goback(fred,bedroom),47).
+happensAt(give(bill,football,mary),48).
+#example holdsAt(fgive(bill,football),49).
+:- not initiatedAt(fgive(bill,football),48).
+

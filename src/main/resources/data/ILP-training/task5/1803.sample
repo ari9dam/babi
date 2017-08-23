@@ -1,0 +1,63 @@
+happensAt(get(jeff,milk),1).
+happensAt(journey(fred,office),2).
+happensAt(travel(bill,kitchen),3).
+happensAt(take(bill,apple),4).
+happensAt(discard(bill,apple),5).
+happensAt(pickup(bill,apple),6).
+happensAt(leave(bill,apple),7).
+happensAt(grab(bill,apple),8).
+happensAt(discard(bill,apple),9).
+happensAt(journey(mary,kitchen),10).
+happensAt(go(mary,office),11).
+happensAt(move(mary,bathroom),12).
+happensAt(move(bill,bathroom),13).
+happensAt(go(fred,hallway),14).
+happensAt(drop(jeff,milk),15).
+happensAt(take(fred,milk),16).
+happensAt(go(mary,hallway),17).
+happensAt(drop(fred,milk),18).
+happensAt(go(bill,kitchen),19).
+happensAt(travel(bill,bedroom),20).
+happensAt(grab(jeff,milk),21).
+happensAt(hand(jeff,milk,mary),22).
+#example holdsAt(fsubjgive(jeff,milk,mary),23).
+:- not initiatedAt(fsubjgive(jeff,milk,mary),22).
+
+happensAt(discard(mary,milk),24).
+happensAt(move(mary,bathroom),25).
+#example holdsAt(fobjgive(jeff,milk,mary),26).
+:- not initiatedAt(fobjgive(jeff,milk,mary),22).
+
+happensAt(grab(jeff,milk),27).
+happensAt(leave(jeff,milk),28).
+#example holdsAt(fgive(jeff,milk),29).
+:- not initiatedAt(fgive(jeff,milk),22).
+
+happensAt(travel(jeff,kitchen),30).
+happensAt(take(jeff,apple),31).
+happensAt(travel(fred,bedroom),32).
+happensAt(drop(jeff,apple),33).
+happensAt(travel(jeff,office),34).
+happensAt(move(fred,hallway),35).
+happensAt(move(jeff,bedroom),36).
+happensAt(journey(fred,bedroom),37).
+happensAt(go(fred,bathroom),38).
+happensAt(go(mary,hallway),39).
+happensAt(goback(fred,hallway),40).
+happensAt(move(mary,bathroom),41).
+happensAt(pickup(fred,milk),42).
+happensAt(move(jeff,kitchen),43).
+happensAt(goback(mary,hallway),44).
+happensAt(goback(bill,hallway),45).
+happensAt(grab(jeff,apple),46).
+happensAt(hand(fred,milk,mary),47).
+#example holdsAt(fgive(fred,milk),48).
+ #example not holdsAt(fgive(jeff,milk),48).
+:- not initiatedAt(fgive(fred,milk),47).
+
+happensAt(go(fred,office),49).
+happensAt(pass(mary,milk,bill),50).
+#example holdsAt(fgive(mary,milk),51).
+ #example not holdsAt(fgive(jeff,milk),51).
+:- not initiatedAt(fgive(mary,milk),50).
+

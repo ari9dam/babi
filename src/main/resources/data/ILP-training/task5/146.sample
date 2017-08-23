@@ -1,0 +1,27 @@
+happensAt(journey(bill,office),1).
+happensAt(go(fred,office),2).
+happensAt(pickup(bill,apple),3).
+happensAt(hand(bill,apple,fred),4).
+#example holdsAt(freceive(fred,apple),5).
+:- not initiatedAt(freceive(fred,apple),4).
+
+happensAt(hand(fred,apple,bill),6).
+happensAt(move(mary,bathroom),7).
+#example holdsAt(fobjgive(fred,apple,bill),8).
+:- not initiatedAt(fobjgive(fred,apple,bill),6).
+
+happensAt(give(bill,apple,fred),9).
+happensAt(hand(fred,apple,bill),10).
+#example holdsAt(frecgive(fred,apple,bill),11).
+:- not initiatedAt(frecgive(fred,apple,bill),10).
+
+happensAt(journey(mary,kitchen),12).
+happensAt(hand(bill,apple,fred),13).
+#example holdsAt(fgive(bill,apple),14).
+:- not initiatedAt(fgive(bill,apple),13).
+
+happensAt(give(fred,apple,bill),15).
+happensAt(pickup(jeff,football),16).
+#example holdsAt(frecgive(fred,apple,bill),17).
+:- not initiatedAt(frecgive(fred,apple,bill),15).
+

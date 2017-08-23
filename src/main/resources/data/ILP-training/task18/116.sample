@@ -1,0 +1,15 @@
+holdsAt(bigger(container,chest),1).
+holdsAt(fit(suitcase,container),1).
+holdsAt(bigger(container,chest),1).
+holdsAt(fit(box,container),1).
+holdsAt(bigger(suitcase,chest),1).
+
+ #example holdsAt(fit(chest,container),1).
+
+ #example not holdsAt(fit(container,chest),1).
+
+ #example holdsAt(bigger(container,chest),1).
+
+ #example not holdsAt(fit(container,chest),1).
+
+ #example holdsAt(bigger(container,chest),1).

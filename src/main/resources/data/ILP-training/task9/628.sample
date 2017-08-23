@@ -1,0 +1,29 @@
+nobserved(location(mary,garden),1).
+observed(location(john,garden),2).
+answer(id3,yes):- holdsAt(location(mary,garden),3), not holdsAt(location(mary,X),3),X!=garden,arg2(X).
+answer(id3,no):-not answer(id3,yes).
+#example answer(id3,no).
+:- not terminatedAt(location(mary,garden),1).
+observed(location(daniel,office),4).
+observed(location(mary,garden),5).
+answer(id6,yes):- holdsAt(location(mary,office),6), not holdsAt(location(mary,X),6),X!=office,arg2(X).
+answer(id6,no):-not answer(id6,yes).
+#example answer(id6,no).
+:- not terminatedAt(location(mary,office),5).
+observed(location(sandra,office),7).
+observed(location(sandra,kitchen),8).
+answer(id9,yes):- holdsAt(location(mary,garden),9), not holdsAt(location(mary,X),9),X!=garden,arg2(X).
+answer(id9,no):-not answer(id9,yes).
+#example answer(id9,yes).
+happensAt(move(mary,hallway),10).
+observed(location(john,office),11).
+answer(id12,yes):- holdsAt(location(mary,office),12), not holdsAt(location(mary,X),12),X!=office,arg2(X).
+answer(id12,no):-not answer(id12,yes).
+#example answer(id12,no).
+:- not terminatedAt(location(mary,office),10).
+nobserved(location(daniel,office),13).
+observed(location(john,bedroom),14).
+answer(id15,yes):- holdsAt(location(mary,office),15), not holdsAt(location(mary,X),15),X!=office,arg2(X).
+answer(id15,no):-not answer(id15,yes).
+#example answer(id15,no).
+:- not terminatedAt(location(mary,office),10).

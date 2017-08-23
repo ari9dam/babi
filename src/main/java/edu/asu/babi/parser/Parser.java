@@ -197,15 +197,15 @@ public class Parser {
 				arg3="below";
 
 			if(words[0].equalsIgnoreCase("red")&& words[1].equalsIgnoreCase("sphere"))
-				arg1 = "red_sphere";
+				arg1 = "redSphere";
 			else if(words[0].equalsIgnoreCase("red")&& words[1].equalsIgnoreCase("square"))
-				arg1 = "red_square";
+				arg1 = "redSquare";
 			else if(words[0].equalsIgnoreCase("blue")&& words[1].equalsIgnoreCase("square"))
-				arg1 = "blue_square"; 
+				arg1 = "blueSquare"; 
 			else if(words[0].equalsIgnoreCase("yellow")&& words[1].equalsIgnoreCase("square"))
-				arg1 = "yellow_square"; 
+				arg1 = "yellowSquare"; 
 			else if(words[0].equalsIgnoreCase("pink")&& words[1].equalsIgnoreCase("rectangle"))
-				arg1 = "pink_rectangle";
+				arg1 = "pinkRectangle";
 			else if(words[0].equalsIgnoreCase("triangle"))
 				arg1 = "triangle";
 			else 
@@ -214,15 +214,15 @@ public class Parser {
 			this.col = true;
 
 			if(words[len-1].equalsIgnoreCase("red")&& words[len].equalsIgnoreCase("sphere"))
-				arg2 = "red_sphere";
+				arg2 = "redSphere";
 			else if(words[len-1].equalsIgnoreCase("red")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "red_square";
+				arg2 = "redSquare";
 			else if(words[len-1].equalsIgnoreCase("blue")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "blue_square"; 
+				arg2 = "blueSquare"; 
 			else if(words[len-1].equalsIgnoreCase("yellow")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "yellow_square"; 
+				arg2 = "yellowSquare"; 
 			else if(words[len-1].equalsIgnoreCase("pink")&& words[len].equalsIgnoreCase("rectangle"))
-				arg2 = "pink_rectangle";
+				arg2 = "pinkRectangle";
 			else if(words[len].equalsIgnoreCase("triangle"))
 				arg2 = "triangle";
 
@@ -571,29 +571,29 @@ public class Parser {
 			} 
 
 			if(words[1].equalsIgnoreCase("red")&& words[2].equalsIgnoreCase("sphere"))
-				arg1 = "red_sphere";
+				arg1 = "redSphere";
 			else if(words[1].equalsIgnoreCase("red")&& words[2].equalsIgnoreCase("square"))
-				arg1 = "red_square";
+				arg1 = "redSquare";
 			else if(words[1].equalsIgnoreCase("blue")&& words[2].equalsIgnoreCase("square"))
-				arg1 = "blue_square"; 
+				arg1 = "blueSquare"; 
 			else if(words[1].equalsIgnoreCase("yellow")&& words[2].equalsIgnoreCase("square"))
-				arg1 = "yellow_square"; 
+				arg1 = "yellowSquare"; 
 			else if(words[1].equalsIgnoreCase("pink")&& words[2].equalsIgnoreCase("rectangle"))
-				arg1 = "pink_rectangle";
+				arg1 = "pinkRectangle";
 			else if(words[1].equalsIgnoreCase("triangle"))
 				arg1 = "triangle";
 			int len = words.length-1;
 
 			if(words[len-1].equalsIgnoreCase("red")&& words[len].equalsIgnoreCase("sphere"))
-				arg2 = "red_sphere";
+				arg2 = "redSphere";
 			else if(words[len-1].equalsIgnoreCase("red")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "red_square";
+				arg2 = "redSquare";
 			else if(words[len-1].equalsIgnoreCase("blue")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "blue_square"; 
+				arg2 = "blueSquare"; 
 			else if(words[len-1].equalsIgnoreCase("yellow")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "yellow_square"; 
+				arg2 = "yellowSquare"; 
 			else if(words[len-1].equalsIgnoreCase("pink")&& words[len].equalsIgnoreCase("rectangle"))
-				arg2 = "pink_rectangle";
+				arg2 = "pinkRectangle";
 			else if(words[len].equalsIgnoreCase("triangle"))
 				arg2 = "triangle";
 			else
@@ -621,6 +621,8 @@ public class Parser {
 			}else{
 				rep = "\n #example not holdsAt(relative_position("+arg1+","+arg2+","+arg3+"),"+1+").";
 			}
+
+
 
 		}else if(_why.matches()){
 			String arg1 = _why.group(1).toLowerCase();
@@ -686,12 +688,26 @@ public class Parser {
 			String arg3 = whoDid.group(3).toLowerCase();
 
 			rep = "#example holdsAt(f_rec_"+arg2+"("+arg1+","+arg3+","+answer.toLowerCase()+"),"+t+").";
-			for(String other: setOfAnswers){
-				if(!other.equalsIgnoreCase(answer)){
-					rep +="\n #example not holdsAt(f_rec_"+arg2+"("+
-							arg1+","+arg3+","+other.toLowerCase()+"),"+t+").";
+
+			String key = "rec_"+arg1+"_"+arg3;
+
+			if(prevValues.containsKey(key)){
+				for(String other: prevValues.get(key)){
+					if(!other.equalsIgnoreCase(answer)){
+						rep +="\n #example not holdsAt(f_rec_"+arg2+"("+
+								arg1+","+arg3+","+other.toLowerCase()+"),"+t+").";
+					}
 				}
 			}
+
+			if(prevValues.containsKey(key)){
+				prevValues.get(key).add(answer.toLowerCase());
+			}else{
+				Set<String> v = new HashSet<String>();
+				v.add(answer.toLowerCase());
+				prevValues.put(key, v);
+			}
+
 			if(this.useAnswer){
 				rep += "\n:- not initiatedAt(f_rec_"+arg2+"("+arg1+","+arg3+","+answer.toLowerCase()+"),"
 						+(qn.getSupports().get(0))+").\n";
@@ -703,11 +719,21 @@ public class Parser {
 			String arg3 = whatDid.group(3).toLowerCase();
 
 			rep = "#example holdsAt(f_obj_"+arg2+"("+arg1+","+answer.toLowerCase()+","+arg3+"),"+t+").";
-			for(String other: setOfAnswers){
-				if(!other.equalsIgnoreCase(answer)){
-					rep +="\n #example not holdsAt(f_obj_"+arg2+"("+
-							arg1+","+other.toLowerCase()+","+arg3+"),"+t+").";
+
+			String key= "f_obj_"+arg1+'-'+arg3;
+
+			if(prevValues.containsKey(key)){
+				for(String other: prevValues.get(key)){
+					if(!other.equalsIgnoreCase(answer)){
+						rep +="\n #example not holdsAt(f_obj_"+arg2+"("+
+								arg1+","+other.toLowerCase()+","+arg3+"),"+t+").";
+					}
 				}
+				prevValues.get(key).add(answer.toLowerCase());
+			}else{
+				Set<String> v = new HashSet<String>();
+				v.add(answer.toLowerCase());
+				prevValues.put(key, v);
 			}
 
 			if(this.useAnswer){
@@ -724,12 +750,22 @@ public class Parser {
 			String arg2 = who_3.group(2).toLowerCase();
 			String arg3 = who_3.group(3).toLowerCase();
 			rep = "#example holdsAt(f_subj_"+arg1+"("+answer.toLowerCase()+","+arg2+","+arg3+"),"+t+").";
-			for(String other: setOfAnswers){
-				if(!other.equalsIgnoreCase(answer)){
-					rep +="\n #example not holdsAt(f_subj_"+arg1+"("+
-							other.toLowerCase()+","+arg2+","+arg3+"),"+t+").";
+
+			String key= "f_subj_"+arg2+'-'+arg3;
+
+			if(prevValues.containsKey(key)){
+				for(String other: prevValues.get(key)){
+					if(!other.equalsIgnoreCase(answer)){
+						rep +="\n #example not holdsAt(f_subj_"+arg1+"("+
+								other.toLowerCase()+","+arg2+","+arg3+"),"+t+").";
+					}
 				}
+			}else{
+				Set<String> v = new HashSet<String>();
+				v.add(answer.toLowerCase());
+				prevValues.put(key, v);
 			}
+
 			if(this.useAnswer){
 				rep += "\n:- not initiatedAt(f_subj_"+arg1+"("+answer.toLowerCase()+","+arg2+","+arg3+"),"
 						+(qn.getSupports().get(0))+").\n";
@@ -744,11 +780,20 @@ public class Parser {
 
 			String arg2 = who.group(2).toLowerCase();
 			rep = "#example holdsAt(f_"+arg1+"("+answer.toLowerCase()+","+arg2+"),"+t+").";
-			for(String other: setOfAnswers){
-				if(!other.equalsIgnoreCase(answer)){
-					rep +="\n #example not holdsAt(f_"+arg1+"("+
-							other.toLowerCase()+","+arg2+"),"+t+").";
+
+			String key= "f_"+arg1+'-'+arg2;
+
+			if(prevValues.containsKey(key)){
+				for(String other: prevValues.get(key)){
+					if(!other.equalsIgnoreCase(answer)){
+						rep +="\n #example not holdsAt(f_"+arg1+"("+
+								other.toLowerCase()+","+arg2+"),"+t+").";
+					}
 				}
+			}else{
+				Set<String> v = new HashSet<String>();
+				v.add(answer.toLowerCase());
+				prevValues.put(key, v);
 			}
 			if(this.useAnswer){
 				rep += "\n:- not initiatedAt(f_"+arg1+"("+answer.toLowerCase()+","+arg2+"),"
@@ -779,7 +824,7 @@ public class Parser {
 					}
 				}
 			}
-			
+
 			Set<String> values = null;
 			if(prevValues.containsKey(words[2].toLowerCase())){
 				values  = prevValues.get(words[2].toLowerCase());
@@ -788,19 +833,24 @@ public class Parser {
 			}
 			values.add(answer);
 			prevValues.put(words[2].toLowerCase(), values);
-			
+
 			if(this.useAnswer){
 				if(qn.getSupports().size()==2){
-					for(int i=qn.getSupports().get(0);i<=qn.getSupports().get(1);i++){
+					
+					/*rep += "\n:- not initiatedAt(location("+words[2].toLowerCase()+","
+					+answer.toLowerCase()+"),"
+							+(qn.getSupports().get(1))+").\n";*/
+					
+					/*for(int i=qn.getSupports().get(0);i<qn.getSupports().get(1);i++){
 						rep += "\n" + generateExamples(
 								"location", 
 								i,
 								words[2].toLowerCase(),
 								answer.toLowerCase(),
 								false);
-					}
+					}*/
 
-					for(int i=qn.getSupports().get(1)+2;i<t;i++){
+					for(int i=qn.getSupports().get(1)+1;i<t;i++){
 						rep += "\n" + generateExamples(
 								"location", 
 								i,
@@ -879,19 +929,38 @@ public class Parser {
 			String arg0 = how_many.group(1).toLowerCase();
 			int count = 0;
 
-			switch(qn.getAnswer().trim()){
-			case "none": count = 0; break;
-			case "one": count = 1;break;
-			case "two": count = 2;break;
-			case "three": count = 3;break;
-			case "four": count = 4;break;
-			case "five": count = 5;break;
-			case "six": count = 6;break;
-			case "seven": count = 7;break;
-			case "eight": count = 8;break;
-			default: System.err.println("unknown count:"+qn.getAnswer());
+			String answer1 = qn.getAnswer().trim();
+			
+			if(answer1.equalsIgnoreCase("none")){
+				count=0;
+			}else if(answer1.equalsIgnoreCase("one")){
+				count=1;
+			}else if(answer1.equalsIgnoreCase("two")){
+				count=2;
+			}else if(answer1.equalsIgnoreCase("three")){
+				count=3;
+			}else if(answer1.equalsIgnoreCase("four")){
+				count=4;
+			}else if(answer1.equalsIgnoreCase("five")){
+				count=5;
+			}else if(answer1.equalsIgnoreCase("six")){
+				count=6;
+			}else if(answer1.equalsIgnoreCase("seven")){
+				count=7;
+			}else if(answer1.equalsIgnoreCase("eight")){
+				count=8;
 			}
-			rep = "#example count("+arg0+","+count+","+t+").";					
+			
+			
+			rep = "#example count("+arg0+","+count+","+t+").";	
+			
+			if(this.useAnswer){
+				int max = -1;
+				for(int i: qn.getSupports())
+					if(max <i) max = i;
+				rep += "\n#example not count("+arg0+","+count+","+(max)+").";	
+				rep += "\n#example count("+arg0+","+count+","+(max+1)+").";	
+			}
 		}else if(yes_no .matches()){
 			String arg0 = yes_no.group(1).toLowerCase();
 			String arg1 = yes_no.group(2).toLowerCase();
@@ -900,14 +969,42 @@ public class Parser {
 						+ "not holdsAt(location("+arg0+",X),"+t+"),X!="+arg1+",arg2(X)."
 						+ "\nanswer(id"+t+",no):-not answer(id"+t+",yes).";	
 				rep+="\n#example answer(id"+t+","+qn.getAnswer().toLowerCase()+").";
+				
+				if(this.useAnswer){
+					if(qn.getAnswer().toLowerCase().equalsIgnoreCase("no")){
+						rep+="\n:- not terminatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+					}else{
+						
+					}
+				}
+				
 			}else{
-				if(answer.equalsIgnoreCase("yes"))
+				if(answer.equalsIgnoreCase("yes")){
 					rep = "\n#example holdsAt(location("+arg0+","+arg1+"),"+t+").";
-				else if(answer.equalsIgnoreCase("maybe"))
+					rep += "\n#example not mayholdsAt(location("+arg0+","+arg1+"),"+t+").";
+				    rep+= "\n#example not holdsAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+				    rep+="\n:- not mterminatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+				    rep+="\n:- not initiatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+				    rep+="\n:- not terminatedAt(location("+arg0+","+"dummy"+"),"+qn.getSupports().get(0)+").";
+				}else if(answer.equalsIgnoreCase("maybe")){
 					rep = "\n#example mayholdsAt(location("+arg0+","+arg1+"),"+t+").";	
-				else {
+					//rep += "\n#example not mayholdsAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";	
+				}else {
 					rep = "\n#example not mayholdsAt(location("+arg0+","+arg1+"),"+t+").";
 					rep += "\n#example not holdsAt(location("+arg0+","+arg1+"),"+t+").";
+				}
+				
+				if(this.useAnswer){
+					if(qn.getAnswer().toLowerCase().equalsIgnoreCase("no")){
+						rep+="\n:- not terminatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+						rep+="\n:- not mterminatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+						
+						
+					}else if(qn.getAnswer().toLowerCase().equalsIgnoreCase("maybe")){
+						rep+="\n:- not minitiatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+						rep+="\n:- not terminatedAt(location("+arg0+","+arg1+"),"+qn.getSupports().get(0)+").";
+						
+					}
 				}
 
 			}
@@ -1029,29 +1126,29 @@ public class Parser {
 			} 
 
 			if(words[1].equalsIgnoreCase("red")&& words[2].equalsIgnoreCase("sphere"))
-				arg1 = "red_sphere";
+				arg1 = "redSphere";
 			else if(words[1].equalsIgnoreCase("red")&& words[2].equalsIgnoreCase("square"))
-				arg1 = "red_square";
+				arg1 = "redSquare";
 			else if(words[1].equalsIgnoreCase("blue")&& words[2].equalsIgnoreCase("square"))
-				arg1 = "blue_square"; 
+				arg1 = "blueSquare"; 
 			else if(words[1].equalsIgnoreCase("yellow")&& words[2].equalsIgnoreCase("square"))
-				arg1 = "yellow_square"; 
+				arg1 = "yellowSquare"; 
 			else if(words[1].equalsIgnoreCase("pink")&& words[2].equalsIgnoreCase("rectangle"))
-				arg1 = "pink_rectangle";
+				arg1 = "pinkRectangle";
 			else if(words[1].equalsIgnoreCase("triangle"))
 				arg1 = "triangle";
 			int len = words.length-1;
 
 			if(words[len-1].equalsIgnoreCase("red")&& words[len].equalsIgnoreCase("sphere"))
-				arg2 = "red_sphere";
+				arg2 = "redSphere";
 			else if(words[len-1].equalsIgnoreCase("red")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "red_square";
+				arg2 = "redSquare";
 			else if(words[len-1].equalsIgnoreCase("blue")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "blue_square"; 
+				arg2 = "blueSquare"; 
 			else if(words[len-1].equalsIgnoreCase("yellow")&& words[len].equalsIgnoreCase("square"))
-				arg2 = "yellow_square"; 
+				arg2 = "yellowSquare"; 
 			else if(words[len-1].equalsIgnoreCase("pink")&& words[len].equalsIgnoreCase("rectangle"))
-				arg2 = "pink_rectangle";
+				arg2 = "pinkRectangle";
 			else if(words[len].equalsIgnoreCase("triangle"))
 				arg2 = "triangle";
 

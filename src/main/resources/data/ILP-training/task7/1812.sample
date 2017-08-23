@@ -1,0 +1,33 @@
+happensAt(journey(john,bedroom),1).
+happensAt(goback(john,bathroom),2).
+happensAt(journey(mary,kitchen),3).
+happensAt(travel(mary,bedroom),4).
+happensAt(move(daniel,bathroom),5).
+happensAt(go(daniel,hallway),6).
+happensAt(goback(sandra,kitchen),7).
+happensAt(get(sandra,football),8).
+#example count(sandra,1,9).
+#example not count(sandra,1,8).
+#example count(sandra,1,9).
+happensAt(travel(daniel,bathroom),10).
+happensAt(putdown(sandra,football),11).
+#example count(sandra,0,12).
+#example not count(sandra,0,11).
+#example count(sandra,0,12).
+happensAt(journey(sandra,garden),13).
+happensAt(journey(sandra,office),14).
+#example count(sandra,0,15).
+#example not count(sandra,0,11).
+#example count(sandra,0,12).
+happensAt(go(mary,office),16).
+happensAt(move(sandra,kitchen),17).
+#example count(sandra,0,18).
+#example not count(sandra,0,11).
+#example count(sandra,0,12).
+happensAt(move(john,garden),19).
+happensAt(journey(daniel,hallway),20).
+happensAt(take(sandra,football),21).
+happensAt(take(daniel,milk),22).
+#example count(sandra,1,23).
+#example not count(sandra,1,21).
+#example count(sandra,1,22).

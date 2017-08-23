@@ -1,0 +1,57 @@
+happensAt(go(mary,bathroom),1).
+happensAt(take(fred,football),2).
+happensAt(go(mary,garden),3).
+happensAt(travel(fred,kitchen),4).
+happensAt(putdown(fred,football),5).
+happensAt(move(mary,office),6).
+happensAt(travel(mary,bathroom),7).
+happensAt(pickup(fred,football),8).
+happensAt(move(bill,garden),9).
+happensAt(travel(mary,garden),10).
+happensAt(putdown(fred,football),11).
+happensAt(journey(mary,hallway),12).
+happensAt(grab(fred,football),13).
+happensAt(move(bill,hallway),14).
+happensAt(move(fred,office),15).
+happensAt(go(bill,bathroom),16).
+happensAt(move(jeff,office),17).
+happensAt(discard(fred,football),18).
+happensAt(journey(fred,bathroom),19).
+happensAt(go(fred,garden),20).
+happensAt(goback(bill,hallway),21).
+happensAt(travel(fred,bathroom),22).
+happensAt(travel(fred,kitchen),23).
+happensAt(goback(mary,bathroom),24).
+happensAt(go(mary,garden),25).
+happensAt(move(jeff,garden),26).
+happensAt(travel(mary,kitchen),27).
+happensAt(travel(bill,office),28).
+happensAt(take(bill,football),29).
+happensAt(travel(fred,hallway),30).
+happensAt(travel(fred,kitchen),31).
+happensAt(travel(bill,kitchen),32).
+happensAt(hand(bill,football,mary),33).
+happensAt(goback(fred,hallway),34).
+#example holdsAt(fobjgive(bill,football,mary),35).
+:- not initiatedAt(fobjgive(bill,football,mary),33).
+
+happensAt(goback(fred,office),36).
+happensAt(travel(jeff,hallway),37).
+#example holdsAt(fgive(bill,football),38).
+:- not initiatedAt(fgive(bill,football),33).
+
+happensAt(journey(jeff,garden),39).
+happensAt(pass(mary,football,bill),40).
+#example holdsAt(fobjgive(mary,football,bill),41).
+:- not initiatedAt(fobjgive(mary,football,bill),40).
+
+happensAt(hand(bill,football,mary),42).
+happensAt(give(mary,football,bill),43).
+#example holdsAt(fsubjgive(mary,football,bill),44).
+:- not initiatedAt(fsubjgive(mary,football,bill),43).
+
+happensAt(pass(bill,football,mary),45).
+happensAt(pass(mary,football,bill),46).
+#example holdsAt(fobjgive(mary,football,bill),47).
+:- not initiatedAt(fobjgive(mary,football,bill),46).
+

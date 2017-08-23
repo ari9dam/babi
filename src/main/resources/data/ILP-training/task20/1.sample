@@ -1,0 +1,17 @@
+holdsAt(domain(yann,tired),1).
+#example holdsAt(possiblego(yann,bedroom),2).
+ :- not initiatedAt(possiblego(yann,bedroom),1).
+
+holdsAt(domain(antoine,bored),1).
+#example holdsAt(possiblego(antoine,garden),4).
+ :- not initiatedAt(possiblego(antoine,garden),3).
+
+happensAt(move(yann,bedroom),5).
+#example holdsAt(causego(yann,tired),6).
+ #example not holdsAt(causego(yann,bored),6).
+ :- not initiatedAt(causego(yann,tired),1).
+
+holdsAt(domain(sumit,tired),1).
+#example holdsAt(possiblego(sumit,bedroom),8).
+ :- not initiatedAt(possiblego(sumit,bedroom),7).
+

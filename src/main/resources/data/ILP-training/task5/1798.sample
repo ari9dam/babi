@@ -1,0 +1,61 @@
+happensAt(journey(fred,office),1).
+happensAt(travel(fred,garden),2).
+happensAt(move(bill,bathroom),3).
+happensAt(grab(bill,apple),4).
+happensAt(go(bill,bedroom),5).
+happensAt(goback(mary,kitchen),6).
+happensAt(travel(fred,office),7).
+happensAt(putdown(bill,apple),8).
+happensAt(grab(bill,apple),9).
+happensAt(move(mary,office),10).
+happensAt(putdown(bill,apple),11).
+happensAt(go(bill,bathroom),12).
+happensAt(pickup(bill,milk),13).
+happensAt(goback(mary,hallway),14).
+happensAt(leave(bill,milk),15).
+happensAt(goback(jeff,garden),16).
+happensAt(go(jeff,office),17).
+happensAt(travel(bill,garden),18).
+happensAt(goback(jeff,bedroom),19).
+happensAt(journey(fred,kitchen),20).
+happensAt(journey(fred,bedroom),21).
+happensAt(pickup(fred,apple),22).
+happensAt(move(bill,hallway),23).
+happensAt(hand(fred,apple,jeff),24).
+#example holdsAt(fsubjgive(fred,apple,jeff),25).
+:- not initiatedAt(fsubjgive(fred,apple,jeff),24).
+
+happensAt(hand(jeff,apple,fred),26).
+happensAt(drop(fred,apple),27).
+#example holdsAt(fobjgive(jeff,apple,fred),28).
+:- not initiatedAt(fobjgive(jeff,apple,fred),26).
+
+happensAt(take(fred,apple),29).
+happensAt(leave(fred,apple),30).
+#example holdsAt(fgive(jeff,apple),31).
+:- not initiatedAt(fgive(jeff,apple),26).
+
+happensAt(goback(jeff,garden),32).
+happensAt(move(mary,office),33).
+happensAt(goback(bill,office),34).
+happensAt(journey(bill,garden),35).
+happensAt(go(bill,office),36).
+happensAt(travel(mary,kitchen),37).
+happensAt(move(jeff,bedroom),38).
+happensAt(move(jeff,garden),39).
+happensAt(go(mary,bedroom),40).
+happensAt(journey(fred,garden),41).
+happensAt(go(bill,bedroom),42).
+happensAt(take(bill,apple),43).
+happensAt(drop(bill,apple),44).
+happensAt(take(bill,apple),45).
+happensAt(hand(bill,apple,mary),46).
+happensAt(move(jeff,kitchen),47).
+#example holdsAt(fobjgive(bill,apple,mary),48).
+:- not initiatedAt(fobjgive(bill,apple,mary),46).
+
+happensAt(pass(mary,apple,bill),49).
+happensAt(journey(fred,bathroom),50).
+#example holdsAt(fsubjgive(mary,apple,bill),51).
+:- not initiatedAt(fsubjgive(mary,apple,bill),49).
+

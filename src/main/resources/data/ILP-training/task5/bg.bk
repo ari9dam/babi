@@ -1,0 +1,15 @@
+time(1..132).
+arg3(apple;milk;football).
+arg2(apple;hallway;milk;garden;football;office;kitchen;bedroom;bathroom).
+arg1(mary;bill;jeff;fred).
+direction(east).
+
+fluent(fgive(X,Y)):-arg3(Y),arg1(X).
+fluent(freceive(X,Y)):-arg3(Y),arg1(X).
+fluent(fsubjgive(X,Y,Z)):-arg3(Y),arg1(X),arg1(Z).
+fluent(frecgive(X,Y,Z)):-arg3(Y),arg1(X),arg1(Z).
+fluent(fobjgive(X,Y,Z)):-arg3(Y),arg1(X),arg1(Z).
+
+holdsAt(F,T+1):- fluent(F),time(T), initiatedAt(F,T).
+holdsAt(F,T+1):- fluent(F),time(T), holdsAt(F,T), not terminatedAt(F,T).
+

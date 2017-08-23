@@ -1,0 +1,63 @@
+happensAt(go(bill,hallway),1).
+happensAt(travel(fred,bathroom),2).
+happensAt(grab(bill,apple),3).
+happensAt(discard(bill,apple),4).
+happensAt(travel(jeff,kitchen),5).
+happensAt(travel(bill,bathroom),6).
+happensAt(journey(mary,hallway),7).
+happensAt(journey(fred,office),8).
+happensAt(travel(bill,kitchen),9).
+happensAt(move(jeff,office),10).
+happensAt(move(fred,garden),11).
+happensAt(move(bill,garden),12).
+happensAt(take(bill,milk),13).
+happensAt(drop(bill,milk),14).
+happensAt(get(bill,milk),15).
+happensAt(move(jeff,bedroom),16).
+happensAt(goback(fred,bathroom),17).
+happensAt(pickup(mary,apple),18).
+happensAt(move(mary,kitchen),19).
+happensAt(discard(mary,apple),20).
+happensAt(journey(bill,office),21).
+happensAt(discard(bill,milk),22).
+happensAt(travel(jeff,bathroom),23).
+happensAt(travel(mary,bedroom),24).
+happensAt(travel(mary,bathroom),25).
+happensAt(goback(bill,hallway),26).
+happensAt(go(jeff,garden),27).
+happensAt(goback(jeff,office),28).
+happensAt(journey(fred,bedroom),29).
+happensAt(journey(fred,kitchen),30).
+happensAt(pickup(fred,apple),31).
+happensAt(take(jeff,milk),32).
+happensAt(pickup(jeff,football),33).
+happensAt(go(bill,kitchen),34).
+happensAt(pass(fred,apple,bill),35).
+happensAt(pass(bill,apple,fred),36).
+#example holdsAt(frecgive(bill,apple,fred),37).
+:- not initiatedAt(frecgive(bill,apple,fred),36).
+
+happensAt(pass(fred,apple,bill),38).
+happensAt(pass(bill,apple,fred),39).
+#example holdsAt(frecgive(bill,apple,fred),40).
+:- not initiatedAt(frecgive(bill,apple,fred),39).
+
+happensAt(move(fred,hallway),41).
+happensAt(drop(jeff,football),42).
+#example holdsAt(fobjgive(bill,apple,fred),43).
+:- not initiatedAt(fobjgive(bill,apple,fred),39).
+
+happensAt(take(jeff,football),44).
+happensAt(journey(bill,bathroom),45).
+#example holdsAt(frecgive(bill,apple,fred),46).
+:- not initiatedAt(frecgive(bill,apple,fred),39).
+
+happensAt(journey(bill,bedroom),47).
+happensAt(travel(jeff,kitchen),48).
+happensAt(move(mary,office),49).
+happensAt(goback(fred,office),50).
+happensAt(pass(fred,apple,mary),51).
+happensAt(give(mary,apple,fred),52).
+#example holdsAt(fgive(mary,apple),53).
+:- not initiatedAt(fgive(mary,apple),52).
+

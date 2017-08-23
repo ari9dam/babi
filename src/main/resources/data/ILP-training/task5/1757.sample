@@ -1,0 +1,59 @@
+happensAt(get(bill,apple),1).
+happensAt(discard(bill,apple),2).
+happensAt(take(bill,apple),3).
+happensAt(go(jeff,bathroom),4).
+happensAt(hand(bill,apple,jeff),5).
+happensAt(hand(jeff,apple,bill),6).
+#example holdsAt(frecgive(jeff,apple,bill),7).
+:- not initiatedAt(frecgive(jeff,apple,bill),6).
+
+happensAt(journey(mary,office),8).
+happensAt(go(bill,bedroom),9).
+#example holdsAt(frecgive(jeff,apple,bill),10).
+:- not initiatedAt(frecgive(jeff,apple,bill),6).
+
+happensAt(take(fred,milk),11).
+happensAt(drop(fred,milk),12).
+#example holdsAt(fgive(jeff,apple),13).
+:- not initiatedAt(fgive(jeff,apple),6).
+
+happensAt(move(fred,office),14).
+happensAt(leave(bill,apple),15).
+happensAt(grab(bill,apple),16).
+happensAt(goback(fred,hallway),17).
+happensAt(journey(fred,bedroom),18).
+happensAt(drop(bill,apple),19).
+happensAt(journey(mary,kitchen),20).
+happensAt(journey(fred,kitchen),21).
+happensAt(travel(bill,bathroom),22).
+happensAt(travel(fred,garden),23).
+happensAt(goback(fred,hallway),24).
+happensAt(go(mary,hallway),25).
+happensAt(travel(fred,kitchen),26).
+happensAt(move(jeff,office),27).
+happensAt(travel(fred,office),28).
+happensAt(travel(fred,kitchen),29).
+happensAt(go(fred,garden),30).
+happensAt(journey(jeff,bathroom),31).
+happensAt(go(jeff,garden),32).
+happensAt(grab(fred,football),33).
+happensAt(move(bill,kitchen),34).
+happensAt(move(jeff,bedroom),35).
+happensAt(move(mary,bedroom),36).
+happensAt(move(bill,office),37).
+happensAt(get(mary,apple),38).
+happensAt(leave(mary,apple),39).
+happensAt(move(bill,bedroom),40).
+happensAt(goback(mary,kitchen),41).
+happensAt(take(jeff,apple),42).
+happensAt(drop(fred,football),43).
+happensAt(goback(jeff,garden),44).
+happensAt(pass(jeff,apple,fred),45).
+#example holdsAt(fsubjgive(jeff,apple,fred),46).
+:- not initiatedAt(fsubjgive(jeff,apple,fred),45).
+
+happensAt(goback(mary,office),47).
+happensAt(hand(fred,apple,jeff),48).
+#example holdsAt(fobjgive(fred,apple,jeff),49).
+:- not initiatedAt(fobjgive(fred,apple,jeff),48).
+

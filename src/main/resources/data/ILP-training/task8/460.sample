@@ -1,0 +1,25 @@
+happensAt(pickup(sandra,football),1).
+happensAt(give(sandra,football,daniel),2).
+#example count(sandra,0,3).
+#example not count(sandra,0,2).
+#example count(sandra,0,3).
+happensAt(journey(sandra,kitchen),4).
+happensAt(leave(daniel,football),5).
+#example count(daniel,0,6).
+#example not count(daniel,0,5).
+#example count(daniel,0,6).
+happensAt(pickup(daniel,football),7).
+happensAt(leave(daniel,football),8).
+#example count(daniel,0,9).
+#example not count(daniel,0,8).
+#example count(daniel,0,9).
+happensAt(take(daniel,football),10).
+happensAt(go(sandra,office),11).
+#example count(daniel,1,12).
+#example not count(daniel,1,10).
+#example count(daniel,1,11).
+happensAt(give(daniel,football,sandra),13).
+happensAt(putdown(sandra,football),14).
+#example count(daniel,0,15).
+#example not count(daniel,0,13).
+#example count(daniel,0,14).

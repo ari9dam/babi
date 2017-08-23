@@ -1,0 +1,115 @@
+happensAt(move(bill,garden),1).
+happensAt(goback(bill,hallway),2).
+happensAt(move(mary,bedroom),3).
+happensAt(travel(jeff,hallway),4).
+happensAt(goback(jeff,garden),5).
+happensAt(pickup(fred,milk),6).
+happensAt(journey(fred,kitchen),7).
+happensAt(journey(fred,garden),8).
+happensAt(goback(fred,bathroom),9).
+happensAt(travel(jeff,kitchen),10).
+happensAt(leave(fred,milk),11).
+happensAt(travel(jeff,bathroom),12).
+happensAt(go(fred,kitchen),13).
+happensAt(goback(jeff,hallway),14).
+happensAt(travel(mary,garden),15).
+happensAt(goback(fred,office),16).
+happensAt(goback(jeff,garden),17).
+happensAt(goback(bill,office),18).
+happensAt(go(jeff,bedroom),19).
+happensAt(go(fred,bathroom),20).
+happensAt(journey(fred,garden),21).
+happensAt(go(mary,bedroom),22).
+happensAt(travel(jeff,hallway),23).
+happensAt(travel(jeff,kitchen),24).
+happensAt(travel(jeff,bedroom),25).
+happensAt(goback(jeff,garden),26).
+happensAt(travel(fred,bedroom),27).
+happensAt(go(bill,hallway),28).
+happensAt(travel(bill,bathroom),29).
+happensAt(move(fred,kitchen),30).
+happensAt(goback(bill,bedroom),31).
+happensAt(goback(jeff,bedroom),32).
+happensAt(journey(bill,bathroom),33).
+happensAt(goback(jeff,hallway),34).
+happensAt(travel(jeff,bathroom),35).
+happensAt(goback(fred,garden),36).
+happensAt(get(bill,apple),37).
+happensAt(discard(bill,apple),38).
+happensAt(pickup(bill,apple),39).
+happensAt(pickup(bill,football),40).
+happensAt(goback(mary,hallway),41).
+happensAt(discard(bill,football),42).
+happensAt(pickup(bill,milk),43).
+happensAt(move(jeff,office),44).
+happensAt(leave(bill,apple),45).
+happensAt(journey(fred,hallway),46).
+happensAt(goback(mary,bedroom),47).
+happensAt(drop(bill,milk),48).
+happensAt(go(bill,hallway),49).
+happensAt(journey(fred,kitchen),50).
+happensAt(travel(bill,bedroom),51).
+happensAt(go(fred,bedroom),52).
+happensAt(goback(fred,garden),53).
+happensAt(travel(jeff,bathroom),54).
+happensAt(goback(fred,hallway),55).
+happensAt(move(bill,office),56).
+happensAt(goback(jeff,bedroom),57).
+happensAt(journey(fred,bathroom),58).
+happensAt(journey(fred,garden),59).
+happensAt(go(bill,bedroom),60).
+happensAt(go(mary,office),61).
+happensAt(travel(bill,bathroom),62).
+happensAt(go(mary,hallway),63).
+happensAt(take(bill,apple),64).
+happensAt(move(mary,bedroom),65).
+happensAt(journey(bill,hallway),66).
+happensAt(move(bill,bathroom),67).
+happensAt(travel(fred,bedroom),68).
+happensAt(journey(jeff,kitchen),69).
+happensAt(journey(fred,hallway),70).
+happensAt(goback(fred,bedroom),71).
+happensAt(goback(bill,office),72).
+happensAt(journey(bill,bathroom),73).
+happensAt(travel(bill,office),74).
+happensAt(discard(bill,apple),75).
+happensAt(journey(fred,bathroom),76).
+happensAt(move(jeff,bathroom),77).
+happensAt(pickup(fred,football),78).
+happensAt(journey(fred,garden),79).
+happensAt(discard(fred,football),80).
+happensAt(take(jeff,milk),81).
+happensAt(take(bill,apple),82).
+happensAt(putdown(bill,apple),83).
+happensAt(move(jeff,office),84).
+happensAt(get(jeff,apple),85).
+happensAt(pass(jeff,apple,bill),86).
+#example holdsAt(frecgive(jeff,apple,bill),87).
+:- not initiatedAt(frecgive(jeff,apple,bill),86).
+
+happensAt(pass(bill,apple,jeff),88).
+happensAt(hand(jeff,apple,bill),89).
+#example holdsAt(fobjgive(jeff,apple,bill),90).
+:- not initiatedAt(fobjgive(jeff,apple,bill),89).
+
+happensAt(pass(bill,apple,jeff),91).
+happensAt(goback(jeff,kitchen),92).
+#example holdsAt(fsubjgive(bill,apple,jeff),93).
+:- not initiatedAt(fsubjgive(bill,apple,jeff),91).
+
+happensAt(move(mary,hallway),94).
+happensAt(travel(bill,garden),95).
+#example holdsAt(freceive(jeff,apple),96).
+:- not initiatedAt(freceive(jeff,apple),91).
+
+happensAt(goback(fred,hallway),97).
+happensAt(move(fred,bedroom),98).
+happensAt(travel(bill,hallway),99).
+happensAt(goback(mary,garden),100).
+happensAt(move(jeff,bedroom),101).
+happensAt(take(mary,football),102).
+happensAt(pass(jeff,apple,fred),103).
+happensAt(pass(fred,apple,jeff),104).
+#example holdsAt(freceive(jeff,apple),105).
+:- not initiatedAt(freceive(jeff,apple),104).
+

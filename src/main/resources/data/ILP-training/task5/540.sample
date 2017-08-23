@@ -1,0 +1,33 @@
+happensAt(travel(fred,kitchen),1).
+happensAt(goback(fred,hallway),2).
+happensAt(take(bill,milk),3).
+happensAt(move(bill,office),4).
+happensAt(pickup(jeff,football),5).
+happensAt(give(jeff,football,fred),6).
+#example holdsAt(fobjgive(jeff,football,fred),7).
+:- not initiatedAt(fobjgive(jeff,football,fred),6).
+
+happensAt(journey(fred,garden),8).
+happensAt(pickup(bill,apple),9).
+#example holdsAt(frecgive(jeff,football,fred),10).
+:- not initiatedAt(frecgive(jeff,football,fred),6).
+
+happensAt(discard(bill,milk),11).
+happensAt(go(bill,bathroom),12).
+#example holdsAt(fobjgive(jeff,football,fred),13).
+:- not initiatedAt(fobjgive(jeff,football,fred),6).
+
+happensAt(leave(bill,apple),14).
+happensAt(putdown(fred,football),15).
+happensAt(grab(mary,apple),16).
+happensAt(grab(fred,football),17).
+happensAt(discard(fred,football),18).
+happensAt(give(mary,apple,bill),19).
+#example holdsAt(fobjgive(mary,apple,bill),20).
+:- not initiatedAt(fobjgive(mary,apple,bill),19).
+
+happensAt(pass(bill,apple,mary),21).
+happensAt(journey(bill,garden),22).
+#example holdsAt(fsubjgive(bill,apple,mary),23).
+:- not initiatedAt(fsubjgive(bill,apple,mary),21).
+

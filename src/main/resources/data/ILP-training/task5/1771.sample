@@ -1,0 +1,59 @@
+happensAt(goback(mary,office),1).
+happensAt(journey(mary,kitchen),2).
+happensAt(goback(bill,garden),3).
+happensAt(journey(mary,bathroom),4).
+happensAt(move(jeff,bedroom),5).
+happensAt(go(fred,garden),6).
+happensAt(goback(mary,bedroom),7).
+happensAt(go(jeff,kitchen),8).
+happensAt(goback(mary,bathroom),9).
+happensAt(move(mary,office),10).
+happensAt(goback(bill,hallway),11).
+happensAt(pickup(bill,milk),12).
+happensAt(go(fred,kitchen),13).
+happensAt(goback(jeff,office),14).
+happensAt(grab(jeff,football),15).
+happensAt(journey(fred,bedroom),16).
+happensAt(leave(jeff,football),17).
+happensAt(discard(bill,milk),18).
+happensAt(pickup(jeff,football),19).
+happensAt(pickup(jeff,apple),20).
+happensAt(goback(mary,hallway),21).
+happensAt(go(jeff,garden),22).
+happensAt(goback(bill,bathroom),23).
+happensAt(get(mary,milk),24).
+happensAt(move(bill,hallway),25).
+happensAt(hand(mary,milk,bill),26).
+#example holdsAt(fobjgive(mary,milk,bill),27).
+:- not initiatedAt(fobjgive(mary,milk,bill),26).
+
+happensAt(drop(bill,milk),28).
+happensAt(pickup(bill,milk),29).
+#example holdsAt(fsubjgive(mary,milk,bill),30).
+:- not initiatedAt(fsubjgive(mary,milk,bill),26).
+
+happensAt(pass(bill,milk,mary),31).
+happensAt(discard(jeff,football),32).
+#example holdsAt(fobjgive(bill,milk,mary),33).
+:- not initiatedAt(fobjgive(bill,milk,mary),31).
+
+happensAt(travel(mary,bathroom),34).
+happensAt(move(jeff,office),35).
+#example holdsAt(fobjgive(bill,milk,mary),36).
+:- not initiatedAt(fobjgive(bill,milk,mary),31).
+
+happensAt(go(jeff,hallway),37).
+happensAt(drop(mary,milk),38).
+happensAt(leave(jeff,apple),39).
+happensAt(grab(mary,milk),40).
+happensAt(move(jeff,kitchen),41).
+happensAt(travel(bill,bathroom),42).
+happensAt(goback(bill,bedroom),43).
+happensAt(move(fred,kitchen),44).
+happensAt(move(bill,kitchen),45).
+happensAt(travel(jeff,bathroom),46).
+happensAt(give(mary,milk,jeff),47).
+happensAt(give(jeff,milk,mary),48).
+#example holdsAt(frecgive(jeff,milk,mary),49).
+:- not initiatedAt(frecgive(jeff,milk,mary),48).
+

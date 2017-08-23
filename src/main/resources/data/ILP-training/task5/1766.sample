@@ -1,0 +1,59 @@
+happensAt(goback(bill,office),1).
+happensAt(goback(fred,bathroom),2).
+happensAt(travel(mary,kitchen),3).
+happensAt(move(mary,office),4).
+happensAt(journey(mary,kitchen),5).
+happensAt(journey(mary,garden),6).
+happensAt(journey(fred,hallway),7).
+happensAt(travel(mary,hallway),8).
+happensAt(goback(bill,bedroom),9).
+happensAt(journey(bill,garden),10).
+happensAt(journey(bill,office),11).
+happensAt(go(mary,kitchen),12).
+happensAt(move(fred,bathroom),13).
+happensAt(move(bill,bedroom),14).
+happensAt(go(mary,hallway),15).
+happensAt(move(bill,bathroom),16).
+happensAt(travel(bill,hallway),17).
+happensAt(journey(fred,office),18).
+happensAt(goback(bill,kitchen),19).
+happensAt(go(mary,bedroom),20).
+happensAt(get(bill,apple),21).
+happensAt(get(mary,football),22).
+happensAt(journey(fred,bedroom),23).
+happensAt(putdown(bill,apple),24).
+happensAt(drop(mary,football),25).
+happensAt(move(fred,hallway),26).
+happensAt(pickup(mary,football),27).
+happensAt(go(mary,garden),28).
+happensAt(putdown(mary,football),29).
+happensAt(travel(mary,bathroom),30).
+happensAt(travel(mary,office),31).
+happensAt(go(mary,garden),32).
+happensAt(pickup(mary,football),33).
+happensAt(move(fred,garden),34).
+happensAt(hand(mary,football,fred),35).
+happensAt(hand(fred,football,mary),36).
+#example holdsAt(fgive(fred,football),37).
+:- not initiatedAt(fgive(fred,football),36).
+
+happensAt(journey(mary,bedroom),38).
+happensAt(move(bill,office),39).
+#example holdsAt(fgive(fred,football),40).
+:- not initiatedAt(fgive(fred,football),36).
+
+happensAt(goback(mary,garden),41).
+happensAt(journey(bill,hallway),42).
+#example holdsAt(fobjgive(fred,football,mary),43).
+:- not initiatedAt(fobjgive(fred,football,mary),36).
+
+happensAt(give(mary,football,fred),44).
+happensAt(hand(fred,football,mary),45).
+#example holdsAt(fgive(fred,football),46).
+:- not initiatedAt(fgive(fred,football),45).
+
+happensAt(hand(mary,football,fred),47).
+happensAt(give(fred,football,mary),48).
+#example holdsAt(frecgive(fred,football,mary),49).
+:- not initiatedAt(frecgive(fred,football,mary),48).
+

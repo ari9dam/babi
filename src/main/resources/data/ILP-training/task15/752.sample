@@ -1,0 +1,24 @@
+holdsAt(fear(sheep,cat),1).
+holdsAt(fear(cat,sheep),1).
+holdsAt(fear(wolf,mouse),1).
+holdsAt(domain(gertrude,sheep),1).
+holdsAt(domain(emily,cat),1).
+holdsAt(domain(winona,cat),1).
+holdsAt(fear(mouse,sheep),1).
+holdsAt(domain(jessica,wolf),1).
+#example holdsAt(fear(jessica,mouse),1).
+#example not holdsAt(fear(jessica,wolf),1).
+#example not holdsAt(fear(jessica,cat),1).
+#example not holdsAt(fear(jessica,sheep),1).
+#example holdsAt(fear(emily,sheep),1).
+#example not holdsAt(fear(emily,mouse),1).
+#example not holdsAt(fear(emily,wolf),1).
+#example not holdsAt(fear(emily,cat),1).
+#example holdsAt(fear(jessica,mouse),1).
+#example not holdsAt(fear(jessica,wolf),1).
+#example not holdsAt(fear(jessica,cat),1).
+#example not holdsAt(fear(jessica,sheep),1).
+#example holdsAt(fear(emily,sheep),1).
+#example not holdsAt(fear(emily,mouse),1).
+#example not holdsAt(fear(emily,wolf),1).
+#example not holdsAt(fear(emily,cat),1).

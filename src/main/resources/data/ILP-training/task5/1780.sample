@@ -1,0 +1,59 @@
+happensAt(journey(bill,office),1).
+happensAt(goback(bill,bedroom),2).
+happensAt(move(mary,hallway),3).
+happensAt(travel(bill,garden),4).
+happensAt(travel(bill,kitchen),5).
+happensAt(move(bill,bedroom),6).
+happensAt(journey(jeff,bedroom),7).
+happensAt(go(jeff,hallway),8).
+happensAt(goback(bill,bathroom),9).
+happensAt(move(fred,garden),10).
+happensAt(move(fred,kitchen),11).
+happensAt(go(jeff,bedroom),12).
+happensAt(goback(bill,kitchen),13).
+happensAt(journey(jeff,hallway),14).
+happensAt(travel(mary,garden),15).
+happensAt(move(mary,hallway),16).
+happensAt(move(fred,hallway),17).
+happensAt(travel(bill,hallway),18).
+happensAt(go(fred,kitchen),19).
+happensAt(journey(bill,kitchen),20).
+happensAt(travel(jeff,office),21).
+happensAt(goback(bill,bedroom),22).
+happensAt(move(mary,garden),23).
+happensAt(go(mary,bedroom),24).
+happensAt(travel(jeff,bathroom),25).
+happensAt(go(fred,garden),26).
+happensAt(travel(jeff,hallway),27).
+happensAt(journey(jeff,office),28).
+happensAt(goback(jeff,hallway),29).
+happensAt(journey(mary,hallway),30).
+happensAt(move(jeff,kitchen),31).
+happensAt(move(fred,office),32).
+happensAt(journey(mary,office),33).
+happensAt(go(jeff,hallway),34).
+happensAt(take(mary,apple),35).
+happensAt(pass(mary,apple,fred),36).
+#example holdsAt(frecgive(mary,apple,fred),37).
+:- not initiatedAt(frecgive(mary,apple,fred),36).
+
+happensAt(hand(fred,apple,mary),38).
+happensAt(give(mary,apple,fred),39).
+#example holdsAt(frecgive(mary,apple,fred),40).
+:- not initiatedAt(frecgive(mary,apple,fred),39).
+
+happensAt(pass(fred,apple,mary),41).
+happensAt(hand(mary,apple,fred),42).
+#example holdsAt(frecgive(mary,apple,fred),43).
+:- not initiatedAt(frecgive(mary,apple,fred),42).
+
+happensAt(discard(fred,apple),44).
+happensAt(travel(jeff,bathroom),45).
+#example holdsAt(freceive(fred,apple),46).
+:- not initiatedAt(freceive(fred,apple),42).
+
+happensAt(go(bill,garden),47).
+happensAt(grab(mary,football),48).
+#example holdsAt(frecgive(mary,apple,fred),49).
+:- not initiatedAt(frecgive(mary,apple,fred),42).
+

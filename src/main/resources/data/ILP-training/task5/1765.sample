@@ -1,0 +1,60 @@
+happensAt(pickup(jeff,football),1).
+happensAt(go(bill,hallway),2).
+happensAt(move(fred,bathroom),3).
+happensAt(pickup(bill,milk),4).
+happensAt(take(mary,apple),5).
+happensAt(discard(bill,milk),6).
+happensAt(goback(fred,hallway),7).
+happensAt(goback(bill,kitchen),8).
+happensAt(drop(mary,apple),9).
+happensAt(leave(jeff,football),10).
+happensAt(journey(fred,bathroom),11).
+happensAt(get(mary,apple),12).
+happensAt(move(bill,office),13).
+happensAt(get(jeff,football),14).
+happensAt(leave(mary,apple),15).
+happensAt(pass(jeff,football,bill),16).
+#example holdsAt(fsubjgive(jeff,football,bill),17).
+:- not initiatedAt(fsubjgive(jeff,football,bill),16).
+
+happensAt(travel(fred,kitchen),18).
+happensAt(travel(mary,bedroom),19).
+#example holdsAt(freceive(bill,football),20).
+:- not initiatedAt(freceive(bill,football),16).
+
+happensAt(hand(bill,football,jeff),21).
+happensAt(move(bill,garden),22).
+#example holdsAt(frecgive(bill,football,jeff),23).
+:- not initiatedAt(frecgive(bill,football,jeff),21).
+
+happensAt(drop(jeff,football),24).
+happensAt(go(fred,bedroom),25).
+#example holdsAt(freceive(jeff,football),26).
+ #example not holdsAt(freceive(bill,football),26).
+:- not initiatedAt(freceive(jeff,football),21).
+
+happensAt(journey(bill,bedroom),27).
+happensAt(go(mary,kitchen),28).
+happensAt(journey(bill,office),29).
+happensAt(travel(fred,office),30).
+happensAt(goback(jeff,bathroom),31).
+happensAt(pickup(bill,football),32).
+happensAt(go(fred,hallway),33).
+happensAt(pickup(fred,milk),34).
+happensAt(go(jeff,kitchen),35).
+happensAt(drop(bill,football),36).
+happensAt(drop(fred,milk),37).
+happensAt(journey(fred,bedroom),38).
+happensAt(go(fred,bathroom),39).
+happensAt(grab(bill,football),40).
+happensAt(go(jeff,garden),41).
+happensAt(goback(bill,bathroom),42).
+happensAt(go(fred,garden),43).
+happensAt(go(bill,garden),44).
+happensAt(pickup(jeff,apple),45).
+happensAt(move(bill,hallway),46).
+happensAt(give(jeff,apple,fred),47).
+happensAt(pass(fred,apple,jeff),48).
+#example holdsAt(fobjgive(fred,apple,jeff),49).
+:- not initiatedAt(fobjgive(fred,apple,jeff),48).
+

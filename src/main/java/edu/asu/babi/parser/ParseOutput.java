@@ -49,6 +49,11 @@ public class ParseOutput {
 	public void setShouldDercrement(boolean shouldDercrement) {
 		this.shouldDercrement = shouldDercrement;
 	}
+
+	public void setLogicalRepresentation(String string) {
+		this.logicalRepresentation = string;
+		
+	}
 	
 	
 }

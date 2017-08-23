@@ -1,0 +1,15 @@
+time(1..16).
+arg2(school;office;cinema;kitchen;park;bedroom).
+arg1(julie;mary;bill;fred).
+arg2(dummy).
+
+
+fluent(location(X,Y)):-arg1(X),arg2(Y).
+holdsAt(F,T+1):- fluent(F),time(T), initiatedAt(F,T).
+holdsAt(F,T+1):- fluent(F),time(T), holdsAt(F,T), not terminatedAt(F,T).
+
+mayholdsAt(F,T+1):- fluent(F),time(T), minitiatedAt(F,T).
+mayholdsAt(F,T+1):- fluent(F),time(T), mayholdsAt(F,T), not mterminatedAt(F,T).
+%:-holdsAt(location(X,Y),T), mayholdsAt(location(X,Z),T),arg1(X),arg2(Y),arg2(Z), time(T).
+
+

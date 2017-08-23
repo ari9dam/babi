@@ -1,0 +1,25 @@
+happensAt(grab(daniel,apple),1).
+happensAt(pass(daniel,apple,sandra),2).
+#example count(daniel,0,3).
+#example not count(daniel,0,2).
+#example count(daniel,0,3).
+happensAt(pass(sandra,apple,daniel),4).
+happensAt(pass(daniel,apple,sandra),5).
+#example count(daniel,0,6).
+#example not count(daniel,0,5).
+#example count(daniel,0,6).
+happensAt(hand(sandra,apple,daniel),7).
+happensAt(pass(daniel,apple,sandra),8).
+#example count(daniel,0,9).
+#example not count(daniel,0,8).
+#example count(daniel,0,9).
+happensAt(give(sandra,apple,daniel),10).
+happensAt(pickup(john,milk),11).
+#example count(sandra,0,12).
+#example not count(sandra,0,10).
+#example count(sandra,0,11).
+happensAt(hand(daniel,apple,sandra),13).
+happensAt(travel(john,hallway),14).
+#example count(sandra,1,15).
+#example not count(sandra,1,13).
+#example count(sandra,1,14).

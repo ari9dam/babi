@@ -1,0 +1,61 @@
+happensAt(goback(jeff,kitchen),1).
+happensAt(go(bill,kitchen),2).
+happensAt(journey(bill,hallway),3).
+happensAt(go(jeff,bedroom),4).
+happensAt(go(jeff,garden),5).
+happensAt(move(fred,hallway),6).
+happensAt(move(bill,bathroom),7).
+happensAt(pickup(mary,milk),8).
+happensAt(go(fred,bedroom),9).
+happensAt(grab(mary,apple),10).
+happensAt(discard(mary,milk),11).
+happensAt(goback(jeff,kitchen),12).
+happensAt(pass(mary,apple,fred),13).
+happensAt(goback(mary,kitchen),14).
+#example holdsAt(fobjgive(mary,apple,fred),15).
+:- not initiatedAt(fobjgive(mary,apple,fred),13).
+
+happensAt(take(fred,milk),16).
+happensAt(goback(fred,garden),17).
+#example holdsAt(fobjgive(mary,apple,fred),18).
+:- not initiatedAt(fobjgive(mary,apple,fred),13).
+
+happensAt(goback(bill,bedroom),19).
+happensAt(putdown(fred,milk),20).
+happensAt(travel(bill,hallway),21).
+happensAt(leave(fred,apple),22).
+happensAt(go(jeff,bathroom),23).
+happensAt(pickup(fred,apple),24).
+happensAt(journey(mary,bedroom),25).
+happensAt(travel(fred,kitchen),26).
+happensAt(pickup(jeff,football),27).
+happensAt(putdown(fred,apple),28).
+happensAt(travel(mary,hallway),29).
+happensAt(move(bill,office),30).
+happensAt(go(bill,garden),31).
+happensAt(leave(jeff,football),32).
+happensAt(go(bill,bathroom),33).
+happensAt(get(fred,apple),34).
+happensAt(journey(mary,office),35).
+happensAt(goback(fred,bedroom),36).
+happensAt(grab(jeff,football),37).
+happensAt(move(bill,hallway),38).
+happensAt(travel(fred,garden),39).
+happensAt(get(fred,milk),40).
+happensAt(travel(fred,bathroom),41).
+happensAt(discard(jeff,football),42).
+happensAt(hand(fred,apple,jeff),43).
+happensAt(grab(fred,football),44).
+#example holdsAt(fgive(fred,apple),45).
+:- not initiatedAt(fgive(fred,apple),43).
+
+happensAt(putdown(jeff,apple),46).
+happensAt(take(jeff,apple),47).
+#example holdsAt(fobjgive(fred,apple,jeff),48).
+:- not initiatedAt(fobjgive(fred,apple,jeff),43).
+
+happensAt(pass(jeff,apple,fred),49).
+happensAt(discard(fred,apple),50).
+#example holdsAt(fobjgive(jeff,apple,fred),51).
+:- not initiatedAt(fobjgive(jeff,apple,fred),49).
+

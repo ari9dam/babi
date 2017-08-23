@@ -1,0 +1,60 @@
+happensAt(travel(bill,garden),1).
+happensAt(pickup(mary,apple),2).
+happensAt(journey(fred,garden),3).
+happensAt(give(mary,apple,jeff),4).
+#example holdsAt(fgive(mary,apple),5).
+:- not initiatedAt(fgive(mary,apple),4).
+
+happensAt(go(fred,kitchen),6).
+happensAt(go(fred,hallway),7).
+#example holdsAt(freceive(jeff,apple),8).
+:- not initiatedAt(freceive(jeff,apple),4).
+
+happensAt(putdown(jeff,apple),9).
+happensAt(take(mary,apple),10).
+#example holdsAt(fsubjgive(mary,apple,jeff),11).
+:- not initiatedAt(fsubjgive(mary,apple,jeff),4).
+
+happensAt(discard(mary,apple),12).
+happensAt(travel(jeff,bedroom),13).
+happensAt(go(fred,office),14).
+happensAt(grab(fred,apple),15).
+happensAt(travel(bill,hallway),16).
+happensAt(leave(fred,apple),17).
+happensAt(travel(mary,garden),18).
+happensAt(move(bill,kitchen),19).
+happensAt(goback(bill,bathroom),20).
+happensAt(goback(fred,bathroom),21).
+happensAt(journey(mary,kitchen),22).
+happensAt(journey(jeff,garden),23).
+happensAt(travel(mary,bathroom),24).
+happensAt(travel(bill,garden),25).
+happensAt(move(jeff,kitchen),26).
+happensAt(move(fred,garden),27).
+happensAt(move(mary,hallway),28).
+happensAt(journey(mary,kitchen),29).
+happensAt(go(fred,kitchen),30).
+happensAt(travel(bill,office),31).
+happensAt(move(mary,bedroom),32).
+happensAt(journey(jeff,garden),33).
+happensAt(take(bill,apple),34).
+happensAt(putdown(bill,apple),35).
+happensAt(grab(bill,apple),36).
+happensAt(leave(bill,apple),37).
+happensAt(grab(mary,milk),38).
+happensAt(take(bill,apple),39).
+happensAt(get(mary,football),40).
+happensAt(move(bill,hallway),41).
+happensAt(move(mary,hallway),42).
+happensAt(travel(bill,office),43).
+happensAt(travel(mary,office),44).
+happensAt(pass(bill,apple,mary),45).
+#example holdsAt(fsubjgive(bill,apple,mary),46).
+:- not initiatedAt(fsubjgive(bill,apple,mary),45).
+
+happensAt(journey(mary,hallway),47).
+happensAt(putdown(mary,apple),48).
+#example holdsAt(freceive(mary,apple),49).
+ #example not holdsAt(freceive(jeff,apple),49).
+:- not initiatedAt(freceive(mary,apple),45).
+

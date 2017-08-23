@@ -1,0 +1,59 @@
+happensAt(journey(mary,hallway),1).
+happensAt(travel(bill,garden),2).
+happensAt(pickup(bill,football),3).
+happensAt(discard(bill,football),4).
+happensAt(pickup(bill,football),5).
+happensAt(move(mary,bedroom),6).
+happensAt(go(mary,hallway),7).
+happensAt(go(bill,bedroom),8).
+happensAt(move(bill,office),9).
+happensAt(leave(bill,football),10).
+happensAt(move(bill,garden),11).
+happensAt(move(fred,office),12).
+happensAt(journey(bill,bedroom),13).
+happensAt(go(jeff,hallway),14).
+happensAt(move(jeff,bathroom),15).
+happensAt(journey(mary,bathroom),16).
+happensAt(pickup(bill,milk),17).
+happensAt(putdown(bill,milk),18).
+happensAt(go(fred,hallway),19).
+happensAt(take(bill,milk),20).
+happensAt(drop(bill,milk),21).
+happensAt(grab(bill,milk),22).
+happensAt(goback(jeff,garden),23).
+happensAt(leave(bill,milk),24).
+happensAt(move(fred,bathroom),25).
+happensAt(journey(bill,bathroom),26).
+happensAt(move(mary,kitchen),27).
+happensAt(grab(mary,apple),28).
+happensAt(goback(jeff,bedroom),29).
+happensAt(goback(fred,bedroom),30).
+happensAt(leave(mary,apple),31).
+happensAt(move(bill,office),32).
+happensAt(take(mary,apple),33).
+happensAt(go(bill,kitchen),34).
+happensAt(give(mary,apple,bill),35).
+happensAt(give(bill,apple,mary),36).
+#example holdsAt(fobjgive(bill,apple,mary),37).
+:- not initiatedAt(fobjgive(bill,apple,mary),36).
+
+happensAt(give(mary,apple,bill),38).
+happensAt(drop(bill,apple),39).
+#example holdsAt(fsubjgive(mary,apple,bill),40).
+:- not initiatedAt(fsubjgive(mary,apple,bill),38).
+
+happensAt(journey(jeff,kitchen),41).
+happensAt(get(bill,apple),42).
+#example holdsAt(fobjgive(mary,apple,bill),43).
+:- not initiatedAt(fobjgive(mary,apple,bill),38).
+
+happensAt(hand(bill,apple,mary),44).
+happensAt(travel(bill,garden),45).
+#example holdsAt(frecgive(bill,apple,mary),46).
+:- not initiatedAt(frecgive(bill,apple,mary),44).
+
+happensAt(get(fred,milk),47).
+happensAt(pass(mary,apple,jeff),48).
+#example holdsAt(fobjgive(mary,apple,jeff),49).
+:- not initiatedAt(fobjgive(mary,apple,jeff),48).
+

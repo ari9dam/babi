@@ -1,0 +1,59 @@
+happensAt(goback(fred,garden),1).
+happensAt(travel(mary,office),2).
+happensAt(pickup(fred,football),3).
+happensAt(goback(jeff,office),4).
+happensAt(leave(fred,football),5).
+happensAt(go(mary,garden),6).
+happensAt(journey(bill,hallway),7).
+happensAt(pickup(bill,apple),8).
+happensAt(grab(bill,milk),9).
+happensAt(move(jeff,kitchen),10).
+happensAt(take(mary,football),11).
+happensAt(journey(mary,hallway),12).
+happensAt(drop(bill,apple),13).
+happensAt(grab(mary,apple),14).
+happensAt(putdown(mary,football),15).
+happensAt(journey(fred,bedroom),16).
+happensAt(go(mary,garden),17).
+happensAt(goback(bill,bedroom),18).
+happensAt(goback(bill,hallway),19).
+happensAt(goback(bill,garden),20).
+happensAt(travel(mary,bedroom),21).
+happensAt(go(bill,bathroom),22).
+happensAt(journey(bill,office),23).
+happensAt(drop(bill,milk),24).
+happensAt(goback(jeff,hallway),25).
+happensAt(hand(mary,apple,fred),26).
+#example holdsAt(fobjgive(mary,apple,fred),27).
+:- not initiatedAt(fobjgive(mary,apple,fred),26).
+
+happensAt(take(bill,milk),28).
+happensAt(pass(fred,apple,mary),29).
+#example holdsAt(fsubjgive(fred,apple,mary),30).
+:- not initiatedAt(fsubjgive(fred,apple,mary),29).
+
+happensAt(travel(bill,hallway),31).
+happensAt(goback(jeff,office),32).
+#example holdsAt(freceive(mary,apple),33).
+:- not initiatedAt(freceive(mary,apple),29).
+
+happensAt(go(mary,kitchen),34).
+happensAt(travel(bill,kitchen),35).
+#example holdsAt(fobjgive(fred,apple,mary),36).
+:- not initiatedAt(fobjgive(fred,apple,mary),29).
+
+happensAt(move(bill,garden),37).
+happensAt(go(fred,garden),38).
+happensAt(goback(mary,office),39).
+happensAt(goback(jeff,garden),40).
+happensAt(travel(mary,garden),41).
+happensAt(leave(mary,apple),42).
+happensAt(take(jeff,apple),43).
+happensAt(journey(jeff,bedroom),44).
+happensAt(goback(jeff,hallway),45).
+happensAt(leave(jeff,apple),46).
+happensAt(hand(bill,milk,mary),47).
+happensAt(journey(mary,kitchen),48).
+#example holdsAt(fsubjgive(bill,milk,mary),49).
+:- not initiatedAt(fsubjgive(bill,milk,mary),47).
+

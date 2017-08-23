@@ -1,0 +1,70 @@
+happensAt(go(bill,school),1).
+timeAt(1,morning).
+
+happensAt(go(bill,park),2).
+timeAt(2,yesterday).
+
+matches(3,T):- time(T),initiatedAt(location(bill,school),T),3>=T.nlatest(3,T):-matches(3,T),matches(3,T1),before(T,T1).
+ answer(3,X):-matches(3,T),not nlatest(3,T), initiatedAt(location(bill,X),T1), previous(T1,T),time(T),time(T1).
+#example answer(3,park).
+#example not answer(3,school).
+#example not answer(3,office).
+#example not answer(3,cinema).
+#example not answer(3,kitchen).
+#example not answer(3,bedroom).
+happensAt(move(bill,kitchen),4).
+timeAt(4,afternoon).
+
+happensAt(journey(julie,bedroom),5).
+timeAt(5,yesterday).
+
+matches(6,T):- time(T),initiatedAt(location(bill,kitchen),T),6>=T.nlatest(6,T):-matches(6,T),matches(6,T1),before(T,T1).
+ answer(6,X):-matches(6,T),not nlatest(6,T), initiatedAt(location(bill,X),T1), previous(T1,T),time(T),time(T1).
+#example answer(6,school).
+#example not answer(6,office).
+#example not answer(6,cinema).
+#example not answer(6,kitchen).
+#example not answer(6,park).
+#example not answer(6,bedroom).
+happensAt(goback(mary,park),7).
+timeAt(7,yesterday).
+
+happensAt(move(julie,park),8).
+timeAt(8,morning).
+
+matches(9,T):- time(T),initiatedAt(location(julie,park),T),9>=T.nlatest(9,T):-matches(9,T),matches(9,T1),before(T,T1).
+ answer(9,X):-matches(9,T),not nlatest(9,T), initiatedAt(location(julie,X),T1), previous(T1,T),time(T),time(T1).
+#example answer(9,bedroom).
+#example not answer(9,school).
+#example not answer(9,office).
+#example not answer(9,cinema).
+#example not answer(9,kitchen).
+#example not answer(9,park).
+happensAt(move(fred,office),10).
+timeAt(10,yesterday).
+
+happensAt(move(bill,cinema),11).
+timeAt(11,evening).
+
+matches(12,T):- time(T),initiatedAt(location(bill,kitchen),T),12>=T.nlatest(12,T):-matches(12,T),matches(12,T1),before(T,T1).
+ answer(12,X):-matches(12,T),not nlatest(12,T), initiatedAt(location(bill,X),T1), previous(T1,T),time(T),time(T1).
+#example answer(12,school).
+#example not answer(12,office).
+#example not answer(12,cinema).
+#example not answer(12,kitchen).
+#example not answer(12,park).
+#example not answer(12,bedroom).
+happensAt(travel(fred,office),13).
+timeAt(13,afternoon).
+
+happensAt(journey(fred,kitchen),14).
+timeAt(14,morning).
+
+matches(15,T):- time(T),initiatedAt(location(fred,office),T),15>=T.nlatest(15,T):-matches(15,T),matches(15,T1),before(T,T1).
+ answer(15,X):-matches(15,T),not nlatest(15,T), initiatedAt(location(fred,X),T1), previous(T1,T),time(T),time(T1).
+#example answer(15,kitchen).
+#example not answer(15,school).
+#example not answer(15,office).
+#example not answer(15,cinema).
+#example not answer(15,park).
+#example not answer(15,bedroom).

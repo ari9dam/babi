@@ -1,0 +1,59 @@
+happensAt(journey(bill,bedroom),1).
+happensAt(journey(mary,bathroom),2).
+happensAt(travel(jeff,kitchen),3).
+happensAt(travel(bill,office),4).
+happensAt(move(mary,garden),5).
+happensAt(journey(mary,hallway),6).
+happensAt(travel(mary,kitchen),7).
+happensAt(goback(bill,bathroom),8).
+happensAt(move(jeff,office),9).
+happensAt(take(bill,milk),10).
+happensAt(move(jeff,garden),11).
+happensAt(journey(mary,hallway),12).
+happensAt(leave(bill,milk),13).
+happensAt(goback(fred,bedroom),14).
+happensAt(get(jeff,apple),15).
+happensAt(go(bill,bedroom),16).
+happensAt(move(jeff,kitchen),17).
+happensAt(discard(jeff,apple),18).
+happensAt(go(jeff,garden),19).
+happensAt(travel(mary,bedroom),20).
+happensAt(move(mary,hallway),21).
+happensAt(go(mary,kitchen),22).
+happensAt(go(jeff,bathroom),23).
+happensAt(go(mary,bedroom),24).
+happensAt(travel(jeff,kitchen),25).
+happensAt(journey(fred,office),26).
+happensAt(goback(bill,bathroom),27).
+happensAt(journey(jeff,office),28).
+happensAt(travel(jeff,bathroom),29).
+happensAt(grab(bill,milk),30).
+happensAt(drop(bill,milk),31).
+happensAt(grab(jeff,milk),32).
+happensAt(hand(jeff,milk,bill),33).
+happensAt(pickup(bill,football),34).
+#example holdsAt(fsubjgive(jeff,milk,bill),35).
+:- not initiatedAt(fsubjgive(jeff,milk,bill),33).
+
+happensAt(journey(mary,hallway),36).
+happensAt(journey(jeff,hallway),37).
+#example holdsAt(fsubjgive(jeff,milk,bill),38).
+:- not initiatedAt(fsubjgive(jeff,milk,bill),33).
+
+happensAt(go(bill,office),39).
+happensAt(journey(fred,hallway),40).
+happensAt(move(jeff,office),41).
+happensAt(pass(bill,football,jeff),42).
+#example holdsAt(fobjgive(bill,football,jeff),43).
+:- not initiatedAt(fobjgive(bill,football,jeff),42).
+
+happensAt(leave(bill,milk),44).
+happensAt(putdown(jeff,football),45).
+#example holdsAt(fobjgive(bill,football,jeff),46).
+:- not initiatedAt(fobjgive(bill,football,jeff),42).
+
+happensAt(journey(bill,bathroom),47).
+happensAt(move(bill,kitchen),48).
+#example holdsAt(frecgive(bill,football,jeff),49).
+:- not initiatedAt(frecgive(bill,football,jeff),42).
+

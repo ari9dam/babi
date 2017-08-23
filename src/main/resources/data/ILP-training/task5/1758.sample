@@ -1,0 +1,59 @@
+happensAt(go(mary,office),1).
+happensAt(go(jeff,office),2).
+happensAt(travel(mary,garden),3).
+happensAt(travel(jeff,bathroom),4).
+happensAt(travel(mary,kitchen),5).
+happensAt(goback(mary,bedroom),6).
+happensAt(goback(fred,kitchen),7).
+happensAt(goback(jeff,bedroom),8).
+happensAt(move(bill,hallway),9).
+happensAt(get(mary,apple),10).
+happensAt(get(bill,football),11).
+happensAt(putdown(bill,football),12).
+happensAt(putdown(mary,apple),13).
+happensAt(grab(bill,football),14).
+happensAt(travel(jeff,hallway),15).
+happensAt(journey(mary,kitchen),16).
+happensAt(travel(bill,kitchen),17).
+happensAt(putdown(bill,football),18).
+happensAt(move(mary,hallway),19).
+happensAt(move(bill,hallway),20).
+happensAt(journey(jeff,office),21).
+happensAt(move(jeff,garden),22).
+happensAt(take(fred,football),23).
+happensAt(goback(jeff,bedroom),24).
+happensAt(drop(fred,football),25).
+happensAt(goback(fred,bathroom),26).
+happensAt(travel(fred,hallway),27).
+happensAt(pickup(jeff,apple),28).
+happensAt(goback(bill,kitchen),29).
+happensAt(journey(bill,bathroom),30).
+happensAt(move(mary,garden),31).
+happensAt(move(fred,garden),32).
+happensAt(go(bill,hallway),33).
+happensAt(take(mary,milk),34).
+happensAt(give(mary,milk,fred),35).
+happensAt(discard(jeff,apple),36).
+#example holdsAt(fobjgive(mary,milk,fred),37).
+:- not initiatedAt(fobjgive(mary,milk,fred),35).
+
+happensAt(pass(fred,milk,mary),38).
+happensAt(hand(mary,milk,fred),39).
+#example holdsAt(fobjgive(mary,milk,fred),40).
+:- not initiatedAt(fobjgive(mary,milk,fred),39).
+
+happensAt(go(jeff,bathroom),41).
+happensAt(give(fred,milk,mary),42).
+#example holdsAt(fobjgive(fred,milk,mary),43).
+:- not initiatedAt(fobjgive(fred,milk,mary),42).
+
+happensAt(give(mary,milk,fred),44).
+happensAt(give(fred,milk,mary),45).
+#example holdsAt(freceive(mary,milk),46).
+:- not initiatedAt(freceive(mary,milk),45).
+
+happensAt(putdown(mary,milk),47).
+happensAt(journey(mary,bedroom),48).
+#example holdsAt(fobjgive(fred,milk,mary),49).
+:- not initiatedAt(fobjgive(fred,milk,mary),45).
+

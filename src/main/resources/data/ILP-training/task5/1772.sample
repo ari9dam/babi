@@ -1,0 +1,59 @@
+happensAt(move(jeff,kitchen),1).
+happensAt(take(jeff,milk),2).
+happensAt(travel(mary,office),3).
+happensAt(grab(bill,apple),4).
+happensAt(move(jeff,garden),5).
+happensAt(travel(jeff,bedroom),6).
+happensAt(journey(mary,bedroom),7).
+happensAt(drop(bill,apple),8).
+happensAt(move(mary,kitchen),9).
+happensAt(go(jeff,hallway),10).
+happensAt(get(jeff,football),11).
+happensAt(travel(bill,bathroom),12).
+happensAt(move(mary,garden),13).
+happensAt(drop(jeff,football),14).
+happensAt(travel(mary,kitchen),15).
+happensAt(grab(jeff,football),16).
+happensAt(goback(fred,office),17).
+happensAt(putdown(jeff,football),18).
+happensAt(goback(jeff,office),19).
+happensAt(journey(fred,garden),20).
+happensAt(travel(fred,bedroom),21).
+happensAt(goback(fred,bathroom),22).
+happensAt(journey(fred,hallway),23).
+happensAt(travel(jeff,hallway),24).
+happensAt(give(jeff,milk,fred),25).
+happensAt(give(fred,milk,jeff),26).
+#example holdsAt(fobjgive(fred,milk,jeff),27).
+:- not initiatedAt(fobjgive(fred,milk,jeff),26).
+
+happensAt(drop(jeff,milk),28).
+happensAt(goback(bill,kitchen),29).
+#example holdsAt(fobjgive(fred,milk,jeff),30).
+:- not initiatedAt(fobjgive(fred,milk,jeff),26).
+
+happensAt(journey(mary,bedroom),31).
+happensAt(travel(jeff,garden),32).
+#example holdsAt(frecgive(fred,milk,jeff),33).
+:- not initiatedAt(frecgive(fred,milk,jeff),26).
+
+happensAt(go(fred,office),34).
+happensAt(go(fred,bedroom),35).
+happensAt(go(mary,bathroom),36).
+happensAt(move(bill,garden),37).
+happensAt(move(bill,bedroom),38).
+happensAt(go(bill,bathroom),39).
+happensAt(move(fred,office),40).
+happensAt(journey(jeff,bedroom),41).
+happensAt(pickup(jeff,apple),42).
+happensAt(journey(mary,bedroom),43).
+happensAt(give(jeff,apple,mary),44).
+happensAt(pass(mary,apple,jeff),45).
+#example holdsAt(frecgive(mary,apple,jeff),46).
+:- not initiatedAt(frecgive(mary,apple,jeff),45).
+
+happensAt(pass(jeff,apple,mary),47).
+happensAt(give(mary,apple,jeff),48).
+#example holdsAt(fgive(mary,apple),49).
+:- not initiatedAt(fgive(mary,apple),48).
+

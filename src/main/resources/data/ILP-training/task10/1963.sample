@@ -1,0 +1,57 @@
+happensAt(journey(julie,kitchen),1).
+observed(location(julie,grid2),2).
+orgroup(grid2,park).
+orgroup(grid2,bedroom).
+id(grid2).
+
+
+#example mayholdsAt(location(julie,bedroom),3).
+:- not minitiatedAt(location(julie,bedroom),2).
+:- not terminatedAt(location(julie,bedroom),2).
+observed(location(mary,grid4),4).
+orgroup(grid4,office).
+orgroup(grid4,bedroom).
+id(grid4).
+
+observed(location(julie,grid5),5).
+orgroup(grid5,office).
+orgroup(grid5,park).
+id(grid5).
+
+
+#example mayholdsAt(location(julie,office),6).
+:- not minitiatedAt(location(julie,office),5).
+:- not terminatedAt(location(julie,office),5).
+observed(location(julie,school),7).
+happensAt(go(julie,bedroom),8).
+
+#example not mayholdsAt(location(julie,school),9).
+#example not holdsAt(location(julie,school),9).
+:- not terminatedAt(location(julie,school),8).
+:- not mterminatedAt(location(julie,school),8).
+observed(location(bill,grid10),10).
+orgroup(grid10,school).
+orgroup(grid10,park).
+id(grid10).
+
+happensAt(journey(bill,school),11).
+
+#example holdsAt(location(julie,bedroom),12).
+#example not mayholdsAt(location(julie,bedroom),12).
+#example not holdsAt(location(julie,bedroom),8).
+:- not mterminatedAt(location(julie,bedroom),8).
+:- not initiatedAt(location(julie,bedroom),8).
+:- not terminatedAt(location(julie,dummy),8).
+observed(location(mary,grid13),13).
+orgroup(grid13,kitchen).
+orgroup(grid13,bedroom).
+id(grid13).
+
+happensAt(journey(bill,office),14).
+
+#example holdsAt(location(julie,bedroom),15).
+#example not mayholdsAt(location(julie,bedroom),15).
+#example not holdsAt(location(julie,bedroom),8).
+:- not mterminatedAt(location(julie,bedroom),8).
+:- not initiatedAt(location(julie,bedroom),8).
+:- not terminatedAt(location(julie,dummy),8).

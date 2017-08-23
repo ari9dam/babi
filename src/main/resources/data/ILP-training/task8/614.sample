@@ -1,0 +1,25 @@
+happensAt(grab(mary,apple),1).
+happensAt(hand(mary,apple,john),2).
+#example count(mary,0,3).
+#example not count(mary,0,2).
+#example count(mary,0,3).
+happensAt(journey(mary,kitchen),4).
+happensAt(take(mary,football),5).
+#example count(mary,1,6).
+#example not count(mary,1,5).
+#example count(mary,1,6).
+happensAt(drop(john,apple),7).
+happensAt(hand(mary,football,daniel),8).
+#example count(mary,0,9).
+#example not count(mary,0,8).
+#example count(mary,0,9).
+happensAt(give(daniel,football,mary),10).
+happensAt(leave(mary,football),11).
+#example count(mary,0,12).
+#example not count(mary,0,11).
+#example count(mary,0,12).
+happensAt(journey(john,bathroom),13).
+happensAt(take(daniel,football),14).
+#example count(mary,0,15).
+#example not count(mary,0,11).
+#example count(mary,0,12).

@@ -1,0 +1,49 @@
+happensAt(goback(sandra,bedroom),1).
+happensAt(go(daniel,bedroom),2).
+happensAt(move(john,garden),3).
+happensAt(travel(mary,bedroom),4).
+happensAt(journey(mary,hallway),5).
+happensAt(goback(john,bedroom),6).
+happensAt(move(john,hallway),7).
+happensAt(goback(mary,kitchen),8).
+happensAt(go(john,bedroom),9).
+happensAt(move(daniel,garden),10).
+happensAt(travel(john,hallway),11).
+happensAt(goback(daniel,bathroom),12).
+happensAt(travel(john,bedroom),13).
+happensAt(journey(sandra,kitchen),14).
+happensAt(move(daniel,hallway),15).
+happensAt(goback(sandra,bedroom),16).
+happensAt(move(sandra,bathroom),17).
+happensAt(move(sandra,kitchen),18).
+happensAt(go(sandra,bedroom),19).
+happensAt(journey(sandra,office),20).
+happensAt(goback(sandra,kitchen),21).
+happensAt(move(daniel,bathroom),22).
+happensAt(go(mary,garden),23).
+happensAt(goback(sandra,hallway),24).
+happensAt(travel(sandra,garden),25).
+happensAt(take(daniel,milk),26).
+#example count(daniel,1,27).
+#example not count(daniel,1,26).
+#example count(daniel,1,27).
+happensAt(travel(john,bathroom),28).
+happensAt(pass(daniel,milk,john),29).
+#example count(daniel,0,30).
+#example not count(daniel,0,29).
+#example count(daniel,0,30).
+happensAt(travel(daniel,garden),31).
+happensAt(goback(daniel,bedroom),32).
+#example count(daniel,0,33).
+#example not count(daniel,0,29).
+#example count(daniel,0,30).
+happensAt(go(john,bedroom),34).
+happensAt(hand(john,milk,daniel),35).
+#example count(john,0,36).
+#example not count(john,0,35).
+#example count(john,0,36).
+happensAt(pass(daniel,milk,john),37).
+happensAt(give(john,milk,daniel),38).
+#example count(john,0,39).
+#example not count(john,0,38).
+#example count(john,0,39).

@@ -1,0 +1,67 @@
+happensAt(move(bill,garden),1).
+happensAt(travel(fred,hallway),2).
+happensAt(get(jeff,milk),3).
+happensAt(leave(jeff,milk),4).
+happensAt(travel(mary,bedroom),5).
+happensAt(journey(jeff,bedroom),6).
+happensAt(journey(jeff,garden),7).
+happensAt(go(bill,bathroom),8).
+happensAt(take(bill,milk),9).
+happensAt(journey(bill,kitchen),10).
+happensAt(travel(fred,bathroom),11).
+happensAt(move(fred,hallway),12).
+happensAt(goback(fred,bedroom),13).
+happensAt(drop(bill,milk),14).
+happensAt(go(mary,bathroom),15).
+happensAt(move(fred,kitchen),16).
+happensAt(journey(jeff,bathroom),17).
+happensAt(travel(bill,hallway),18).
+happensAt(travel(jeff,bedroom),19).
+happensAt(move(bill,kitchen),20).
+happensAt(take(fred,milk),21).
+happensAt(go(jeff,bathroom),22).
+happensAt(discard(fred,milk),23).
+happensAt(grab(bill,milk),24).
+happensAt(move(jeff,office),25).
+happensAt(grab(jeff,apple),26).
+happensAt(take(jeff,football),27).
+happensAt(go(mary,hallway),28).
+happensAt(journey(fred,bathroom),29).
+happensAt(move(mary,garden),30).
+happensAt(travel(fred,hallway),31).
+happensAt(journey(jeff,kitchen),32).
+happensAt(drop(jeff,apple),33).
+happensAt(grab(bill,apple),34).
+happensAt(hand(bill,apple,jeff),35).
+happensAt(go(jeff,bedroom),36).
+#example holdsAt(fgive(bill,apple),37).
+:- not initiatedAt(fgive(bill,apple),35).
+
+happensAt(discard(jeff,football),38).
+happensAt(putdown(jeff,apple),39).
+#example holdsAt(freceive(jeff,apple),40).
+:- not initiatedAt(freceive(jeff,apple),35).
+
+happensAt(journey(jeff,office),41).
+happensAt(putdown(bill,milk),42).
+happensAt(journey(fred,bathroom),43).
+happensAt(go(jeff,hallway),44).
+happensAt(move(jeff,office),45).
+happensAt(pickup(bill,milk),46).
+happensAt(move(jeff,bathroom),47).
+happensAt(travel(bill,garden),48).
+happensAt(give(bill,milk,mary),49).
+happensAt(go(jeff,bedroom),50).
+#example holdsAt(fgive(bill,milk),51).
+:- not initiatedAt(fgive(bill,milk),49).
+
+happensAt(pass(mary,milk,bill),52).
+happensAt(hand(bill,milk,mary),53).
+#example holdsAt(freceive(mary,milk),54).
+:- not initiatedAt(freceive(mary,milk),53).
+
+happensAt(hand(mary,milk,bill),55).
+happensAt(go(fred,kitchen),56).
+#example holdsAt(fsubjgive(mary,milk,bill),57).
+:- not initiatedAt(fsubjgive(mary,milk,bill),55).
+

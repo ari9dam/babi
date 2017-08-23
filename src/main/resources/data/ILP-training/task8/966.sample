@@ -1,0 +1,27 @@
+happensAt(journey(john,garden),1).
+happensAt(go(john,office),2).
+happensAt(grab(john,apple),3).
+happensAt(hand(john,apple,daniel),4).
+#example count(john,0,5).
+#example not count(john,0,4).
+#example count(john,0,5).
+happensAt(go(mary,bedroom),6).
+happensAt(give(daniel,apple,john),7).
+#example count(john,1,8).
+#example not count(john,1,7).
+#example count(john,1,8).
+happensAt(give(john,apple,daniel),9).
+happensAt(drop(daniel,apple),10).
+#example count(john,0,11).
+#example not count(john,0,9).
+#example count(john,0,10).
+happensAt(grab(john,apple),12).
+happensAt(pass(john,apple,daniel),13).
+#example count(john,0,14).
+#example not count(john,0,13).
+#example count(john,0,14).
+happensAt(give(daniel,apple,john),15).
+happensAt(get(mary,football),16).
+#example count(john,1,17).
+#example not count(john,1,15).
+#example count(john,1,16).

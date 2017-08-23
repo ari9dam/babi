@@ -1,0 +1,27 @@
+happensAt(travel(sandra,garden),1).
+happensAt(journey(john,bedroom),2).
+happensAt(take(john,apple),3).
+happensAt(go(daniel,office),4).
+#example count(john,1,5).
+#example not count(john,1,3).
+#example count(john,1,4).
+happensAt(travel(daniel,bedroom),6).
+happensAt(pass(john,apple,daniel),7).
+#example count(john,0,8).
+#example not count(john,0,7).
+#example count(john,0,8).
+happensAt(give(daniel,apple,john),9).
+happensAt(give(john,apple,daniel),10).
+#example count(john,0,11).
+#example not count(john,0,10).
+#example count(john,0,11).
+happensAt(give(daniel,apple,john),12).
+happensAt(move(daniel,kitchen),13).
+#example count(john,1,14).
+#example not count(john,1,12).
+#example count(john,1,13).
+happensAt(move(john,kitchen),15).
+happensAt(move(sandra,bathroom),16).
+#example count(john,1,17).
+#example not count(john,1,12).
+#example count(john,1,13).

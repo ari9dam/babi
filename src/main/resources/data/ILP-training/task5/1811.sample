@@ -1,0 +1,61 @@
+happensAt(journey(fred,hallway),1).
+happensAt(goback(mary,hallway),2).
+happensAt(get(fred,apple),3).
+happensAt(move(mary,bedroom),4).
+happensAt(go(bill,office),5).
+happensAt(travel(mary,office),6).
+happensAt(travel(jeff,office),7).
+happensAt(journey(mary,kitchen),8).
+happensAt(go(jeff,bathroom),9).
+happensAt(get(bill,milk),10).
+happensAt(discard(fred,apple),11).
+happensAt(grab(fred,apple),12).
+happensAt(discard(bill,milk),13).
+happensAt(travel(fred,office),14).
+happensAt(hand(fred,apple,bill),15).
+happensAt(give(bill,apple,fred),16).
+#example holdsAt(freceive(fred,apple),17).
+:- not initiatedAt(freceive(fred,apple),16).
+
+happensAt(give(fred,apple,bill),18).
+happensAt(take(fred,milk),19).
+#example holdsAt(fsubjgive(fred,apple,bill),20).
+:- not initiatedAt(fsubjgive(fred,apple,bill),18).
+
+happensAt(pass(bill,apple,fred),21).
+happensAt(journey(fred,bedroom),22).
+#example holdsAt(fgive(bill,apple),23).
+:- not initiatedAt(fgive(bill,apple),21).
+
+happensAt(goback(jeff,bedroom),24).
+happensAt(putdown(fred,apple),25).
+#example holdsAt(fgive(bill,apple),26).
+:- not initiatedAt(fgive(bill,apple),21).
+
+happensAt(go(fred,hallway),27).
+happensAt(get(jeff,apple),28).
+happensAt(journey(fred,bathroom),29).
+happensAt(putdown(jeff,apple),30).
+happensAt(putdown(fred,milk),31).
+happensAt(go(jeff,hallway),32).
+happensAt(move(bill,bathroom),33).
+happensAt(travel(fred,bedroom),34).
+happensAt(go(bill,hallway),35).
+happensAt(goback(jeff,kitchen),36).
+happensAt(move(fred,office),37).
+happensAt(move(mary,garden),38).
+happensAt(travel(mary,bedroom),39).
+happensAt(journey(jeff,bathroom),40).
+happensAt(goback(jeff,kitchen),41).
+happensAt(move(mary,kitchen),42).
+happensAt(travel(jeff,garden),43).
+happensAt(grab(fred,football),44).
+happensAt(goback(bill,garden),45).
+happensAt(go(mary,bathroom),46).
+happensAt(discard(fred,football),47).
+happensAt(grab(mary,milk),48).
+happensAt(move(fred,bathroom),49).
+happensAt(give(mary,milk,fred),50).
+#example holdsAt(fgive(mary,milk),51).
+:- not initiatedAt(fgive(mary,milk),50).
+

@@ -1,0 +1,52 @@
+happensAt(goback(jeff,kitchen),1).
+happensAt(take(jeff,football),2).
+happensAt(move(bill,hallway),3).
+happensAt(journey(bill,bedroom),4).
+happensAt(journey(bill,kitchen),5).
+happensAt(travel(mary,office),6).
+happensAt(discard(jeff,football),7).
+happensAt(travel(bill,garden),8).
+happensAt(journey(mary,hallway),9).
+happensAt(travel(jeff,bathroom),10).
+happensAt(journey(bill,office),11).
+happensAt(go(fred,bathroom),12).
+happensAt(go(mary,office),13).
+happensAt(goback(mary,kitchen),14).
+happensAt(goback(mary,hallway),15).
+happensAt(journey(mary,garden),16).
+happensAt(go(bill,kitchen),17).
+happensAt(goback(bill,bathroom),18).
+happensAt(journey(fred,kitchen),19).
+happensAt(goback(bill,garden),20).
+happensAt(goback(mary,bathroom),21).
+happensAt(get(fred,football),22).
+happensAt(goback(fred,office),23).
+happensAt(go(bill,kitchen),24).
+happensAt(move(jeff,garden),25).
+happensAt(travel(jeff,hallway),26).
+happensAt(journey(fred,hallway),27).
+happensAt(pass(fred,football,jeff),28).
+#example holdsAt(fobjgive(fred,football,jeff),29).
+:- not initiatedAt(fobjgive(fred,football,jeff),28).
+
+happensAt(grab(fred,apple),30).
+happensAt(take(jeff,milk),31).
+#example holdsAt(freceive(jeff,football),32).
+:- not initiatedAt(freceive(jeff,football),28).
+
+happensAt(hand(fred,apple,jeff),33).
+happensAt(go(bill,office),34).
+#example holdsAt(fobjgive(fred,apple,jeff),35).
+ #example not holdsAt(fobjgive(fred,football,jeff),35).
+:- not initiatedAt(fobjgive(fred,apple,jeff),33).
+
+happensAt(journey(bill,bedroom),36).
+happensAt(hand(jeff,apple,fred),37).
+#example holdsAt(fobjgive(jeff,apple,fred),38).
+:- not initiatedAt(fobjgive(jeff,apple,fred),37).
+
+happensAt(hand(fred,apple,jeff),39).
+happensAt(hand(jeff,apple,fred),40).
+#example holdsAt(fgive(jeff,apple),41).
+:- not initiatedAt(fgive(jeff,apple),40).
+

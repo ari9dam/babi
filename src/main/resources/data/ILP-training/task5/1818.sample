@@ -1,0 +1,61 @@
+happensAt(travel(bill,bedroom),1).
+happensAt(goback(jeff,garden),2).
+happensAt(goback(jeff,office),3).
+happensAt(go(bill,hallway),4).
+happensAt(travel(fred,bedroom),5).
+happensAt(move(jeff,bathroom),6).
+happensAt(move(mary,hallway),7).
+happensAt(move(bill,bathroom),8).
+happensAt(journey(mary,office),9).
+happensAt(goback(mary,bathroom),10).
+happensAt(journey(mary,garden),11).
+happensAt(get(bill,milk),12).
+happensAt(goback(bill,garden),13).
+happensAt(hand(bill,milk,mary),14).
+#example holdsAt(fobjgive(bill,milk,mary),15).
+:- not initiatedAt(fobjgive(bill,milk,mary),14).
+
+happensAt(goback(bill,office),16).
+happensAt(travel(bill,bedroom),17).
+#example holdsAt(fobjgive(bill,milk,mary),18).
+:- not initiatedAt(fobjgive(bill,milk,mary),14).
+
+happensAt(travel(jeff,bedroom),19).
+happensAt(goback(fred,hallway),20).
+#example holdsAt(frecgive(bill,milk,mary),21).
+:- not initiatedAt(frecgive(bill,milk,mary),14).
+
+happensAt(move(fred,bedroom),22).
+happensAt(leave(mary,milk),23).
+happensAt(move(fred,garden),24).
+happensAt(get(mary,milk),25).
+happensAt(go(fred,bedroom),26).
+happensAt(goback(bill,kitchen),27).
+happensAt(leave(mary,milk),28).
+happensAt(get(mary,milk),29).
+happensAt(leave(mary,milk),30).
+happensAt(journey(fred,office),31).
+happensAt(travel(fred,kitchen),32).
+happensAt(take(mary,milk),33).
+happensAt(move(mary,bathroom),34).
+happensAt(go(bill,office),35).
+happensAt(goback(fred,bedroom),36).
+happensAt(leave(mary,milk),37).
+happensAt(get(mary,milk),38).
+happensAt(pickup(bill,football),39).
+happensAt(putdown(bill,football),40).
+happensAt(get(bill,football),41).
+happensAt(goback(jeff,kitchen),42).
+happensAt(move(bill,hallway),43).
+happensAt(journey(mary,bedroom),44).
+happensAt(drop(mary,milk),45).
+happensAt(get(fred,milk),46).
+happensAt(hand(fred,milk,mary),47).
+#example holdsAt(fobjgive(fred,milk,mary),48).
+:- not initiatedAt(fobjgive(fred,milk,mary),47).
+
+happensAt(hand(mary,milk,fred),49).
+happensAt(putdown(fred,milk),50).
+#example holdsAt(freceive(fred,milk),51).
+:- not initiatedAt(freceive(fred,milk),49).
+

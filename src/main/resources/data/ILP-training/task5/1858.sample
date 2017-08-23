@@ -1,0 +1,65 @@
+happensAt(journey(bill,hallway),1).
+happensAt(travel(fred,office),2).
+happensAt(go(bill,garden),3).
+happensAt(journey(mary,garden),4).
+happensAt(goback(fred,garden),5).
+happensAt(journey(mary,hallway),6).
+happensAt(go(jeff,garden),7).
+happensAt(goback(bill,bedroom),8).
+happensAt(go(fred,office),9).
+happensAt(goback(jeff,bathroom),10).
+happensAt(travel(jeff,kitchen),11).
+happensAt(grab(fred,milk),12).
+happensAt(putdown(fred,milk),13).
+happensAt(travel(mary,office),14).
+happensAt(move(fred,hallway),15).
+happensAt(journey(mary,bathroom),16).
+happensAt(go(mary,bedroom),17).
+happensAt(go(mary,office),18).
+happensAt(travel(jeff,garden),19).
+happensAt(go(mary,garden),20).
+happensAt(move(bill,hallway),21).
+happensAt(goback(jeff,office),22).
+happensAt(journey(jeff,kitchen),23).
+happensAt(journey(jeff,bathroom),24).
+happensAt(journey(fred,kitchen),25).
+happensAt(journey(fred,bedroom),26).
+happensAt(journey(mary,kitchen),27).
+happensAt(travel(jeff,office),28).
+happensAt(take(jeff,milk),29).
+happensAt(drop(jeff,milk),30).
+happensAt(journey(bill,kitchen),31).
+happensAt(journey(fred,garden),32).
+happensAt(travel(bill,office),33).
+happensAt(journey(mary,bedroom),34).
+happensAt(get(jeff,milk),35).
+happensAt(move(bill,garden),36).
+happensAt(travel(mary,bathroom),37).
+happensAt(putdown(jeff,milk),38).
+happensAt(goback(fred,kitchen),39).
+happensAt(go(bill,bathroom),40).
+happensAt(take(mary,football),41).
+happensAt(pass(mary,football,bill),42).
+#example holdsAt(fsubjgive(mary,football,bill),43).
+:- not initiatedAt(fsubjgive(mary,football,bill),42).
+
+happensAt(hand(bill,football,mary),44).
+happensAt(pass(mary,football,bill),45).
+#example holdsAt(frecgive(mary,football,bill),46).
+:- not initiatedAt(frecgive(mary,football,bill),45).
+
+happensAt(give(bill,football,mary),47).
+happensAt(travel(jeff,bedroom),48).
+#example holdsAt(fobjgive(bill,football,mary),49).
+:- not initiatedAt(fobjgive(bill,football,mary),47).
+
+happensAt(hand(mary,football,bill),50).
+happensAt(go(bill,hallway),51).
+#example holdsAt(fobjgive(mary,football,bill),52).
+:- not initiatedAt(fobjgive(mary,football,bill),50).
+
+happensAt(journey(mary,garden),53).
+happensAt(move(fred,garden),54).
+#example holdsAt(freceive(bill,football),55).
+:- not initiatedAt(freceive(bill,football),50).
+

@@ -1,0 +1,61 @@
+happensAt(go(jeff,bathroom),1).
+happensAt(travel(bill,garden),2).
+happensAt(move(mary,bathroom),3).
+happensAt(travel(bill,bedroom),4).
+happensAt(move(mary,kitchen),5).
+happensAt(go(jeff,kitchen),6).
+happensAt(move(bill,garden),7).
+happensAt(goback(fred,office),8).
+happensAt(journey(mary,bathroom),9).
+happensAt(journey(bill,bathroom),10).
+happensAt(journey(mary,office),11).
+happensAt(journey(bill,bedroom),12).
+happensAt(goback(bill,office),13).
+happensAt(goback(fred,hallway),14).
+happensAt(journey(mary,bedroom),15).
+happensAt(goback(fred,bathroom),16).
+happensAt(go(bill,garden),17).
+happensAt(goback(bill,bedroom),18).
+happensAt(travel(bill,kitchen),19).
+happensAt(travel(jeff,office),20).
+happensAt(travel(fred,hallway),21).
+happensAt(go(jeff,bathroom),22).
+happensAt(goback(jeff,bedroom),23).
+happensAt(journey(jeff,garden),24).
+happensAt(get(fred,milk),25).
+happensAt(discard(fred,milk),26).
+happensAt(pickup(fred,milk),27).
+happensAt(drop(fred,milk),28).
+happensAt(move(bill,bathroom),29).
+happensAt(goback(fred,kitchen),30).
+happensAt(travel(mary,hallway),31).
+happensAt(journey(mary,garden),32).
+happensAt(travel(fred,bedroom),33).
+happensAt(grab(jeff,football),34).
+happensAt(move(bill,office),35).
+happensAt(get(jeff,apple),36).
+happensAt(pass(jeff,apple,mary),37).
+happensAt(pass(mary,apple,jeff),38).
+#example holdsAt(fsubjgive(mary,apple,jeff),39).
+:- not initiatedAt(fsubjgive(mary,apple,jeff),38).
+
+happensAt(journey(fred,bathroom),40).
+happensAt(travel(fred,kitchen),41).
+#example holdsAt(fgive(mary,apple),42).
+:- not initiatedAt(fgive(mary,apple),38).
+
+happensAt(pass(jeff,apple,mary),43).
+happensAt(pass(mary,apple,jeff),44).
+#example holdsAt(fobjgive(mary,apple,jeff),45).
+:- not initiatedAt(fobjgive(mary,apple,jeff),44).
+
+happensAt(leave(jeff,football),46).
+happensAt(grab(mary,football),47).
+#example holdsAt(freceive(jeff,apple),48).
+:- not initiatedAt(freceive(jeff,apple),44).
+
+happensAt(pass(jeff,apple,mary),49).
+happensAt(putdown(mary,football),50).
+#example holdsAt(frecgive(jeff,apple,mary),51).
+:- not initiatedAt(frecgive(jeff,apple,mary),49).
+

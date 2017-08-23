@@ -1,0 +1,60 @@
+happensAt(journey(bill,office),1).
+happensAt(journey(mary,bathroom),2).
+happensAt(goback(jeff,hallway),3).
+happensAt(take(jeff,milk),4).
+happensAt(move(bill,bathroom),5).
+happensAt(journey(mary,office),6).
+happensAt(journey(bill,garden),7).
+happensAt(pickup(bill,apple),8).
+happensAt(goback(fred,kitchen),9).
+happensAt(putdown(bill,apple),10).
+happensAt(travel(jeff,garden),11).
+happensAt(goback(bill,hallway),12).
+happensAt(discard(jeff,milk),13).
+happensAt(go(mary,garden),14).
+happensAt(pickup(jeff,football),15).
+happensAt(get(jeff,apple),16).
+happensAt(travel(jeff,bathroom),17).
+happensAt(drop(jeff,apple),18).
+happensAt(leave(jeff,football),19).
+happensAt(pickup(mary,milk),20).
+happensAt(grab(jeff,football),21).
+happensAt(leave(jeff,football),22).
+happensAt(go(fred,bathroom),23).
+happensAt(move(jeff,office),24).
+happensAt(travel(fred,hallway),25).
+happensAt(journey(jeff,bathroom),26).
+happensAt(goback(jeff,kitchen),27).
+happensAt(travel(bill,office),28).
+happensAt(go(mary,kitchen),29).
+happensAt(give(mary,milk,jeff),30).
+#example holdsAt(fgive(mary,milk),31).
+:- not initiatedAt(fgive(mary,milk),30).
+
+happensAt(leave(jeff,milk),32).
+happensAt(travel(bill,garden),33).
+#example holdsAt(fobjgive(mary,milk,jeff),34).
+:- not initiatedAt(fobjgive(mary,milk,jeff),30).
+
+happensAt(go(bill,bathroom),35).
+happensAt(travel(mary,office),36).
+#example holdsAt(fobjgive(mary,milk,jeff),37).
+:- not initiatedAt(fobjgive(mary,milk,jeff),30).
+
+happensAt(get(jeff,milk),38).
+happensAt(putdown(jeff,milk),39).
+happensAt(goback(bill,garden),40).
+happensAt(get(jeff,milk),41).
+happensAt(journey(jeff,bathroom),42).
+happensAt(travel(jeff,hallway),43).
+happensAt(hand(jeff,milk,fred),44).
+happensAt(give(fred,milk,jeff),45).
+#example holdsAt(fgive(fred,milk),46).
+ #example not holdsAt(fgive(mary,milk),46).
+:- not initiatedAt(fgive(fred,milk),45).
+
+happensAt(travel(jeff,bathroom),47).
+happensAt(putdown(jeff,milk),48).
+#example holdsAt(fobjgive(fred,milk,jeff),49).
+:- not initiatedAt(fobjgive(fred,milk,jeff),45).
+

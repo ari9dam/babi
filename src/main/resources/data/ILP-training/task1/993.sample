@@ -8,11 +8,9 @@ happensAt(move(john,hallway),5).
 happensAt(go(mary,bedroom),7).
 happensAt(journey(mary,office),8).
 #example holdsAt(location(mary,office),9).
-#example not holdsAt(location(mary,bedroom),9).
 happensAt(travel(daniel,office),10).
 happensAt(journey(john,bathroom),11).
 #example holdsAt(location(mary,office),12).
-#example not holdsAt(location(mary,bedroom),12).
 happensAt(move(sandra,kitchen),13).
 happensAt(journey(daniel,hallway),14).
 #example holdsAt(location(daniel,hallway),15).

@@ -1,0 +1,61 @@
+happensAt(travel(mary,hallway),1).
+happensAt(travel(jeff,office),2).
+happensAt(go(fred,office),3).
+happensAt(travel(mary,garden),4).
+happensAt(travel(fred,hallway),5).
+happensAt(journey(fred,office),6).
+happensAt(journey(fred,kitchen),7).
+happensAt(journey(fred,garden),8).
+happensAt(move(mary,kitchen),9).
+happensAt(go(bill,office),10).
+happensAt(journey(mary,hallway),11).
+happensAt(move(fred,kitchen),12).
+happensAt(journey(fred,bathroom),13).
+happensAt(travel(fred,kitchen),14).
+happensAt(go(fred,bathroom),15).
+happensAt(move(mary,bathroom),16).
+happensAt(journey(fred,bedroom),17).
+happensAt(move(mary,kitchen),18).
+happensAt(move(mary,garden),19).
+happensAt(go(jeff,kitchen),20).
+happensAt(go(bill,bathroom),21).
+happensAt(travel(fred,office),22).
+happensAt(pickup(jeff,milk),23).
+happensAt(get(mary,apple),24).
+happensAt(go(fred,kitchen),25).
+happensAt(journey(mary,bedroom),26).
+happensAt(move(bill,kitchen),27).
+happensAt(hand(jeff,milk,fred),28).
+#example holdsAt(fobjgive(jeff,milk,fred),29).
+:- not initiatedAt(fobjgive(jeff,milk,fred),28).
+
+happensAt(discard(mary,apple),30).
+happensAt(go(fred,bedroom),31).
+#example holdsAt(fobjgive(jeff,milk,fred),32).
+:- not initiatedAt(fobjgive(jeff,milk,fred),28).
+
+happensAt(go(mary,office),33).
+happensAt(travel(jeff,office),34).
+#example holdsAt(fobjgive(jeff,milk,fred),35).
+:- not initiatedAt(fobjgive(jeff,milk,fred),28).
+
+happensAt(grab(fred,apple),36).
+happensAt(travel(jeff,bedroom),37).
+happensAt(travel(fred,bathroom),38).
+happensAt(drop(fred,apple),39).
+happensAt(putdown(fred,milk),40).
+happensAt(move(mary,bedroom),41).
+happensAt(grab(fred,milk),42).
+happensAt(travel(mary,garden),43).
+happensAt(pickup(fred,apple),44).
+happensAt(travel(jeff,bathroom),45).
+happensAt(discard(fred,apple),46).
+happensAt(hand(fred,milk,jeff),47).
+#example holdsAt(fobjgive(fred,milk,jeff),48).
+:- not initiatedAt(fobjgive(fred,milk,jeff),47).
+
+happensAt(journey(mary,hallway),49).
+happensAt(get(fred,apple),50).
+#example holdsAt(frecgive(fred,milk,jeff),51).
+:- not initiatedAt(frecgive(fred,milk,jeff),47).
+

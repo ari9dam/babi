@@ -1,0 +1,28 @@
+happensAt(grab(fred,milk),1).
+happensAt(pickup(bill,football),2).
+happensAt(pass(bill,football,jeff),3).
+happensAt(drop(jeff,football),4).
+#example holdsAt(fobjgive(bill,football,jeff),5).
+:- not initiatedAt(fobjgive(bill,football,jeff),3).
+
+happensAt(get(bill,football),6).
+happensAt(give(bill,football,jeff),7).
+#example holdsAt(fobjgive(bill,football,jeff),8).
+:- not initiatedAt(fobjgive(bill,football,jeff),7).
+
+happensAt(leave(fred,milk),9).
+happensAt(give(jeff,football,bill),10).
+#example holdsAt(fgive(jeff,football),11).
+:- not initiatedAt(fgive(jeff,football),10).
+
+happensAt(give(bill,football,jeff),12).
+happensAt(hand(jeff,football,bill),13).
+#example holdsAt(freceive(bill,football),14).
+:- not initiatedAt(freceive(bill,football),13).
+
+happensAt(get(fred,milk),15).
+happensAt(hand(bill,football,jeff),16).
+#example holdsAt(freceive(jeff,football),17).
+ #example not holdsAt(freceive(bill,football),17).
+:- not initiatedAt(freceive(jeff,football),16).
+

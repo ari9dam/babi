@@ -1,0 +1,16 @@
+observed(relativeposition(bathroom,garden,north),1).
+observed(relativeposition(office,bedroom,south),1).
+observed(relativeposition(hallway,bedroom,north),1).
+observed(relativeposition(kitchen,bedroom,west),1).
+observed(relativeposition(garden,bedroom,east),1).
+holdsAt(location(you,garden),6).
+#example not holdsAt(location(you,office),6).
+happensAt(mt(you,west),6).
+happensAt(mt(you,south),7).
+#example holdsAt(location(you,office),8).
+#example holdsAt(location(you,office),9).
+atleastone(T):-holdsAt(location(you,X),T),time(T).
+:-not atleastone(T),time(T),T>5,T<9.
+:-holdsAt(location(you,X),T),holdsAt(location(you,Y),T),X!=Y,arg2(X),arg2(Y),T>5,T<9,time(T).
+:-holdsAt(location(you,X),T),holdsAt(location(you,X),T+1),arg2(X),time(T),T>5,T<8,time(T).
+time(1..11).

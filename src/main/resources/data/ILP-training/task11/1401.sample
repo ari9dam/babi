@@ -1,0 +1,22 @@
+happensAt(travel(daniel,hallway),1).
+happensAt(journey(X,bathroom),2):-holdsAt(coref(id2,X),2),arg1(X).
+eventId(id2,1).
+#example holdsAt(location(daniel,bathroom),3).
+happensAt(go(john,garden),4).
+happensAt(goback(X,kitchen),5):-holdsAt(coref(id5,X),5),arg1(X).
+eventId(id5,4).
+#example holdsAt(location(john,kitchen),6).
+happensAt(move(john,garden),7).
+happensAt(travel(X,bathroom),8):-holdsAt(coref(id8,X),8),arg1(X).
+eventId(id8,7).
+#example holdsAt(location(john,bathroom),9).
+#example not holdsAt(location(john,kitchen),9).
+happensAt(travel(sandra,hallway),10).
+happensAt(goback(X,bathroom),11):-holdsAt(coref(id11,X),11),arg1(X).
+eventId(id11,10).
+#example holdsAt(location(sandra,bathroom),12).
+happensAt(journey(sandra,bedroom),13).
+happensAt(travel(X,garden),14):-holdsAt(coref(id14,X),14),arg1(X).
+eventId(id14,13).
+#example holdsAt(location(sandra,garden),15).
+#example not holdsAt(location(sandra,bathroom),15).

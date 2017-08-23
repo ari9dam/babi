@@ -1,0 +1,72 @@
+happensAt(journey(bill,bathroom),1).
+happensAt(travel(mary,hallway),2).
+happensAt(pickup(mary,football),3).
+happensAt(move(jeff,bathroom),4).
+happensAt(go(jeff,garden),5).
+happensAt(leave(mary,football),6).
+happensAt(travel(mary,garden),7).
+happensAt(move(jeff,bedroom),8).
+happensAt(journey(jeff,bathroom),9).
+happensAt(go(fred,office),10).
+happensAt(travel(bill,bedroom),11).
+happensAt(move(mary,kitchen),12).
+happensAt(go(fred,hallway),13).
+happensAt(go(bill,office),14).
+happensAt(travel(fred,bedroom),15).
+happensAt(journey(bill,hallway),16).
+happensAt(goback(mary,hallway),17).
+happensAt(move(fred,office),18).
+happensAt(travel(mary,kitchen),19).
+happensAt(goback(mary,bathroom),20).
+happensAt(goback(bill,bathroom),21).
+happensAt(travel(jeff,hallway),22).
+happensAt(journey(jeff,bathroom),23).
+happensAt(go(bill,bedroom),24).
+happensAt(journey(jeff,office),25).
+happensAt(go(bill,hallway),26).
+happensAt(go(mary,office),27).
+happensAt(take(fred,milk),28).
+happensAt(hand(fred,milk,mary),29).
+happensAt(goback(jeff,kitchen),30).
+#example holdsAt(freceive(mary,milk),31).
+:- not initiatedAt(freceive(mary,milk),29).
+
+happensAt(journey(jeff,hallway),32).
+happensAt(journey(jeff,bedroom),33).
+#example holdsAt(fobjgive(fred,milk,mary),34).
+:- not initiatedAt(fobjgive(fred,milk,mary),29).
+
+happensAt(hand(mary,milk,fred),35).
+happensAt(leave(fred,milk),36).
+#example holdsAt(fobjgive(mary,milk,fred),37).
+:- not initiatedAt(fobjgive(mary,milk,fred),35).
+
+happensAt(move(mary,hallway),38).
+happensAt(get(fred,milk),39).
+#example holdsAt(fgive(mary,milk),40).
+:- not initiatedAt(fgive(mary,milk),35).
+
+happensAt(grab(bill,football),41).
+happensAt(travel(mary,bedroom),42).
+happensAt(move(mary,kitchen),43).
+happensAt(get(bill,apple),44).
+happensAt(discard(bill,apple),45).
+happensAt(drop(bill,football),46).
+happensAt(move(jeff,kitchen),47).
+happensAt(discard(fred,milk),48).
+happensAt(pickup(fred,milk),49).
+happensAt(discard(fred,milk),50).
+happensAt(grab(fred,milk),51).
+happensAt(move(mary,bedroom),52).
+happensAt(go(bill,office),53).
+happensAt(drop(fred,milk),54).
+happensAt(move(jeff,hallway),55).
+happensAt(get(bill,milk),56).
+happensAt(putdown(bill,milk),57).
+happensAt(get(jeff,apple),58).
+happensAt(grab(bill,milk),59).
+happensAt(hand(bill,milk,fred),60).
+#example holdsAt(freceive(fred,milk),61).
+ #example not holdsAt(freceive(mary,milk),61).
+:- not initiatedAt(freceive(fred,milk),60).
+

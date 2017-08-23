@@ -1,0 +1,29 @@
+happensAt(goback(fred,garden),1).
+happensAt(get(jeff,apple),2).
+happensAt(take(fred,milk),3).
+happensAt(take(mary,football),4).
+happensAt(pass(mary,football,fred),5).
+happensAt(discard(jeff,apple),6).
+#example holdsAt(frecgive(mary,football,fred),7).
+:- not initiatedAt(frecgive(mary,football,fred),5).
+
+happensAt(give(fred,football,mary),8).
+happensAt(give(mary,football,fred),9).
+#example holdsAt(fobjgive(mary,football,fred),10).
+:- not initiatedAt(fobjgive(mary,football,fred),9).
+
+happensAt(journey(fred,hallway),11).
+happensAt(grab(jeff,apple),12).
+#example holdsAt(freceive(fred,football),13).
+:- not initiatedAt(freceive(fred,football),9).
+
+happensAt(go(jeff,hallway),14).
+happensAt(pass(jeff,apple,fred),15).
+#example holdsAt(fobjgive(mary,football,fred),16).
+:- not initiatedAt(fobjgive(mary,football,fred),9).
+
+happensAt(give(fred,apple,jeff),17).
+happensAt(goback(fred,bedroom),18).
+#example holdsAt(frecgive(fred,apple,jeff),19).
+:- not initiatedAt(frecgive(fred,apple,jeff),17).
+

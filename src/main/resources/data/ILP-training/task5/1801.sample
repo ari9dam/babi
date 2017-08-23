@@ -1,0 +1,61 @@
+happensAt(journey(mary,kitchen),1).
+happensAt(get(bill,milk),2).
+happensAt(go(mary,garden),3).
+happensAt(journey(bill,office),4).
+happensAt(pass(bill,milk,jeff),5).
+happensAt(leave(jeff,milk),6).
+#example holdsAt(fobjgive(bill,milk,jeff),7).
+:- not initiatedAt(fobjgive(bill,milk,jeff),5).
+
+happensAt(goback(fred,office),8).
+happensAt(travel(fred,kitchen),9).
+#example holdsAt(fobjgive(bill,milk,jeff),10).
+:- not initiatedAt(fobjgive(bill,milk,jeff),5).
+
+happensAt(travel(fred,bathroom),11).
+happensAt(pickup(bill,milk),12).
+happensAt(goback(mary,hallway),13).
+happensAt(grab(fred,football),14).
+happensAt(go(jeff,hallway),15).
+happensAt(move(fred,hallway),16).
+happensAt(drop(fred,football),17).
+happensAt(discard(bill,milk),18).
+happensAt(get(bill,milk),19).
+happensAt(grab(fred,football),20).
+happensAt(hand(fred,football,mary),21).
+happensAt(move(mary,bedroom),22).
+#example holdsAt(fobjgive(fred,football,mary),23).
+:- not initiatedAt(fobjgive(fred,football,mary),21).
+
+happensAt(journey(jeff,garden),24).
+happensAt(travel(bill,kitchen),25).
+#example holdsAt(freceive(mary,football),26).
+:- not initiatedAt(freceive(mary,football),21).
+
+happensAt(goback(fred,garden),27).
+happensAt(leave(mary,football),28).
+happensAt(journey(bill,office),29).
+happensAt(go(bill,bedroom),30).
+happensAt(journey(bill,bathroom),31).
+happensAt(travel(jeff,office),32).
+happensAt(goback(jeff,kitchen),33).
+happensAt(journey(mary,office),34).
+happensAt(move(jeff,office),35).
+happensAt(discard(bill,milk),36).
+happensAt(get(bill,apple),37).
+happensAt(leave(bill,apple),38).
+happensAt(get(bill,milk),39).
+happensAt(drop(bill,milk),40).
+happensAt(travel(jeff,kitchen),41).
+happensAt(goback(bill,kitchen),42).
+happensAt(move(bill,bathroom),43).
+happensAt(goback(mary,kitchen),44).
+happensAt(go(jeff,bathroom),45).
+happensAt(goback(mary,office),46).
+happensAt(grab(jeff,milk),47).
+happensAt(goback(fred,hallway),48).
+happensAt(give(jeff,milk,bill),49).
+happensAt(give(bill,milk,jeff),50).
+#example holdsAt(frecgive(bill,milk,jeff),51).
+:- not initiatedAt(frecgive(bill,milk,jeff),50).
+

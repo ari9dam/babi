@@ -1,0 +1,61 @@
+happensAt(travel(bill,kitchen),1).
+happensAt(journey(jeff,bathroom),2).
+happensAt(get(mary,milk),3).
+happensAt(leave(mary,milk),4).
+happensAt(take(mary,milk),5).
+happensAt(move(bill,garden),6).
+happensAt(pass(mary,milk,bill),7).
+happensAt(travel(fred,kitchen),8).
+#example holdsAt(fsubjgive(mary,milk,bill),9).
+:- not initiatedAt(fsubjgive(mary,milk,bill),7).
+
+happensAt(pass(bill,milk,mary),10).
+happensAt(pass(mary,milk,bill),11).
+#example holdsAt(frecgive(mary,milk,bill),12).
+:- not initiatedAt(frecgive(mary,milk,bill),11).
+
+happensAt(goback(bill,office),13).
+happensAt(journey(jeff,hallway),14).
+#example holdsAt(fsubjgive(mary,milk,bill),15).
+:- not initiatedAt(fsubjgive(mary,milk,bill),11).
+
+happensAt(putdown(bill,milk),16).
+happensAt(go(jeff,office),17).
+#example holdsAt(freceive(bill,milk),18).
+:- not initiatedAt(freceive(bill,milk),11).
+
+happensAt(move(jeff,garden),19).
+happensAt(journey(jeff,bathroom),20).
+happensAt(travel(fred,hallway),21).
+happensAt(move(bill,kitchen),22).
+happensAt(move(fred,office),23).
+happensAt(goback(bill,hallway),24).
+happensAt(grab(fred,milk),25).
+happensAt(go(bill,bedroom),26).
+happensAt(move(mary,kitchen),27).
+happensAt(move(jeff,office),28).
+happensAt(go(jeff,kitchen),29).
+happensAt(journey(bill,garden),30).
+happensAt(travel(bill,bedroom),31).
+happensAt(go(fred,kitchen),32).
+happensAt(putdown(fred,milk),33).
+happensAt(travel(mary,garden),34).
+happensAt(get(bill,football),35).
+happensAt(go(jeff,hallway),36).
+happensAt(journey(jeff,garden),37).
+happensAt(travel(fred,hallway),38).
+happensAt(leave(bill,football),39).
+happensAt(grab(bill,football),40).
+happensAt(journey(fred,garden),41).
+happensAt(putdown(bill,football),42).
+happensAt(grab(bill,football),43).
+happensAt(putdown(bill,football),44).
+happensAt(move(bill,hallway),45).
+happensAt(journey(bill,kitchen),46).
+happensAt(move(jeff,kitchen),47).
+happensAt(get(bill,milk),48).
+happensAt(give(bill,milk,jeff),49).
+happensAt(pass(jeff,milk,bill),50).
+#example holdsAt(fgive(jeff,milk),51).
+:- not initiatedAt(fgive(jeff,milk),50).
+

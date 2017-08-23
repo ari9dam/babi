@@ -1,0 +1,25 @@
+happensAt(grab(john,apple),1).
+happensAt(travel(daniel,bathroom),2).
+#example count(john,1,3).
+#example not count(john,1,1).
+#example count(john,1,2).
+happensAt(travel(daniel,kitchen),4).
+happensAt(hand(john,apple,sandra),5).
+#example count(john,0,6).
+#example not count(john,0,5).
+#example count(john,0,6).
+happensAt(move(daniel,bedroom),7).
+happensAt(pass(sandra,apple,john),8).
+#example count(john,1,9).
+#example not count(john,1,8).
+#example count(john,1,9).
+happensAt(hand(john,apple,sandra),10).
+happensAt(hand(sandra,apple,john),11).
+#example count(john,1,12).
+#example not count(john,1,11).
+#example count(john,1,12).
+happensAt(hand(john,apple,sandra),13).
+happensAt(travel(john,bathroom),14).
+#example count(john,0,15).
+#example not count(john,0,13).
+#example count(john,0,14).

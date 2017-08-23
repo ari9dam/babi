@@ -57,7 +57,7 @@ public class TrainingCorpusReader implements Iterable<Story>{
 	
 	public static void main(String args[]) throws IOException{
 		String dir = "src\\main\\resources\\data\\en-10k\\";
-		String task1 = "qa7_counting_train.txt";
+		String task1 = "qa17_positional-reasoning_train.txt";
 		TrainingCorpusReader tr = new TrainingCorpusReader(dir+task1);
 		Iterator<Story> it = tr.iterator();
 		

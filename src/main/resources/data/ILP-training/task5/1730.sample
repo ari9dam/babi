@@ -1,0 +1,57 @@
+happensAt(move(mary,bathroom),1).
+happensAt(move(fred,garden),2).
+happensAt(go(fred,bathroom),3).
+happensAt(go(jeff,garden),4).
+happensAt(move(fred,hallway),5).
+happensAt(go(fred,bedroom),6).
+happensAt(go(jeff,bedroom),7).
+happensAt(journey(mary,garden),8).
+happensAt(goback(mary,kitchen),9).
+happensAt(move(bill,bedroom),10).
+happensAt(goback(jeff,hallway),11).
+happensAt(travel(bill,office),12).
+happensAt(goback(jeff,bedroom),13).
+happensAt(travel(bill,bedroom),14).
+happensAt(journey(bill,garden),15).
+happensAt(journey(bill,bathroom),16).
+happensAt(take(fred,football),17).
+happensAt(give(fred,football,jeff),18).
+#example holdsAt(frecgive(fred,football,jeff),19).
+:- not initiatedAt(frecgive(fred,football,jeff),18).
+
+happensAt(move(bill,hallway),20).
+happensAt(give(jeff,football,fred),21).
+#example holdsAt(frecgive(jeff,football,fred),22).
+:- not initiatedAt(frecgive(jeff,football,fred),21).
+
+happensAt(pass(fred,football,jeff),23).
+happensAt(go(jeff,office),24).
+#example holdsAt(frecgive(fred,football,jeff),25).
+:- not initiatedAt(frecgive(fred,football,jeff),23).
+
+happensAt(discard(jeff,football),26).
+happensAt(go(fred,bathroom),27).
+#example holdsAt(fobjgive(fred,football,jeff),28).
+:- not initiatedAt(fobjgive(fred,football,jeff),23).
+
+happensAt(move(mary,garden),29).
+happensAt(move(fred,garden),30).
+happensAt(take(jeff,football),31).
+happensAt(journey(fred,bathroom),32).
+happensAt(take(bill,milk),33).
+happensAt(discard(jeff,football),34).
+happensAt(get(jeff,football),35).
+happensAt(discard(jeff,football),36).
+happensAt(goback(mary,bedroom),37).
+happensAt(go(jeff,bedroom),38).
+happensAt(move(bill,office),39).
+happensAt(go(mary,kitchen),40).
+happensAt(get(bill,football),41).
+happensAt(move(jeff,garden),42).
+happensAt(go(jeff,hallway),43).
+happensAt(goback(bill,kitchen),44).
+happensAt(give(bill,football,mary),45).
+happensAt(discard(bill,milk),46).
+#example holdsAt(fsubjgive(bill,football,mary),47).
+:- not initiatedAt(fsubjgive(bill,football,mary),45).
+

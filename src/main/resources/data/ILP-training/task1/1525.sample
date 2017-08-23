@@ -11,9 +11,7 @@ happensAt(travel(mary,hallway),8).
 happensAt(go(sandra,bedroom),10).
 happensAt(move(sandra,hallway),11).
 #example holdsAt(location(sandra,hallway),12).
-#example not holdsAt(location(sandra,bedroom),12).
 happensAt(go_back(sandra,office),13).
 happensAt(go(john,bathroom),14).
 #example holdsAt(location(sandra,office),15).
 #example not holdsAt(location(sandra,hallway),15).
-#example not holdsAt(location(sandra,bedroom),15).

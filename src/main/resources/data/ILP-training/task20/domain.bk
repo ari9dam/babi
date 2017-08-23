@@ -1,0 +1,15 @@
+time(1..25).
+arg3(apple;pajamas;milk;football).
+arg2(garden;kitchen;bedroom).
+arg4(hungry;thirsty;tired;bored).
+arg1(yann;antoine;jason;sumit).
+direction(east).
+
+fluent(possiblego(X,Y)):-arg1(X),arg2(Y).
+fluent(causego(X,Z)):-arg1(X),arg4(Z).
+fluent(causeget(X,Z)):-arg1(X),arg4(Z).
+fluent(domain(X,Y)):-arg1(X),arg4(Y).
+
+
+holdsAt(F,T+1):- fluent(F),time(T), initiatedAt(F,T).
+holdsAt(F,T+1):- fluent(F),time(T), holdsAt(F,T), not terminatedAt(F,T).

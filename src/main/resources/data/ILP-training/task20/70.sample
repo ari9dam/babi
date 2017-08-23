@@ -1,0 +1,66 @@
+holdsAt(domain(antoine,tired),1).
+#example holdsAt(possiblego(antoine,bedroom),2).
+ #example not holdsAt(possiblego(antoine,garden),2).
+ #example not holdsAt(possiblego(antoine,kitchen),2).
+ :- not initiatedAt(possiblego(antoine,bedroom),1).
+
+holdsAt(domain(sumit,bored),1).
+#example holdsAt(possiblego(sumit,garden),4).
+ #example not holdsAt(possiblego(sumit,kitchen),4).
+ #example not holdsAt(possiblego(sumit,bedroom),4).
+ :- not initiatedAt(possiblego(sumit,garden),3).
+
+holdsAt(domain(jason,tired),1).
+#example holdsAt(possiblego(jason,bedroom),6).
+ #example not holdsAt(possiblego(jason,garden),6).
+ #example not holdsAt(possiblego(jason,kitchen),6).
+ :- not initiatedAt(possiblego(jason,bedroom),5).
+
+holdsAt(domain(yann,tired),1).
+#example holdsAt(possiblego(yann,bedroom),8).
+ #example not holdsAt(possiblego(yann,garden),8).
+ #example not holdsAt(possiblego(yann,kitchen),8).
+ :- not initiatedAt(possiblego(yann,bedroom),7).
+
+happensAt(move(yann,bedroom),9).
+#example holdsAt(causego(yann,tired),10).
+ #example not holdsAt(causego(yann,hungry),10).
+ #example not holdsAt(causego(yann,thirsty),10).
+ #example not holdsAt(causego(yann,bored),10).
+ :- not initiatedAt(causego(yann,tired),7).
+
+happensAt(goback(antoine,bedroom),11).
+#example holdsAt(causego(antoine,tired),12).
+ #example not holdsAt(causego(antoine,hungry),12).
+ #example not holdsAt(causego(antoine,thirsty),12).
+ #example not holdsAt(causego(antoine,bored),12).
+ :- not initiatedAt(causego(antoine,tired),1).
+
+happensAt(travel(sumit,garden),13).
+#example holdsAt(causego(sumit,bored),14).
+ #example not holdsAt(causego(sumit,hungry),14).
+ #example not holdsAt(causego(sumit,thirsty),14).
+ #example not holdsAt(causego(sumit,tired),14).
+ :- not initiatedAt(causego(sumit,bored),3).
+
+happensAt(take(sumit,football),15).
+#example holdsAt(causeget(sumit,bored),16).
+ #example not holdsAt(causeget(sumit,hungry),16).
+ #example not holdsAt(causeget(sumit,thirsty),16).
+ #example not holdsAt(causeget(sumit,tired),16).
+ :- not initiatedAt(causeget(sumit,bored),3).
+
+happensAt(move(jason,bedroom),17).
+#example holdsAt(causego(jason,tired),18).
+ #example not holdsAt(causego(jason,hungry),18).
+ #example not holdsAt(causego(jason,thirsty),18).
+ #example not holdsAt(causego(jason,bored),18).
+ :- not initiatedAt(causego(jason,tired),5).
+
+happensAt(pickup(antoine,pajamas),19).
+#example holdsAt(causeget(antoine,tired),20).
+ #example not holdsAt(causeget(antoine,hungry),20).
+ #example not holdsAt(causeget(antoine,thirsty),20).
+ #example not holdsAt(causeget(antoine,bored),20).
+ :- not initiatedAt(causeget(antoine,tired),1).
+
