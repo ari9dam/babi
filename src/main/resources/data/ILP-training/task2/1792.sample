@@ -1,0 +1,49 @@
+happensAt(move(john,kitchen),1).
+happensAt(move(john,hallway),2).
+happensAt(travel(daniel,office),3).
+happensAt(go(mary,hallway),4).
+happensAt(travel(john,bedroom),5).
+happensAt(pickup(mary,football),6).
+happensAt(move(daniel,kitchen),7).
+happensAt(journey(daniel,garden),8).
+happensAt(leave(mary,football),9).
+happensAt(go(john,kitchen),10).
+#example holdsAt(location(football,hallway),11).
+#example holdsAt(location(football,hallway),10).
+happensAt(go(mary,office),12).
+happensAt(move(daniel,office),13).
+#example holdsAt(location(football,hallway),14).
+#example holdsAt(location(football,hallway),10).
+#example holdsAt(location(football,hallway),11).
+#example holdsAt(location(football,hallway),12).
+#example holdsAt(location(football,hallway),13).
+happensAt(travel(mary,bedroom),15).
+happensAt(journey(mary,bathroom),16).
+happensAt(move(john,bathroom),17).
+happensAt(journey(mary,hallway),18).
+happensAt(take(mary,football),19).
+happensAt(travel(john,bedroom),20).
+happensAt(journey(sandra,bedroom),21).
+happensAt(journey(john,kitchen),22).
+happensAt(travel(daniel,kitchen),23).
+happensAt(go(sandra,office),24).
+happensAt(journey(daniel,bedroom),25).
+happensAt(goback(sandra,bathroom),26).
+happensAt(travel(sandra,hallway),27).
+happensAt(drop(mary,football),28).
+#example holdsAt(location(football,hallway),29).
+happensAt(goback(sandra,office),30).
+happensAt(goback(mary,kitchen),31).
+#example holdsAt(location(football,hallway),32).
+#example holdsAt(location(football,hallway),29).
+#example holdsAt(location(football,hallway),30).
+#example holdsAt(location(football,hallway),31).
+happensAt(goback(mary,bedroom),33).
+happensAt(move(sandra,kitchen),34).
+#example holdsAt(location(football,hallway),35).
+#example holdsAt(location(football,hallway),29).
+#example holdsAt(location(football,hallway),30).
+#example holdsAt(location(football,hallway),31).
+#example holdsAt(location(football,hallway),32).
+#example holdsAt(location(football,hallway),33).
+#example holdsAt(location(football,hallway),34).

@@ -1,0 +1,50 @@
+happensAt(grab(john,football),1).
+happensAt(journey(mary,garden),2).
+happensAt(move(daniel,hallway),3).
+happensAt(putdown(john,football),4).
+happensAt(goback(daniel,bathroom),5).
+happensAt(pickup(mary,football),6).
+happensAt(leave(mary,football),7).
+happensAt(take(john,football),8).
+happensAt(journey(sandra,bathroom),9).
+happensAt(journey(mary,bathroom),10).
+happensAt(go(mary,office),11).
+happensAt(journey(john,kitchen),12).
+#example holdsAt(location(football,kitchen),13).
+happensAt(travel(john,bathroom),14).
+happensAt(go(mary,bedroom),15).
+happensAt(move(mary,garden),16).
+happensAt(putdown(john,football),17).
+#example holdsAt(location(football,bathroom),18).
+#example not holdsAt(location(football,kitchen),18).
+happensAt(move(sandra,bedroom),19).
+happensAt(grab(john,football),20).
+happensAt(drop(john,football),21).
+happensAt(take(daniel,football),22).
+happensAt(go(john,hallway),23).
+happensAt(travel(mary,kitchen),24).
+happensAt(goback(john,bathroom),25).
+happensAt(leave(daniel,football),26).
+#example holdsAt(location(football,bathroom),27).
+#example not holdsAt(location(football,kitchen),27).
+happensAt(grab(daniel,football),28).
+happensAt(pickup(mary,milk),29).
+happensAt(move(sandra,kitchen),30).
+happensAt(go(john,bedroom),31).
+happensAt(travel(john,hallway),32).
+happensAt(move(john,kitchen),33).
+happensAt(goback(sandra,hallway),34).
+happensAt(goback(sandra,office),35).
+happensAt(putdown(daniel,football),36).
+happensAt(grab(sandra,apple),37).
+#example holdsAt(location(football,bathroom),38).
+#example not holdsAt(location(football,kitchen),38).
+#example holdsAt(location(football,bathroom),37).
+happensAt(travel(sandra,hallway),39).
+happensAt(go(daniel,bedroom),40).
+#example holdsAt(location(football,bathroom),41).
+#example not holdsAt(location(football,kitchen),41).
+#example holdsAt(location(football,bathroom),37).
+#example holdsAt(location(football,bathroom),38).
+#example holdsAt(location(football,bathroom),39).
+#example holdsAt(location(football,bathroom),40).

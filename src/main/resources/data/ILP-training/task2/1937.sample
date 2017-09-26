@@ -1,0 +1,52 @@
+happensAt(grab(john,apple),1).
+happensAt(discard(john,apple),2).
+happensAt(move(daniel,office),3).
+happensAt(travel(mary,office),4).
+happensAt(travel(john,garden),5).
+happensAt(move(john,bedroom),6).
+happensAt(pickup(sandra,apple),7).
+happensAt(discard(sandra,apple),8).
+happensAt(move(mary,hallway),9).
+happensAt(take(mary,apple),10).
+happensAt(move(john,kitchen),11).
+happensAt(leave(mary,apple),12).
+#example holdsAt(location(apple,hallway),13).
+happensAt(go(john,bedroom),14).
+happensAt(get(mary,apple),15).
+happensAt(go(sandra,office),16).
+happensAt(journey(daniel,bedroom),17).
+happensAt(goback(john,kitchen),18).
+happensAt(go(sandra,kitchen),19).
+happensAt(move(sandra,hallway),20).
+happensAt(journey(mary,bathroom),21).
+happensAt(goback(sandra,office),22).
+happensAt(move(sandra,garden),23).
+happensAt(journey(daniel,hallway),24).
+happensAt(get(mary,football),25).
+happensAt(take(sandra,milk),26).
+happensAt(journey(daniel,bathroom),27).
+happensAt(journey(sandra,hallway),28).
+happensAt(putdown(mary,football),29).
+#example holdsAt(location(football,bathroom),30).
+happensAt(goback(mary,hallway),31).
+happensAt(move(daniel,garden),32).
+#example holdsAt(location(football,bathroom),33).
+#example holdsAt(location(football,bathroom),30).
+#example holdsAt(location(football,bathroom),31).
+#example holdsAt(location(football,bathroom),32).
+happensAt(move(daniel,bathroom),34).
+happensAt(travel(daniel,bedroom),35).
+#example holdsAt(location(football,bathroom),36).
+#example holdsAt(location(football,bathroom),30).
+#example holdsAt(location(football,bathroom),31).
+#example holdsAt(location(football,bathroom),32).
+#example holdsAt(location(football,bathroom),33).
+#example holdsAt(location(football,bathroom),34).
+#example holdsAt(location(football,bathroom),35).
+happensAt(journey(john,bathroom),37).
+happensAt(travel(sandra,office),38).
+happensAt(travel(daniel,bathroom),39).
+happensAt(grab(daniel,football),40).
+happensAt(go(sandra,hallway),41).
+happensAt(discard(daniel,football),42).
+#example holdsAt(location(football,bathroom),43).

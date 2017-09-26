@@ -1,0 +1,51 @@
+happensAt(travel(daniel,hallway),1).
+happensAt(travel(daniel,kitchen),2).
+happensAt(grab(john,football),3).
+happensAt(move(mary,kitchen),4).
+happensAt(drop(john,football),5).
+happensAt(pickup(john,football),6).
+happensAt(go(sandra,office),7).
+happensAt(journey(sandra,bedroom),8).
+happensAt(travel(daniel,garden),9).
+happensAt(get(sandra,milk),10).
+happensAt(move(mary,hallway),11).
+happensAt(goback(daniel,bedroom),12).
+happensAt(travel(daniel,hallway),13).
+happensAt(move(mary,bathroom),14).
+happensAt(move(mary,office),15).
+happensAt(journey(daniel,kitchen),16).
+happensAt(journey(mary,hallway),17).
+happensAt(leave(sandra,milk),18).
+#example holdsAt(location(milk,bedroom),19).
+happensAt(goback(sandra,kitchen),20).
+happensAt(travel(john,office),21).
+#example holdsAt(location(milk,bedroom),22).
+#example holdsAt(location(milk,bedroom),19).
+#example holdsAt(location(milk,bedroom),20).
+#example holdsAt(location(milk,bedroom),21).
+happensAt(journey(sandra,garden),23).
+happensAt(travel(mary,bedroom),24).
+#example holdsAt(location(milk,bedroom),25).
+#example holdsAt(location(milk,bedroom),19).
+#example holdsAt(location(milk,bedroom),20).
+#example holdsAt(location(milk,bedroom),21).
+#example holdsAt(location(milk,bedroom),22).
+#example holdsAt(location(milk,bedroom),23).
+#example holdsAt(location(milk,bedroom),24).
+happensAt(goback(sandra,bathroom),26).
+happensAt(travel(john,bedroom),27).
+happensAt(go(john,garden),28).
+happensAt(goback(daniel,bathroom),29).
+happensAt(journey(john,hallway),30).
+happensAt(move(daniel,office),31).
+happensAt(putdown(john,football),32).
+happensAt(get(mary,milk),33).
+#example holdsAt(location(football,hallway),34).
+#example holdsAt(location(football,hallway),33).
+happensAt(go(sandra,hallway),35).
+happensAt(move(daniel,kitchen),36).
+#example holdsAt(location(football,hallway),37).
+#example holdsAt(location(football,hallway),33).
+#example holdsAt(location(football,hallway),34).
+#example holdsAt(location(football,hallway),35).
+#example holdsAt(location(football,hallway),36).

@@ -1,0 +1,52 @@
+happensAt(goback(daniel,bathroom),1).
+happensAt(goback(mary,office),2).
+happensAt(move(mary,garden),3).
+happensAt(go(mary,office),4).
+happensAt(go(daniel,office),5).
+happensAt(goback(daniel,kitchen),6).
+happensAt(journey(sandra,hallway),7).
+happensAt(journey(john,office),8).
+happensAt(travel(daniel,bathroom),9).
+happensAt(get(sandra,milk),10).
+happensAt(go(daniel,hallway),11).
+happensAt(move(mary,kitchen),12).
+happensAt(move(daniel,garden),13).
+happensAt(travel(mary,office),14).
+happensAt(journey(daniel,kitchen),15).
+happensAt(travel(john,bedroom),16).
+happensAt(go(daniel,bedroom),17).
+happensAt(goback(john,garden),18).
+happensAt(goback(sandra,office),19).
+happensAt(travel(mary,garden),20).
+happensAt(go(sandra,kitchen),21).
+happensAt(move(mary,bedroom),22).
+happensAt(go(john,kitchen),23).
+happensAt(pickup(john,football),24).
+happensAt(journey(john,hallway),25).
+happensAt(putdown(john,football),26).
+#example holdsAt(location(football,hallway),27).
+happensAt(journey(sandra,bedroom),28).
+happensAt(move(john,office),29).
+#example holdsAt(location(football,hallway),30).
+#example holdsAt(location(football,hallway),27).
+#example holdsAt(location(football,hallway),28).
+#example holdsAt(location(football,hallway),29).
+happensAt(leave(sandra,milk),31).
+happensAt(go(daniel,hallway),32).
+#example holdsAt(location(football,hallway),33).
+#example holdsAt(location(football,hallway),27).
+#example holdsAt(location(football,hallway),28).
+#example holdsAt(location(football,hallway),29).
+#example holdsAt(location(football,hallway),30).
+#example holdsAt(location(football,hallway),31).
+#example holdsAt(location(football,hallway),32).
+happensAt(travel(daniel,bathroom),34).
+happensAt(goback(john,bathroom),35).
+#example holdsAt(location(milk,bedroom),36).
+#example holdsAt(location(milk,bedroom),32).
+#example holdsAt(location(milk,bedroom),33).
+#example holdsAt(location(milk,bedroom),34).
+#example holdsAt(location(milk,bedroom),35).
+happensAt(pickup(daniel,apple),37).
+happensAt(leave(daniel,apple),38).
+#example holdsAt(location(apple,bathroom),39).

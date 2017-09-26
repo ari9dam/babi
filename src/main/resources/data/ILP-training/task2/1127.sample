@@ -1,0 +1,34 @@
+happensAt(go(daniel,hallway),1).
+happensAt(goback(mary,bedroom),2).
+happensAt(grab(mary,milk),3).
+happensAt(goback(daniel,office),4).
+happensAt(drop(mary,milk),5).
+happensAt(move(daniel,kitchen),6).
+#example holdsAt(location(milk,bedroom),7).
+#example holdsAt(location(milk,bedroom),6).
+happensAt(travel(daniel,hallway),8).
+happensAt(take(mary,milk),9).
+happensAt(journey(daniel,bedroom),10).
+happensAt(move(sandra,garden),11).
+happensAt(move(mary,bathroom),12).
+happensAt(take(sandra,apple),13).
+#example holdsAt(location(milk,bathroom),14).
+#example not holdsAt(location(milk,bedroom),14).
+#example holdsAt(location(milk,bathroom),13).
+happensAt(putdown(sandra,apple),15).
+happensAt(pickup(sandra,apple),16).
+happensAt(goback(daniel,garden),17).
+happensAt(putdown(sandra,apple),18).
+#example holdsAt(location(apple,garden),19).
+happensAt(go(mary,bedroom),20).
+happensAt(move(mary,garden),21).
+#example holdsAt(location(apple,garden),22).
+#example holdsAt(location(apple,garden),19).
+#example holdsAt(location(apple,garden),20).
+#example holdsAt(location(apple,garden),21).
+happensAt(travel(sandra,bedroom),23).
+happensAt(pickup(mary,apple),24).
+happensAt(go(john,bedroom),25).
+happensAt(move(mary,bedroom),26).
+#example holdsAt(location(apple,bedroom),27).
+#example not holdsAt(location(apple,garden),27).

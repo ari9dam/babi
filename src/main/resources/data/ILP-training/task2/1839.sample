@@ -1,0 +1,51 @@
+happensAt(journey(john,kitchen),1).
+happensAt(move(sandra,hallway),2).
+happensAt(move(sandra,bedroom),3).
+happensAt(travel(mary,kitchen),4).
+happensAt(move(john,hallway),5).
+happensAt(travel(mary,bedroom),6).
+happensAt(travel(sandra,kitchen),7).
+happensAt(goback(john,garden),8).
+happensAt(journey(mary,garden),9).
+happensAt(journey(sandra,office),10).
+happensAt(journey(mary,office),11).
+happensAt(move(sandra,kitchen),12).
+happensAt(goback(mary,garden),13).
+happensAt(move(daniel,garden),14).
+happensAt(move(sandra,garden),15).
+happensAt(travel(mary,kitchen),16).
+happensAt(grab(mary,milk),17).
+happensAt(travel(john,office),18).
+happensAt(get(mary,apple),19).
+happensAt(drop(mary,apple),20).
+#example holdsAt(location(apple,kitchen),21).
+happensAt(go(john,bathroom),22).
+happensAt(goback(john,kitchen),23).
+#example holdsAt(location(apple,kitchen),24).
+#example holdsAt(location(apple,kitchen),21).
+#example holdsAt(location(apple,kitchen),22).
+#example holdsAt(location(apple,kitchen),23).
+happensAt(goback(john,garden),25).
+happensAt(journey(mary,bathroom),26).
+#example holdsAt(location(apple,kitchen),27).
+#example holdsAt(location(apple,kitchen),21).
+#example holdsAt(location(apple,kitchen),22).
+#example holdsAt(location(apple,kitchen),23).
+#example holdsAt(location(apple,kitchen),24).
+#example holdsAt(location(apple,kitchen),25).
+#example holdsAt(location(apple,kitchen),26).
+happensAt(go(daniel,hallway),28).
+happensAt(go(sandra,kitchen),29).
+happensAt(travel(daniel,bathroom),30).
+happensAt(get(sandra,apple),31).
+happensAt(drop(sandra,apple),32).
+happensAt(move(daniel,garden),33).
+#example holdsAt(location(apple,kitchen),34).
+#example holdsAt(location(apple,kitchen),33).
+happensAt(move(mary,hallway),35).
+happensAt(get(mary,football),36).
+#example holdsAt(location(apple,kitchen),37).
+#example holdsAt(location(apple,kitchen),33).
+#example holdsAt(location(apple,kitchen),34).
+#example holdsAt(location(apple,kitchen),35).
+#example holdsAt(location(apple,kitchen),36).

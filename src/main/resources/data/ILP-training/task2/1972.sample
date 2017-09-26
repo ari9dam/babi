@@ -1,0 +1,53 @@
+happensAt(travel(mary,hallway),1).
+happensAt(go(john,garden),2).
+happensAt(journey(mary,office),3).
+happensAt(goback(mary,bathroom),4).
+happensAt(journey(mary,office),5).
+happensAt(travel(john,bathroom),6).
+happensAt(goback(daniel,bathroom),7).
+happensAt(go(daniel,hallway),8).
+happensAt(travel(sandra,kitchen),9).
+happensAt(take(sandra,apple),10).
+happensAt(go(sandra,hallway),11).
+happensAt(journey(sandra,bedroom),12).
+#example holdsAt(location(apple,bedroom),13).
+happensAt(drop(sandra,apple),14).
+happensAt(travel(sandra,hallway),15).
+#example holdsAt(location(apple,bedroom),16).
+#example holdsAt(location(apple,bedroom),15).
+happensAt(go(mary,garden),17).
+happensAt(travel(daniel,office),18).
+#example holdsAt(location(apple,bedroom),19).
+#example holdsAt(location(apple,bedroom),15).
+#example holdsAt(location(apple,bedroom),16).
+#example holdsAt(location(apple,bedroom),17).
+#example holdsAt(location(apple,bedroom),18).
+happensAt(move(mary,bedroom),20).
+happensAt(journey(mary,office),21).
+happensAt(move(sandra,kitchen),22).
+happensAt(journey(sandra,bedroom),23).
+happensAt(move(daniel,bathroom),24).
+happensAt(go(john,hallway),25).
+happensAt(travel(mary,bathroom),26).
+happensAt(move(daniel,hallway),27).
+happensAt(travel(mary,hallway),28).
+happensAt(goback(mary,kitchen),29).
+happensAt(goback(sandra,hallway),30).
+happensAt(move(daniel,office),31).
+happensAt(move(sandra,kitchen),32).
+happensAt(journey(mary,hallway),33).
+happensAt(go(daniel,bathroom),34).
+happensAt(travel(daniel,garden),35).
+happensAt(travel(sandra,hallway),36).
+happensAt(goback(sandra,bedroom),37).
+happensAt(pickup(sandra,milk),38).
+happensAt(get(sandra,apple),39).
+happensAt(travel(mary,garden),40).
+happensAt(goback(daniel,bedroom),41).
+happensAt(goback(mary,hallway),42).
+happensAt(discard(sandra,milk),43).
+#example holdsAt(location(milk,bedroom),44).
+happensAt(discard(sandra,apple),45).
+happensAt(goback(daniel,bathroom),46).
+#example holdsAt(location(apple,bedroom),47).
+#example holdsAt(location(apple,bedroom),46).

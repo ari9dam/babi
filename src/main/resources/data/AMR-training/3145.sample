@@ -1,0 +1,332 @@
+lemma(1,mary).
+glemma(1,mary).
+pos(1,jj).
+lemma(2,move).
+glemma(2,move).
+pos(2,vbn).
+lemma(3,to).
+glemma(3,to).
+pos(3,to).
+lemma(4,the).
+glemma(4,the).
+pos(4,dt).
+lemma(5,office).
+glemma(5,office).
+pos(5,nn).
+lemma(6,this).
+glemma(6,this).
+pos(6,dt).
+lemma(7,afternoon).
+glemma(7,afternoon).
+pos(7,nn).
+index(1..7).
+concept(negative).
+concept(relativeposition01).
+concept(domain).
+concept(belocatedat91).
+concept(fear).
+concept(afternoon).
+concept(move01).
+concept(mary).
+concept(office).
+#example arg2(move01,office) .
+#example arg1(move01,mary) .
+#example time(move01,afternoon) .
+#example not arg3(move01,afternoon) .
+#example not arg3(move01,negative) .
+#example not arg3(move01,either) .
+#example not arg3(move01,mary) .
+#example not arg3(move01,office) .
+#example not arg3(relativeposition01,afternoon) .
+#example not arg3(relativeposition01,negative) .
+#example not arg3(relativeposition01,either) .
+#example not arg3(relativeposition01,mary) .
+#example not arg3(relativeposition01,office) .
+#example not arg3(domain,afternoon) .
+#example not arg3(domain,negative) .
+#example not arg3(domain,either) .
+#example not arg3(domain,mary) .
+#example not arg3(domain,office) .
+#example not arg3(pass01,afternoon) .
+#example not arg3(pass01,negative) .
+#example not arg3(pass01,either) .
+#example not arg3(pass01,mary) .
+#example not arg3(pass01,office) .
+#example not arg3(belocatedat91,afternoon) .
+#example not arg3(belocatedat91,negative) .
+#example not arg3(belocatedat91,either) .
+#example not arg3(belocatedat91,mary) .
+#example not arg3(belocatedat91,office) .
+#example not arg3(fear,afternoon) .
+#example not arg3(fear,negative) .
+#example not arg3(fear,either) .
+#example not arg3(fear,mary) .
+#example not arg3(fear,office) .
+#example not op2(move01,afternoon) .
+#example not op2(move01,negative) .
+#example not op2(move01,either) .
+#example not op2(move01,mary) .
+#example not op2(move01,office) .
+#example not op2(relativeposition01,afternoon) .
+#example not op2(relativeposition01,negative) .
+#example not op2(relativeposition01,either) .
+#example not op2(relativeposition01,mary) .
+#example not op2(relativeposition01,office) .
+#example not op2(domain,afternoon) .
+#example not op2(domain,negative) .
+#example not op2(domain,either) .
+#example not op2(domain,mary) .
+#example not op2(domain,office) .
+#example not op2(pass01,afternoon) .
+#example not op2(pass01,negative) .
+#example not op2(pass01,either) .
+#example not op2(pass01,mary) .
+#example not op2(pass01,office) .
+#example not op2(belocatedat91,afternoon) .
+#example not op2(belocatedat91,negative) .
+#example not op2(belocatedat91,either) .
+#example not op2(belocatedat91,mary) .
+#example not op2(belocatedat91,office) .
+#example not op2(fear,afternoon) .
+#example not op2(fear,negative) .
+#example not op2(fear,either) .
+#example not op2(fear,mary) .
+#example not op2(fear,office) .
+#example not arg2(move01,afternoon) .
+#example not arg2(move01,negative) .
+#example not arg2(move01,either) .
+#example not arg2(move01,mary) .
+#example not arg2(relativeposition01,afternoon) .
+#example not arg2(relativeposition01,negative) .
+#example not arg2(relativeposition01,either) .
+#example not arg2(relativeposition01,mary) .
+#example not arg2(relativeposition01,office) .
+#example not arg2(domain,afternoon) .
+#example not arg2(domain,negative) .
+#example not arg2(domain,either) .
+#example not arg2(domain,mary) .
+#example not arg2(domain,office) .
+#example not arg2(pass01,afternoon) .
+#example not arg2(pass01,negative) .
+#example not arg2(pass01,either) .
+#example not arg2(pass01,mary) .
+#example not arg2(pass01,office) .
+#example not arg2(belocatedat91,afternoon) .
+#example not arg2(belocatedat91,negative) .
+#example not arg2(belocatedat91,either) .
+#example not arg2(belocatedat91,mary) .
+#example not arg2(belocatedat91,office) .
+#example not arg2(fear,afternoon) .
+#example not arg2(fear,negative) .
+#example not arg2(fear,either) .
+#example not arg2(fear,mary) .
+#example not arg2(fear,office) .
+#example not op1(move01,afternoon) .
+#example not op1(move01,negative) .
+#example not op1(move01,either) .
+#example not op1(move01,mary) .
+#example not op1(move01,office) .
+#example not op1(relativeposition01,afternoon) .
+#example not op1(relativeposition01,negative) .
+#example not op1(relativeposition01,either) .
+#example not op1(relativeposition01,mary) .
+#example not op1(relativeposition01,office) .
+#example not op1(domain,afternoon) .
+#example not op1(domain,negative) .
+#example not op1(domain,either) .
+#example not op1(domain,mary) .
+#example not op1(domain,office) .
+#example not op1(pass01,afternoon) .
+#example not op1(pass01,negative) .
+#example not op1(pass01,either) .
+#example not op1(pass01,mary) .
+#example not op1(pass01,office) .
+#example not op1(belocatedat91,afternoon) .
+#example not op1(belocatedat91,negative) .
+#example not op1(belocatedat91,either) .
+#example not op1(belocatedat91,mary) .
+#example not op1(belocatedat91,office) .
+#example not op1(fear,afternoon) .
+#example not op1(fear,negative) .
+#example not op1(fear,either) .
+#example not op1(fear,mary) .
+#example not op1(fear,office) .
+#example not comparedto(move01,afternoon) .
+#example not comparedto(move01,negative) .
+#example not comparedto(move01,either) .
+#example not comparedto(move01,mary) .
+#example not comparedto(move01,office) .
+#example not comparedto(relativeposition01,afternoon) .
+#example not comparedto(relativeposition01,negative) .
+#example not comparedto(relativeposition01,either) .
+#example not comparedto(relativeposition01,mary) .
+#example not comparedto(relativeposition01,office) .
+#example not comparedto(domain,afternoon) .
+#example not comparedto(domain,negative) .
+#example not comparedto(domain,either) .
+#example not comparedto(domain,mary) .
+#example not comparedto(domain,office) .
+#example not comparedto(pass01,afternoon) .
+#example not comparedto(pass01,negative) .
+#example not comparedto(pass01,either) .
+#example not comparedto(pass01,mary) .
+#example not comparedto(pass01,office) .
+#example not comparedto(belocatedat91,afternoon) .
+#example not comparedto(belocatedat91,negative) .
+#example not comparedto(belocatedat91,either) .
+#example not comparedto(belocatedat91,mary) .
+#example not comparedto(belocatedat91,office) .
+#example not comparedto(fear,afternoon) .
+#example not comparedto(fear,negative) .
+#example not comparedto(fear,either) .
+#example not comparedto(fear,mary) .
+#example not comparedto(fear,office) .
+#example not arg1(move01,afternoon) .
+#example not arg1(move01,negative) .
+#example not arg1(move01,either) .
+#example not arg1(move01,office) .
+#example not arg1(relativeposition01,afternoon) .
+#example not arg1(relativeposition01,negative) .
+#example not arg1(relativeposition01,either) .
+#example not arg1(relativeposition01,mary) .
+#example not arg1(relativeposition01,office) .
+#example not arg1(domain,afternoon) .
+#example not arg1(domain,negative) .
+#example not arg1(domain,either) .
+#example not arg1(domain,mary) .
+#example not arg1(domain,office) .
+#example not arg1(pass01,afternoon) .
+#example not arg1(pass01,negative) .
+#example not arg1(pass01,either) .
+#example not arg1(pass01,mary) .
+#example not arg1(pass01,office) .
+#example not arg1(belocatedat91,afternoon) .
+#example not arg1(belocatedat91,negative) .
+#example not arg1(belocatedat91,either) .
+#example not arg1(belocatedat91,mary) .
+#example not arg1(belocatedat91,office) .
+#example not arg1(fear,afternoon) .
+#example not arg1(fear,negative) .
+#example not arg1(fear,either) .
+#example not arg1(fear,mary) .
+#example not arg1(fear,office) .
+#example not degree(move01,afternoon) .
+#example not degree(move01,negative) .
+#example not degree(move01,either) .
+#example not degree(move01,mary) .
+#example not degree(move01,office) .
+#example not degree(relativeposition01,afternoon) .
+#example not degree(relativeposition01,negative) .
+#example not degree(relativeposition01,either) .
+#example not degree(relativeposition01,mary) .
+#example not degree(relativeposition01,office) .
+#example not degree(domain,afternoon) .
+#example not degree(domain,negative) .
+#example not degree(domain,either) .
+#example not degree(domain,mary) .
+#example not degree(domain,office) .
+#example not degree(pass01,afternoon) .
+#example not degree(pass01,negative) .
+#example not degree(pass01,either) .
+#example not degree(pass01,mary) .
+#example not degree(pass01,office) .
+#example not degree(belocatedat91,afternoon) .
+#example not degree(belocatedat91,negative) .
+#example not degree(belocatedat91,either) .
+#example not degree(belocatedat91,mary) .
+#example not degree(belocatedat91,office) .
+#example not degree(fear,afternoon) .
+#example not degree(fear,negative) .
+#example not degree(fear,either) .
+#example not degree(fear,mary) .
+#example not degree(fear,office) .
+#example not time(move01,negative) .
+#example not time(move01,either) .
+#example not time(move01,mary) .
+#example not time(move01,office) .
+#example not time(relativeposition01,afternoon) .
+#example not time(relativeposition01,negative) .
+#example not time(relativeposition01,either) .
+#example not time(relativeposition01,mary) .
+#example not time(relativeposition01,office) .
+#example not time(domain,afternoon) .
+#example not time(domain,negative) .
+#example not time(domain,either) .
+#example not time(domain,mary) .
+#example not time(domain,office) .
+#example not time(pass01,afternoon) .
+#example not time(pass01,negative) .
+#example not time(pass01,either) .
+#example not time(pass01,mary) .
+#example not time(pass01,office) .
+#example not time(belocatedat91,afternoon) .
+#example not time(belocatedat91,negative) .
+#example not time(belocatedat91,either) .
+#example not time(belocatedat91,mary) .
+#example not time(belocatedat91,office) .
+#example not time(fear,afternoon) .
+#example not time(fear,negative) .
+#example not time(fear,either) .
+#example not time(fear,mary) .
+#example not time(fear,office) .
+#example not direction(move01,afternoon) .
+#example not direction(move01,negative) .
+#example not direction(move01,either) .
+#example not direction(move01,mary) .
+#example not direction(move01,office) .
+#example not direction(relativeposition01,afternoon) .
+#example not direction(relativeposition01,negative) .
+#example not direction(relativeposition01,either) .
+#example not direction(relativeposition01,mary) .
+#example not direction(relativeposition01,office) .
+#example not direction(domain,afternoon) .
+#example not direction(domain,negative) .
+#example not direction(domain,either) .
+#example not direction(domain,mary) .
+#example not direction(domain,office) .
+#example not direction(pass01,afternoon) .
+#example not direction(pass01,negative) .
+#example not direction(pass01,either) .
+#example not direction(pass01,mary) .
+#example not direction(pass01,office) .
+#example not direction(belocatedat91,afternoon) .
+#example not direction(belocatedat91,negative) .
+#example not direction(belocatedat91,either) .
+#example not direction(belocatedat91,mary) .
+#example not direction(belocatedat91,office) .
+#example not direction(fear,afternoon) .
+#example not direction(fear,negative) .
+#example not direction(fear,either) .
+#example not direction(fear,mary) .
+#example not direction(fear,office) .
+#example not polarity(move01,afternoon) .
+#example not polarity(move01,negative) .
+#example not polarity(move01,either) .
+#example not polarity(move01,mary) .
+#example not polarity(move01,office) .
+#example not polarity(relativeposition01,afternoon) .
+#example not polarity(relativeposition01,negative) .
+#example not polarity(relativeposition01,either) .
+#example not polarity(relativeposition01,mary) .
+#example not polarity(relativeposition01,office) .
+#example not polarity(domain,afternoon) .
+#example not polarity(domain,negative) .
+#example not polarity(domain,either) .
+#example not polarity(domain,mary) .
+#example not polarity(domain,office) .
+#example not polarity(pass01,afternoon) .
+#example not polarity(pass01,negative) .
+#example not polarity(pass01,either) .
+#example not polarity(pass01,mary) .
+#example not polarity(pass01,office) .
+#example not polarity(belocatedat91,afternoon) .
+#example not polarity(belocatedat91,negative) .
+#example not polarity(belocatedat91,either) .
+#example not polarity(belocatedat91,mary) .
+#example not polarity(belocatedat91,office) .
+#example not polarity(fear,afternoon) .
+#example not polarity(fear,negative) .
+#example not polarity(fear,either) .
+#example not polarity(fear,mary) .
+#example not polarity(fear,office) .
+concept(pass01).

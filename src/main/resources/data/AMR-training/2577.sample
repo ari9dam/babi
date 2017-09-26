@@ -1,0 +1,335 @@
+lemma(1,after).
+glemma(1,after).
+pos(1,in).
+lemma(2,that).
+glemma(2,that).
+pos(2,dt).
+lemma(3,she).
+glemma(3,she).
+pos(3,prp).
+lemma(4,go).
+glemma(4,go).
+pos(4,vbd).
+lemma(5,back).
+glemma(5,back).
+pos(5,rb).
+lemma(6,to).
+glemma(6,to).
+pos(6,to).
+lemma(7,the).
+glemma(7,the).
+pos(7,dt).
+lemma(8,hallway).
+glemma(8,hallway).
+pos(8,nn).
+index(1..8).
+concept(negative).
+concept(relativeposition01).
+concept(domain).
+concept(belocatedat91).
+concept(fear).
+concept(she).
+concept(hallway).
+concept(go01).
+concept(back).
+#example arg2(go01,hallway) .
+#example arg1(go01,she) .
+#example direction(go01,back) .
+#example not arg3(relativeposition01,she) .
+#example not arg3(relativeposition01,negative) .
+#example not arg3(relativeposition01,either) .
+#example not arg3(relativeposition01,hallway) .
+#example not arg3(relativeposition01,back) .
+#example not arg3(domain,she) .
+#example not arg3(domain,negative) .
+#example not arg3(domain,either) .
+#example not arg3(domain,hallway) .
+#example not arg3(domain,back) .
+#example not arg3(travel01,she) .
+#example not arg3(travel01,negative) .
+#example not arg3(travel01,either) .
+#example not arg3(travel01,hallway) .
+#example not arg3(travel01,back) .
+#example not arg3(go01,she) .
+#example not arg3(go01,negative) .
+#example not arg3(go01,either) .
+#example not arg3(go01,hallway) .
+#example not arg3(go01,back) .
+#example not arg3(belocatedat91,she) .
+#example not arg3(belocatedat91,negative) .
+#example not arg3(belocatedat91,either) .
+#example not arg3(belocatedat91,hallway) .
+#example not arg3(belocatedat91,back) .
+#example not arg3(fear,she) .
+#example not arg3(fear,negative) .
+#example not arg3(fear,either) .
+#example not arg3(fear,hallway) .
+#example not arg3(fear,back) .
+#example not op2(relativeposition01,she) .
+#example not op2(relativeposition01,negative) .
+#example not op2(relativeposition01,either) .
+#example not op2(relativeposition01,hallway) .
+#example not op2(relativeposition01,back) .
+#example not op2(domain,she) .
+#example not op2(domain,negative) .
+#example not op2(domain,either) .
+#example not op2(domain,hallway) .
+#example not op2(domain,back) .
+#example not op2(travel01,she) .
+#example not op2(travel01,negative) .
+#example not op2(travel01,either) .
+#example not op2(travel01,hallway) .
+#example not op2(travel01,back) .
+#example not op2(go01,she) .
+#example not op2(go01,negative) .
+#example not op2(go01,either) .
+#example not op2(go01,hallway) .
+#example not op2(go01,back) .
+#example not op2(belocatedat91,she) .
+#example not op2(belocatedat91,negative) .
+#example not op2(belocatedat91,either) .
+#example not op2(belocatedat91,hallway) .
+#example not op2(belocatedat91,back) .
+#example not op2(fear,she) .
+#example not op2(fear,negative) .
+#example not op2(fear,either) .
+#example not op2(fear,hallway) .
+#example not op2(fear,back) .
+#example not arg2(relativeposition01,she) .
+#example not arg2(relativeposition01,negative) .
+#example not arg2(relativeposition01,either) .
+#example not arg2(relativeposition01,hallway) .
+#example not arg2(relativeposition01,back) .
+#example not arg2(domain,she) .
+#example not arg2(domain,negative) .
+#example not arg2(domain,either) .
+#example not arg2(domain,hallway) .
+#example not arg2(domain,back) .
+#example not arg2(travel01,she) .
+#example not arg2(travel01,negative) .
+#example not arg2(travel01,either) .
+#example not arg2(travel01,hallway) .
+#example not arg2(travel01,back) .
+#example not arg2(go01,she) .
+#example not arg2(go01,negative) .
+#example not arg2(go01,either) .
+#example not arg2(go01,back) .
+#example not arg2(belocatedat91,she) .
+#example not arg2(belocatedat91,negative) .
+#example not arg2(belocatedat91,either) .
+#example not arg2(belocatedat91,hallway) .
+#example not arg2(belocatedat91,back) .
+#example not arg2(fear,she) .
+#example not arg2(fear,negative) .
+#example not arg2(fear,either) .
+#example not arg2(fear,hallway) .
+#example not arg2(fear,back) .
+#example not op1(relativeposition01,she) .
+#example not op1(relativeposition01,negative) .
+#example not op1(relativeposition01,either) .
+#example not op1(relativeposition01,hallway) .
+#example not op1(relativeposition01,back) .
+#example not op1(domain,she) .
+#example not op1(domain,negative) .
+#example not op1(domain,either) .
+#example not op1(domain,hallway) .
+#example not op1(domain,back) .
+#example not op1(travel01,she) .
+#example not op1(travel01,negative) .
+#example not op1(travel01,either) .
+#example not op1(travel01,hallway) .
+#example not op1(travel01,back) .
+#example not op1(go01,she) .
+#example not op1(go01,negative) .
+#example not op1(go01,either) .
+#example not op1(go01,hallway) .
+#example not op1(go01,back) .
+#example not op1(belocatedat91,she) .
+#example not op1(belocatedat91,negative) .
+#example not op1(belocatedat91,either) .
+#example not op1(belocatedat91,hallway) .
+#example not op1(belocatedat91,back) .
+#example not op1(fear,she) .
+#example not op1(fear,negative) .
+#example not op1(fear,either) .
+#example not op1(fear,hallway) .
+#example not op1(fear,back) .
+#example not comparedto(relativeposition01,she) .
+#example not comparedto(relativeposition01,negative) .
+#example not comparedto(relativeposition01,either) .
+#example not comparedto(relativeposition01,hallway) .
+#example not comparedto(relativeposition01,back) .
+#example not comparedto(domain,she) .
+#example not comparedto(domain,negative) .
+#example not comparedto(domain,either) .
+#example not comparedto(domain,hallway) .
+#example not comparedto(domain,back) .
+#example not comparedto(travel01,she) .
+#example not comparedto(travel01,negative) .
+#example not comparedto(travel01,either) .
+#example not comparedto(travel01,hallway) .
+#example not comparedto(travel01,back) .
+#example not comparedto(go01,she) .
+#example not comparedto(go01,negative) .
+#example not comparedto(go01,either) .
+#example not comparedto(go01,hallway) .
+#example not comparedto(go01,back) .
+#example not comparedto(belocatedat91,she) .
+#example not comparedto(belocatedat91,negative) .
+#example not comparedto(belocatedat91,either) .
+#example not comparedto(belocatedat91,hallway) .
+#example not comparedto(belocatedat91,back) .
+#example not comparedto(fear,she) .
+#example not comparedto(fear,negative) .
+#example not comparedto(fear,either) .
+#example not comparedto(fear,hallway) .
+#example not comparedto(fear,back) .
+#example not arg1(relativeposition01,she) .
+#example not arg1(relativeposition01,negative) .
+#example not arg1(relativeposition01,either) .
+#example not arg1(relativeposition01,hallway) .
+#example not arg1(relativeposition01,back) .
+#example not arg1(domain,she) .
+#example not arg1(domain,negative) .
+#example not arg1(domain,either) .
+#example not arg1(domain,hallway) .
+#example not arg1(domain,back) .
+#example not arg1(travel01,she) .
+#example not arg1(travel01,negative) .
+#example not arg1(travel01,either) .
+#example not arg1(travel01,hallway) .
+#example not arg1(travel01,back) .
+#example not arg1(go01,negative) .
+#example not arg1(go01,either) .
+#example not arg1(go01,hallway) .
+#example not arg1(go01,back) .
+#example not arg1(belocatedat91,she) .
+#example not arg1(belocatedat91,negative) .
+#example not arg1(belocatedat91,either) .
+#example not arg1(belocatedat91,hallway) .
+#example not arg1(belocatedat91,back) .
+#example not arg1(fear,she) .
+#example not arg1(fear,negative) .
+#example not arg1(fear,either) .
+#example not arg1(fear,hallway) .
+#example not arg1(fear,back) .
+#example not degree(relativeposition01,she) .
+#example not degree(relativeposition01,negative) .
+#example not degree(relativeposition01,either) .
+#example not degree(relativeposition01,hallway) .
+#example not degree(relativeposition01,back) .
+#example not degree(domain,she) .
+#example not degree(domain,negative) .
+#example not degree(domain,either) .
+#example not degree(domain,hallway) .
+#example not degree(domain,back) .
+#example not degree(travel01,she) .
+#example not degree(travel01,negative) .
+#example not degree(travel01,either) .
+#example not degree(travel01,hallway) .
+#example not degree(travel01,back) .
+#example not degree(go01,she) .
+#example not degree(go01,negative) .
+#example not degree(go01,either) .
+#example not degree(go01,hallway) .
+#example not degree(go01,back) .
+#example not degree(belocatedat91,she) .
+#example not degree(belocatedat91,negative) .
+#example not degree(belocatedat91,either) .
+#example not degree(belocatedat91,hallway) .
+#example not degree(belocatedat91,back) .
+#example not degree(fear,she) .
+#example not degree(fear,negative) .
+#example not degree(fear,either) .
+#example not degree(fear,hallway) .
+#example not degree(fear,back) .
+#example not time(relativeposition01,she) .
+#example not time(relativeposition01,negative) .
+#example not time(relativeposition01,either) .
+#example not time(relativeposition01,hallway) .
+#example not time(relativeposition01,back) .
+#example not time(domain,she) .
+#example not time(domain,negative) .
+#example not time(domain,either) .
+#example not time(domain,hallway) .
+#example not time(domain,back) .
+#example not time(travel01,she) .
+#example not time(travel01,negative) .
+#example not time(travel01,either) .
+#example not time(travel01,hallway) .
+#example not time(travel01,back) .
+#example not time(go01,she) .
+#example not time(go01,negative) .
+#example not time(go01,either) .
+#example not time(go01,hallway) .
+#example not time(go01,back) .
+#example not time(belocatedat91,she) .
+#example not time(belocatedat91,negative) .
+#example not time(belocatedat91,either) .
+#example not time(belocatedat91,hallway) .
+#example not time(belocatedat91,back) .
+#example not time(fear,she) .
+#example not time(fear,negative) .
+#example not time(fear,either) .
+#example not time(fear,hallway) .
+#example not time(fear,back) .
+#example not direction(relativeposition01,she) .
+#example not direction(relativeposition01,negative) .
+#example not direction(relativeposition01,either) .
+#example not direction(relativeposition01,hallway) .
+#example not direction(relativeposition01,back) .
+#example not direction(domain,she) .
+#example not direction(domain,negative) .
+#example not direction(domain,either) .
+#example not direction(domain,hallway) .
+#example not direction(domain,back) .
+#example not direction(travel01,she) .
+#example not direction(travel01,negative) .
+#example not direction(travel01,either) .
+#example not direction(travel01,hallway) .
+#example not direction(travel01,back) .
+#example not direction(go01,she) .
+#example not direction(go01,negative) .
+#example not direction(go01,either) .
+#example not direction(go01,hallway) .
+#example not direction(belocatedat91,she) .
+#example not direction(belocatedat91,negative) .
+#example not direction(belocatedat91,either) .
+#example not direction(belocatedat91,hallway) .
+#example not direction(belocatedat91,back) .
+#example not direction(fear,she) .
+#example not direction(fear,negative) .
+#example not direction(fear,either) .
+#example not direction(fear,hallway) .
+#example not direction(fear,back) .
+#example not polarity(relativeposition01,she) .
+#example not polarity(relativeposition01,negative) .
+#example not polarity(relativeposition01,either) .
+#example not polarity(relativeposition01,hallway) .
+#example not polarity(relativeposition01,back) .
+#example not polarity(domain,she) .
+#example not polarity(domain,negative) .
+#example not polarity(domain,either) .
+#example not polarity(domain,hallway) .
+#example not polarity(domain,back) .
+#example not polarity(travel01,she) .
+#example not polarity(travel01,negative) .
+#example not polarity(travel01,either) .
+#example not polarity(travel01,hallway) .
+#example not polarity(travel01,back) .
+#example not polarity(go01,she) .
+#example not polarity(go01,negative) .
+#example not polarity(go01,either) .
+#example not polarity(go01,hallway) .
+#example not polarity(go01,back) .
+#example not polarity(belocatedat91,she) .
+#example not polarity(belocatedat91,negative) .
+#example not polarity(belocatedat91,either) .
+#example not polarity(belocatedat91,hallway) .
+#example not polarity(belocatedat91,back) .
+#example not polarity(fear,she) .
+#example not polarity(fear,negative) .
+#example not polarity(fear,either) .
+#example not polarity(fear,hallway) .
+#example not polarity(fear,back) .
+concept(travel01).

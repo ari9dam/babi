@@ -1,0 +1,54 @@
+happensAt(goback(sandra,bedroom),1).
+happensAt(travel(john,hallway),2).
+happensAt(goback(john,bedroom),3).
+happensAt(go(sandra,office),4).
+happensAt(goback(john,kitchen),5).
+happensAt(travel(daniel,kitchen),6).
+happensAt(go(john,hallway),7).
+happensAt(travel(john,bedroom),8).
+happensAt(go(sandra,kitchen),9).
+happensAt(goback(john,kitchen),10).
+happensAt(goback(john,garden),11).
+happensAt(go(daniel,bedroom),12).
+happensAt(go(sandra,garden),13).
+happensAt(travel(john,office),14).
+happensAt(move(mary,garden),15).
+happensAt(goback(daniel,kitchen),16).
+happensAt(go(sandra,hallway),17).
+happensAt(go(john,kitchen),18).
+happensAt(move(john,bedroom),19).
+happensAt(move(sandra,garden),20).
+happensAt(travel(daniel,bedroom),21).
+happensAt(travel(john,kitchen),22).
+happensAt(travel(mary,bathroom),23).
+happensAt(journey(mary,kitchen),24).
+happensAt(goback(daniel,garden),25).
+happensAt(grab(sandra,apple),26).
+happensAt(get(daniel,football),27).
+happensAt(journey(john,bedroom),28).
+happensAt(go(mary,office),29).
+happensAt(pickup(daniel,milk),30).
+happensAt(journey(daniel,bathroom),31).
+happensAt(journey(daniel,kitchen),32).
+#example holdsAt(location(milk,kitchen),33).
+happensAt(go(john,hallway),34).
+happensAt(leave(sandra,apple),35).
+#example holdsAt(location(apple,garden),36).
+happensAt(leave(daniel,football),37).
+happensAt(travel(daniel,hallway),38).
+#example holdsAt(location(football,kitchen),39).
+#example holdsAt(location(football,kitchen),38).
+happensAt(goback(sandra,bedroom),40).
+happensAt(journey(john,bathroom),41).
+#example holdsAt(location(apple,garden),42).
+#example holdsAt(location(apple,garden),36).
+#example holdsAt(location(apple,garden),37).
+#example holdsAt(location(apple,garden),38).
+#example holdsAt(location(apple,garden),39).
+#example holdsAt(location(apple,garden),40).
+#example holdsAt(location(apple,garden),41).
+happensAt(discard(daniel,milk),43).
+happensAt(go(daniel,bedroom),44).
+#example holdsAt(location(milk,hallway),45).
+#example not holdsAt(location(milk,kitchen),45).
+#example holdsAt(location(milk,hallway),44).

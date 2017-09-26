@@ -1,0 +1,52 @@
+happensAt(journey(daniel,garden),1).
+happensAt(pickup(mary,milk),2).
+happensAt(go(mary,hallway),3).
+happensAt(goback(sandra,hallway),4).
+#example holdsAt(location(milk,hallway),5).
+#example holdsAt(location(milk,hallway),4).
+happensAt(travel(daniel,bathroom),6).
+happensAt(travel(sandra,office),7).
+#example holdsAt(location(milk,hallway),8).
+#example holdsAt(location(milk,hallway),4).
+#example holdsAt(location(milk,hallway),5).
+#example holdsAt(location(milk,hallway),6).
+#example holdsAt(location(milk,hallway),7).
+happensAt(travel(daniel,office),9).
+happensAt(goback(mary,garden),10).
+happensAt(journey(daniel,hallway),11).
+happensAt(move(mary,kitchen),12).
+happensAt(take(mary,football),13).
+happensAt(journey(daniel,office),14).
+happensAt(putdown(mary,football),15).
+happensAt(move(mary,office),16).
+#example holdsAt(location(football,kitchen),17).
+#example holdsAt(location(football,kitchen),16).
+happensAt(discard(mary,milk),18).
+happensAt(journey(john,office),19).
+#example holdsAt(location(milk,office),20).
+#example not holdsAt(location(milk,hallway),20).
+#example holdsAt(location(milk,office),19).
+happensAt(grab(john,milk),21).
+happensAt(goback(sandra,garden),22).
+happensAt(goback(mary,bedroom),23).
+happensAt(travel(daniel,bathroom),24).
+happensAt(go(mary,hallway),25).
+happensAt(go(mary,bedroom),26).
+happensAt(travel(john,kitchen),27).
+happensAt(travel(john,office),28).
+happensAt(travel(sandra,hallway),29).
+happensAt(move(john,bedroom),30).
+happensAt(go(john,kitchen),31).
+happensAt(goback(mary,bathroom),32).
+happensAt(journey(john,bathroom),33).
+happensAt(travel(daniel,garden),34).
+happensAt(journey(daniel,bedroom),35).
+happensAt(go(mary,bedroom),36).
+happensAt(travel(mary,hallway),37).
+happensAt(move(sandra,kitchen),38).
+happensAt(drop(john,milk),39).
+happensAt(journey(john,kitchen),40).
+#example holdsAt(location(milk,bathroom),41).
+#example not holdsAt(location(milk,hallway),41).
+#example not holdsAt(location(milk,office),41).
+#example holdsAt(location(milk,bathroom),40).

@@ -1,0 +1,52 @@
+happensAt(move(john,garden),1).
+happensAt(goback(daniel,office),2).
+happensAt(move(daniel,hallway),3).
+happensAt(journey(sandra,bedroom),4).
+happensAt(move(daniel,bathroom),5).
+happensAt(go(mary,garden),6).
+happensAt(go(john,office),7).
+happensAt(travel(daniel,office),8).
+happensAt(goback(daniel,garden),9).
+happensAt(goback(daniel,bedroom),10).
+happensAt(journey(sandra,bathroom),11).
+happensAt(move(mary,office),12).
+happensAt(journey(john,bathroom),13).
+happensAt(move(sandra,hallway),14).
+happensAt(goback(sandra,bathroom),15).
+happensAt(go(daniel,kitchen),16).
+happensAt(goback(john,garden),17).
+happensAt(journey(john,bathroom),18).
+happensAt(go(daniel,office),19).
+happensAt(goback(john,hallway),20).
+happensAt(journey(daniel,bedroom),21).
+happensAt(take(john,football),22).
+happensAt(travel(daniel,hallway),23).
+happensAt(journey(sandra,hallway),24).
+happensAt(goback(daniel,office),25).
+happensAt(journey(sandra,bedroom),26).
+happensAt(go(sandra,office),27).
+happensAt(go(mary,garden),28).
+happensAt(move(sandra,garden),29).
+happensAt(putdown(john,football),30).
+#example holdsAt(location(football,hallway),31).
+happensAt(move(sandra,kitchen),32).
+happensAt(grab(sandra,milk),33).
+#example holdsAt(location(football,hallway),34).
+#example holdsAt(location(football,hallway),31).
+#example holdsAt(location(football,hallway),32).
+#example holdsAt(location(football,hallway),33).
+happensAt(goback(mary,bedroom),35).
+happensAt(journey(sandra,bathroom),36).
+#example holdsAt(location(milk,bathroom),37).
+happensAt(journey(mary,garden),38).
+happensAt(journey(daniel,garden),39).
+#example holdsAt(location(milk,bathroom),40).
+#example holdsAt(location(milk,bathroom),37).
+#example holdsAt(location(milk,bathroom),38).
+#example holdsAt(location(milk,bathroom),39).
+happensAt(move(daniel,office),41).
+happensAt(pickup(john,football),42).
+happensAt(drop(john,football),43).
+happensAt(journey(daniel,garden),44).
+#example holdsAt(location(football,hallway),45).
+#example holdsAt(location(football,hallway),44).

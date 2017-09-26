@@ -1,0 +1,53 @@
+happensAt(go(sandra,kitchen),1).
+happensAt(goback(john,bathroom),2).
+happensAt(get(daniel,apple),3).
+happensAt(take(mary,milk),4).
+happensAt(goback(john,bedroom),5).
+happensAt(travel(john,office),6).
+happensAt(move(john,bedroom),7).
+happensAt(goback(daniel,office),8).
+happensAt(grab(mary,football),9).
+happensAt(putdown(mary,milk),10).
+happensAt(leave(mary,football),11).
+happensAt(move(sandra,bedroom),12).
+happensAt(journey(sandra,office),13).
+happensAt(travel(john,kitchen),14).
+happensAt(take(mary,milk),15).
+happensAt(drop(mary,milk),16).
+happensAt(grab(mary,football),17).
+happensAt(travel(daniel,garden),18).
+happensAt(move(daniel,bedroom),19).
+happensAt(move(john,office),20).
+happensAt(discard(daniel,apple),21).
+happensAt(drop(mary,football),22).
+#example holdsAt(location(apple,bedroom),23).
+#example holdsAt(location(apple,bedroom),22).
+happensAt(journey(mary,hallway),24).
+happensAt(move(mary,kitchen),25).
+#example holdsAt(location(apple,bedroom),26).
+#example holdsAt(location(apple,bedroom),22).
+#example holdsAt(location(apple,bedroom),23).
+#example holdsAt(location(apple,bedroom),24).
+#example holdsAt(location(apple,bedroom),25).
+happensAt(journey(daniel,kitchen),27).
+happensAt(journey(john,kitchen),28).
+happensAt(move(john,bathroom),29).
+happensAt(travel(daniel,bedroom),30).
+happensAt(take(daniel,apple),31).
+happensAt(journey(sandra,bathroom),32).
+happensAt(take(sandra,football),33).
+happensAt(take(john,milk),34).
+happensAt(go(mary,bathroom),35).
+happensAt(putdown(sandra,football),36).
+#example holdsAt(location(football,bathroom),37).
+happensAt(move(daniel,bathroom),38).
+happensAt(get(mary,football),39).
+happensAt(discard(daniel,apple),40).
+happensAt(pickup(john,apple),41).
+happensAt(journey(john,garden),42).
+happensAt(journey(mary,office),43).
+#example holdsAt(location(football,office),44).
+#example not holdsAt(location(football,bathroom),44).
+happensAt(move(sandra,hallway),45).
+happensAt(travel(john,bedroom),46).
+#example holdsAt(location(apple,bedroom),47).

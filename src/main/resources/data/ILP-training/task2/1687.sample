@@ -1,0 +1,49 @@
+happensAt(get(john,milk),1).
+happensAt(journey(mary,bathroom),2).
+happensAt(goback(daniel,garden),3).
+happensAt(travel(mary,bedroom),4).
+happensAt(move(sandra,bedroom),5).
+happensAt(journey(mary,kitchen),6).
+happensAt(goback(sandra,kitchen),7).
+happensAt(goback(daniel,kitchen),8).
+happensAt(move(daniel,bathroom),9).
+happensAt(putdown(john,milk),10).
+happensAt(move(daniel,bedroom),11).
+happensAt(journey(john,hallway),12).
+happensAt(travel(daniel,kitchen),13).
+happensAt(go(mary,garden),14).
+happensAt(journey(john,office),15).
+happensAt(get(john,apple),16).
+happensAt(journey(sandra,bathroom),17).
+happensAt(take(sandra,football),18).
+happensAt(drop(john,apple),19).
+happensAt(move(daniel,bathroom),20).
+#example holdsAt(location(apple,office),21).
+#example holdsAt(location(apple,office),20).
+happensAt(grab(john,apple),22).
+happensAt(putdown(sandra,football),23).
+#example holdsAt(location(football,bathroom),24).
+happensAt(goback(daniel,bedroom),25).
+happensAt(leave(john,apple),26).
+#example holdsAt(location(football,bathroom),27).
+#example holdsAt(location(football,bathroom),24).
+#example holdsAt(location(football,bathroom),25).
+#example holdsAt(location(football,bathroom),26).
+happensAt(move(sandra,kitchen),28).
+happensAt(pickup(daniel,milk),29).
+#example holdsAt(location(football,bathroom),30).
+#example holdsAt(location(football,bathroom),24).
+#example holdsAt(location(football,bathroom),25).
+#example holdsAt(location(football,bathroom),26).
+#example holdsAt(location(football,bathroom),27).
+#example holdsAt(location(football,bathroom),28).
+#example holdsAt(location(football,bathroom),29).
+happensAt(goback(mary,bedroom),31).
+happensAt(go(john,bathroom),32).
+#example holdsAt(location(apple,office),33).
+#example holdsAt(location(apple,office),27).
+#example holdsAt(location(apple,office),28).
+#example holdsAt(location(apple,office),29).
+#example holdsAt(location(apple,office),30).
+#example holdsAt(location(apple,office),31).
+#example holdsAt(location(apple,office),32).

@@ -29,9 +29,9 @@ import edu.asu.babi.parser.Parser;
 public class ILPTrainingDataCreator {
 
 	public static void main(String[] args) throws IOException {
-		String dest="src\\main\\resources\\data\\ILP-training\\task20\\";
+		String dest="src\\main\\resources\\data\\ILP-training\\task2\\";
 		String dir = "src\\main\\resources\\data\\en-10k\\";
-		String task = "qa20_agents-motivations_train.txt";
+		String task = "qa2_two-supporting-facts_train.txt";
 		TrainingCorpusReader tr = new TrainingCorpusReader(dir+task);
 		Iterator<Story> it = tr.iterator();
 		Parser parser = new Parser(true);

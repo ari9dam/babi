@@ -1,0 +1,53 @@
+happensAt(goback(sandra,bathroom),1).
+happensAt(journey(mary,hallway),2).
+happensAt(travel(mary,bathroom),3).
+happensAt(journey(sandra,bedroom),4).
+happensAt(goback(john,kitchen),5).
+happensAt(move(mary,kitchen),6).
+happensAt(move(daniel,kitchen),7).
+happensAt(travel(john,office),8).
+happensAt(goback(john,bathroom),9).
+happensAt(go(mary,bathroom),10).
+happensAt(go(mary,garden),11).
+happensAt(move(mary,office),12).
+happensAt(journey(daniel,office),13).
+happensAt(journey(sandra,office),14).
+happensAt(goback(john,bedroom),15).
+happensAt(goback(sandra,hallway),16).
+happensAt(journey(john,office),17).
+happensAt(go(sandra,bathroom),18).
+happensAt(go(sandra,hallway),19).
+happensAt(go(daniel,hallway),20).
+happensAt(take(daniel,apple),21).
+happensAt(discard(daniel,apple),22).
+#example holdsAt(location(apple,hallway),23).
+happensAt(take(daniel,milk),24).
+happensAt(goback(john,hallway),25).
+#example holdsAt(location(apple,hallway),26).
+#example holdsAt(location(apple,hallway),23).
+#example holdsAt(location(apple,hallway),24).
+#example holdsAt(location(apple,hallway),25).
+happensAt(move(sandra,kitchen),27).
+happensAt(grab(john,apple),28).
+happensAt(putdown(john,apple),29).
+happensAt(take(john,apple),30).
+happensAt(journey(mary,bathroom),31).
+happensAt(goback(sandra,bedroom),32).
+happensAt(travel(mary,garden),33).
+happensAt(goback(daniel,garden),34).
+happensAt(take(daniel,football),35).
+happensAt(putdown(john,apple),36).
+#example holdsAt(location(apple,hallway),37).
+happensAt(go(sandra,kitchen),38).
+happensAt(grab(john,apple),39).
+happensAt(discard(daniel,milk),40).
+happensAt(goback(mary,kitchen),41).
+#example holdsAt(location(milk,garden),42).
+#example holdsAt(location(milk,garden),41).
+happensAt(drop(daniel,football),43).
+happensAt(goback(sandra,office),44).
+#example holdsAt(location(milk,garden),45).
+#example holdsAt(location(milk,garden),41).
+#example holdsAt(location(milk,garden),42).
+#example holdsAt(location(milk,garden),43).
+#example holdsAt(location(milk,garden),44).

@@ -1,0 +1,50 @@
+happensAt(goback(daniel,garden),1).
+happensAt(goback(daniel,office),2).
+happensAt(goback(john,hallway),3).
+happensAt(move(sandra,kitchen),4).
+happensAt(journey(daniel,bathroom),5).
+happensAt(move(mary,hallway),6).
+happensAt(go(daniel,garden),7).
+happensAt(go(daniel,bathroom),8).
+happensAt(journey(sandra,bathroom),9).
+happensAt(goback(sandra,hallway),10).
+happensAt(move(john,bedroom),11).
+happensAt(journey(daniel,garden),12).
+happensAt(grab(daniel,apple),13).
+happensAt(discard(daniel,apple),14).
+#example holdsAt(location(apple,garden),15).
+happensAt(pickup(daniel,apple),16).
+happensAt(travel(daniel,bathroom),17).
+#example holdsAt(location(apple,bathroom),18).
+#example not holdsAt(location(apple,garden),18).
+happensAt(go(mary,bedroom),19).
+happensAt(journey(mary,kitchen),20).
+#example holdsAt(location(apple,bathroom),21).
+#example not holdsAt(location(apple,garden),21).
+#example holdsAt(location(apple,bathroom),18).
+#example holdsAt(location(apple,bathroom),19).
+#example holdsAt(location(apple,bathroom),20).
+happensAt(move(sandra,office),22).
+happensAt(go(john,office),23).
+happensAt(travel(daniel,hallway),24).
+happensAt(journey(sandra,bathroom),25).
+happensAt(go(john,garden),26).
+happensAt(journey(john,kitchen),27).
+happensAt(journey(daniel,garden),28).
+happensAt(move(daniel,bathroom),29).
+happensAt(journey(mary,garden),30).
+happensAt(move(sandra,hallway),31).
+happensAt(discard(daniel,apple),32).
+happensAt(take(daniel,apple),33).
+happensAt(goback(daniel,hallway),34).
+happensAt(travel(sandra,office),35).
+#example holdsAt(location(apple,hallway),36).
+#example not holdsAt(location(apple,garden),36).
+#example not holdsAt(location(apple,bathroom),36).
+#example holdsAt(location(apple,hallway),35).
+happensAt(journey(daniel,kitchen),37).
+happensAt(discard(daniel,apple),38).
+#example holdsAt(location(apple,kitchen),39).
+#example not holdsAt(location(apple,hallway),39).
+#example not holdsAt(location(apple,garden),39).
+#example not holdsAt(location(apple,bathroom),39).

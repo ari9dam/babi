@@ -1,0 +1,52 @@
+happensAt(pickup(daniel,football),1).
+happensAt(move(sandra,kitchen),2).
+happensAt(journey(mary,bathroom),3).
+happensAt(journey(john,hallway),4).
+happensAt(travel(john,kitchen),5).
+happensAt(journey(sandra,garden),6).
+happensAt(putdown(daniel,football),7).
+happensAt(travel(sandra,bedroom),8).
+happensAt(take(daniel,football),9).
+happensAt(drop(daniel,football),10).
+happensAt(journey(sandra,bathroom),11).
+happensAt(travel(john,hallway),12).
+happensAt(go(sandra,office),13).
+happensAt(goback(mary,kitchen),14).
+happensAt(journey(daniel,hallway),15).
+happensAt(goback(mary,hallway),16).
+happensAt(move(daniel,kitchen),17).
+happensAt(move(mary,bedroom),18).
+happensAt(take(mary,football),19).
+happensAt(goback(john,garden),20).
+happensAt(putdown(mary,football),21).
+happensAt(journey(john,office),22).
+#example holdsAt(location(football,bedroom),23).
+#example holdsAt(location(football,bedroom),22).
+happensAt(go(sandra,garden),24).
+happensAt(pickup(mary,football),25).
+happensAt(move(daniel,bedroom),26).
+happensAt(drop(mary,football),27).
+#example holdsAt(location(football,bedroom),28).
+happensAt(pickup(mary,football),29).
+happensAt(go(daniel,bathroom),30).
+happensAt(journey(mary,hallway),31).
+happensAt(putdown(mary,football),32).
+#example holdsAt(location(football,hallway),33).
+#example not holdsAt(location(football,bedroom),33).
+happensAt(pickup(mary,football),34).
+happensAt(go(sandra,office),35).
+happensAt(travel(sandra,kitchen),36).
+happensAt(go(daniel,office),37).
+happensAt(goback(sandra,bedroom),38).
+happensAt(grab(mary,milk),39).
+happensAt(putdown(mary,milk),40).
+happensAt(travel(mary,bathroom),41).
+#example holdsAt(location(milk,hallway),42).
+#example holdsAt(location(milk,hallway),41).
+happensAt(drop(mary,football),43).
+happensAt(travel(john,garden),44).
+#example holdsAt(location(milk,hallway),45).
+#example holdsAt(location(milk,hallway),41).
+#example holdsAt(location(milk,hallway),42).
+#example holdsAt(location(milk,hallway),43).
+#example holdsAt(location(milk,hallway),44).

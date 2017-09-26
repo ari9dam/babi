@@ -1,0 +1,52 @@
+happensAt(travel(john,bathroom),1).
+happensAt(journey(daniel,hallway),2).
+happensAt(move(john,garden),3).
+happensAt(journey(john,kitchen),4).
+happensAt(journey(john,garden),5).
+happensAt(travel(daniel,office),6).
+happensAt(journey(daniel,hallway),7).
+happensAt(go(daniel,bathroom),8).
+happensAt(pickup(john,milk),9).
+happensAt(goback(daniel,garden),10).
+happensAt(go(sandra,bedroom),11).
+happensAt(go(daniel,office),12).
+happensAt(travel(sandra,kitchen),13).
+happensAt(journey(daniel,bedroom),14).
+happensAt(goback(john,office),15).
+happensAt(grab(john,football),16).
+happensAt(move(sandra,bathroom),17).
+happensAt(goback(daniel,hallway),18).
+happensAt(go(daniel,kitchen),19).
+happensAt(go(daniel,office),20).
+happensAt(move(mary,hallway),21).
+happensAt(go(sandra,garden),22).
+happensAt(go(mary,kitchen),23).
+happensAt(goback(sandra,kitchen),24).
+happensAt(travel(sandra,bathroom),25).
+happensAt(get(sandra,apple),26).
+happensAt(move(john,hallway),27).
+happensAt(travel(daniel,garden),28).
+happensAt(journey(sandra,bedroom),29).
+happensAt(journey(sandra,office),30).
+#example holdsAt(location(apple,office),31).
+happensAt(leave(sandra,apple),32).
+happensAt(leave(john,milk),33).
+#example holdsAt(location(apple,office),34).
+#example holdsAt(location(apple,office),33).
+happensAt(get(sandra,apple),35).
+happensAt(travel(john,kitchen),36).
+#example holdsAt(location(milk,hallway),37).
+#example holdsAt(location(milk,hallway),34).
+#example holdsAt(location(milk,hallway),35).
+#example holdsAt(location(milk,hallway),36).
+happensAt(putdown(sandra,apple),38).
+happensAt(journey(sandra,hallway),39).
+#example holdsAt(location(apple,office),40).
+#example holdsAt(location(apple,office),39).
+happensAt(travel(daniel,office),41).
+happensAt(journey(mary,bathroom),42).
+#example holdsAt(location(apple,office),43).
+#example holdsAt(location(apple,office),39).
+#example holdsAt(location(apple,office),40).
+#example holdsAt(location(apple,office),41).
+#example holdsAt(location(apple,office),42).

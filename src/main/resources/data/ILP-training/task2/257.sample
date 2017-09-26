@@ -1,0 +1,28 @@
+happensAt(move(mary,garden),1).
+happensAt(go(john,bedroom),2).
+happensAt(take(john,apple),3).
+happensAt(pickup(john,milk),4).
+happensAt(leave(john,milk),5).
+happensAt(discard(john,apple),6).
+#example holdsAt(location(apple,bedroom),7).
+happensAt(go(mary,office),8).
+happensAt(goback(mary,garden),9).
+#example holdsAt(location(apple,bedroom),10).
+#example holdsAt(location(apple,bedroom),7).
+#example holdsAt(location(apple,bedroom),8).
+#example holdsAt(location(apple,bedroom),9).
+happensAt(travel(john,kitchen),11).
+happensAt(journey(mary,office),12).
+#example holdsAt(location(apple,bedroom),13).
+#example holdsAt(location(apple,bedroom),7).
+#example holdsAt(location(apple,bedroom),8).
+#example holdsAt(location(apple,bedroom),9).
+#example holdsAt(location(apple,bedroom),10).
+#example holdsAt(location(apple,bedroom),11).
+#example holdsAt(location(apple,bedroom),12).
+happensAt(get(mary,football),14).
+happensAt(go(mary,bedroom),15).
+#example holdsAt(location(football,bedroom),16).
+happensAt(travel(john,bathroom),17).
+happensAt(discard(mary,football),18).
+#example holdsAt(location(football,bedroom),19).

@@ -849,8 +849,8 @@ public class Parser {
 								answer.toLowerCase(),
 								false);
 					}*/
-
-					for(int i=qn.getSupports().get(1)+1;i<t;i++){
+					int max = Math.max(qn.getSupports().get(0), qn.getSupports().get(1));
+					for(int i=max+1;i<t;i++){
 						rep += "\n" + generateExamples(
 								"location", 
 								i,

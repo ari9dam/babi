@@ -1,0 +1,54 @@
+happensAt(journey(mary,kitchen),1).
+happensAt(go(john,kitchen),2).
+happensAt(take(sandra,milk),3).
+happensAt(leave(sandra,milk),4).
+happensAt(goback(daniel,garden),5).
+happensAt(travel(sandra,bedroom),6).
+happensAt(travel(john,garden),7).
+happensAt(go(mary,garden),8).
+happensAt(go(mary,bedroom),9).
+happensAt(travel(sandra,kitchen),10).
+happensAt(go(mary,bathroom),11).
+happensAt(go(sandra,office),12).
+happensAt(go(john,office),13).
+happensAt(move(sandra,kitchen),14).
+happensAt(move(john,bathroom),15).
+happensAt(journey(daniel,bathroom),16).
+happensAt(travel(daniel,garden),17).
+happensAt(goback(john,hallway),18).
+happensAt(grab(john,apple),19).
+happensAt(go(daniel,bathroom),20).
+happensAt(journey(sandra,office),21).
+happensAt(grab(sandra,football),22).
+happensAt(move(john,office),23).
+happensAt(discard(sandra,football),24).
+#example holdsAt(location(football,office),25).
+happensAt(leave(john,apple),26).
+happensAt(travel(john,bedroom),27).
+#example holdsAt(location(football,office),28).
+#example holdsAt(location(football,office),25).
+#example holdsAt(location(football,office),26).
+#example holdsAt(location(football,office),27).
+happensAt(goback(daniel,garden),29).
+happensAt(move(daniel,kitchen),30).
+#example holdsAt(location(football,office),31).
+#example holdsAt(location(football,office),25).
+#example holdsAt(location(football,office),26).
+#example holdsAt(location(football,office),27).
+#example holdsAt(location(football,office),28).
+#example holdsAt(location(football,office),29).
+#example holdsAt(location(football,office),30).
+happensAt(goback(mary,bedroom),32).
+happensAt(take(sandra,football),33).
+happensAt(move(daniel,garden),34).
+happensAt(travel(john,garden),35).
+happensAt(goback(sandra,bedroom),36).
+happensAt(journey(daniel,kitchen),37).
+#example holdsAt(location(football,bedroom),38).
+#example not holdsAt(location(football,office),38).
+#example holdsAt(location(football,bedroom),37).
+happensAt(drop(sandra,football),39).
+happensAt(move(sandra,hallway),40).
+#example holdsAt(location(football,bedroom),41).
+#example not holdsAt(location(football,office),41).
+#example holdsAt(location(football,bedroom),40).

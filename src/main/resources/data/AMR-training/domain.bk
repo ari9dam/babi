@@ -1,0 +1,33 @@
+postag(jj).
+postag(nn).
+postag(cc).
+postag(vbn).
+postag(in).
+postag(vbp).
+postag(vb).
+postag(vbz).
+postag(prp).
+postag(dt).
+postag(rb).
+postag(nnp).
+postag(nns).
+postag(jjr).
+postag(vbd).
+postag(vbg).
+postag(to).
+postag(rp).
+token(above).
+token(morning).
+token(left).
+token(south).
+token(north).
+token(right).
+token(evening).
+token(west).
+token(below).
+token(back).
+token(yesterday).
+token(east).
+token(afternoon).
+next(J,I):- index(I),index(J), I=J+1.
+token(X):- lemma(I,X), not concept(X), index(I).

@@ -1,0 +1,51 @@
+happensAt(goback(daniel,bedroom),1).
+happensAt(journey(mary,office),2).
+happensAt(move(john,bedroom),3).
+happensAt(goback(sandra,office),4).
+happensAt(journey(sandra,garden),5).
+happensAt(goback(daniel,kitchen),6).
+happensAt(move(mary,hallway),7).
+happensAt(goback(daniel,hallway),8).
+happensAt(move(mary,office),9).
+happensAt(travel(sandra,hallway),10).
+happensAt(travel(mary,bathroom),11).
+happensAt(move(john,kitchen),12).
+happensAt(go(daniel,garden),13).
+happensAt(move(sandra,office),14).
+happensAt(travel(sandra,kitchen),15).
+happensAt(travel(mary,office),16).
+happensAt(pickup(sandra,football),17).
+happensAt(goback(john,office),18).
+happensAt(go(mary,bathroom),19).
+happensAt(grab(daniel,apple),20).
+happensAt(leave(daniel,apple),21).
+happensAt(goback(john,bathroom),22).
+#example holdsAt(location(apple,garden),23).
+#example holdsAt(location(apple,garden),22).
+happensAt(leave(sandra,football),24).
+happensAt(journey(sandra,bedroom),25).
+#example holdsAt(location(apple,garden),26).
+#example holdsAt(location(apple,garden),22).
+#example holdsAt(location(apple,garden),23).
+#example holdsAt(location(apple,garden),24).
+#example holdsAt(location(apple,garden),25).
+happensAt(travel(daniel,kitchen),27).
+happensAt(go(mary,office),28).
+#example holdsAt(location(football,kitchen),29).
+#example holdsAt(location(football,kitchen),25).
+#example holdsAt(location(football,kitchen),26).
+#example holdsAt(location(football,kitchen),27).
+#example holdsAt(location(football,kitchen),28).
+happensAt(pickup(daniel,football),30).
+happensAt(journey(sandra,garden),31).
+happensAt(get(sandra,milk),32).
+happensAt(pickup(sandra,apple),33).
+happensAt(travel(sandra,office),34).
+happensAt(leave(daniel,football),35).
+#example holdsAt(location(apple,office),36).
+#example not holdsAt(location(apple,garden),36).
+#example holdsAt(location(apple,office),35).
+happensAt(drop(sandra,milk),37).
+happensAt(journey(sandra,bathroom),38).
+#example holdsAt(location(milk,office),39).
+#example holdsAt(location(milk,office),38).

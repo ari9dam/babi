@@ -1,0 +1,62 @@
+happensAt(take(sandra,football),1).
+happensAt(take(sandra,apple),2).
+happensAt(go(john,bedroom),3).
+happensAt(take(john,milk),4).
+happensAt(drop(john,milk),5).
+happensAt(pickup(sandra,milk),6).
+happensAt(putdown(sandra,milk),7).
+happensAt(take(sandra,milk),8).
+happensAt(journey(mary,kitchen),9).
+happensAt(goback(daniel,kitchen),10).
+happensAt(goback(john,kitchen),11).
+happensAt(putdown(sandra,apple),12).
+happensAt(pickup(sandra,apple),13).
+happensAt(journey(mary,office),14).
+happensAt(move(john,hallway),15).
+happensAt(goback(sandra,bathroom),16).
+#example holdsAt(location(apple,bathroom),17).
+happensAt(goback(daniel,bedroom),18).
+happensAt(travel(daniel,bathroom),19).
+happensAt(go(mary,bedroom),20).
+happensAt(move(sandra,kitchen),21).
+happensAt(travel(sandra,garden),22).
+happensAt(move(mary,kitchen),23).
+happensAt(travel(mary,bathroom),24).
+happensAt(goback(daniel,hallway),25).
+happensAt(goback(john,bathroom),26).
+happensAt(move(mary,hallway),27).
+happensAt(move(daniel,bathroom),28).
+happensAt(move(daniel,garden),29).
+happensAt(go(sandra,hallway),30).
+happensAt(goback(daniel,bedroom),31).
+happensAt(go(john,office),32).
+happensAt(journey(sandra,office),33).
+happensAt(travel(mary,kitchen),34).
+happensAt(move(mary,garden),35).
+happensAt(go(mary,hallway),36).
+happensAt(travel(mary,kitchen),37).
+happensAt(travel(mary,bathroom),38).
+happensAt(move(mary,office),39).
+happensAt(move(john,bedroom),40).
+happensAt(goback(daniel,office),41).
+happensAt(discard(sandra,milk),42).
+happensAt(get(daniel,milk),43).
+happensAt(travel(daniel,bedroom),44).
+happensAt(go(john,bathroom),45).
+#example holdsAt(location(milk,bedroom),46).
+#example holdsAt(location(milk,bedroom),45).
+happensAt(goback(john,office),47).
+happensAt(drop(sandra,apple),48).
+#example holdsAt(location(apple,office),49).
+#example not holdsAt(location(apple,bathroom),49).
+happensAt(go(john,kitchen),50).
+happensAt(drop(sandra,football),51).
+#example holdsAt(location(apple,office),52).
+#example not holdsAt(location(apple,bathroom),52).
+#example holdsAt(location(apple,office),49).
+#example holdsAt(location(apple,office),50).
+#example holdsAt(location(apple,office),51).
+happensAt(putdown(daniel,milk),53).
+happensAt(journey(sandra,bedroom),54).
+#example holdsAt(location(milk,bedroom),55).
+#example holdsAt(location(milk,bedroom),54).

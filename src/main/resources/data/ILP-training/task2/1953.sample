@@ -1,0 +1,56 @@
+happensAt(travel(john,garden),1).
+happensAt(journey(mary,office),2).
+happensAt(travel(sandra,hallway),3).
+happensAt(travel(mary,bedroom),4).
+happensAt(journey(john,hallway),5).
+happensAt(travel(john,garden),6).
+happensAt(goback(john,hallway),7).
+happensAt(go(john,garden),8).
+happensAt(move(sandra,bedroom),9).
+happensAt(move(daniel,bedroom),10).
+happensAt(travel(mary,bathroom),11).
+happensAt(go(sandra,office),12).
+happensAt(journey(mary,hallway),13).
+happensAt(journey(john,kitchen),14).
+happensAt(goback(sandra,bathroom),15).
+happensAt(take(sandra,football),16).
+happensAt(go(sandra,bedroom),17).
+happensAt(travel(mary,kitchen),18).
+#example holdsAt(location(football,bedroom),19).
+#example holdsAt(location(football,bedroom),18).
+happensAt(journey(sandra,bathroom),20).
+happensAt(move(sandra,garden),21).
+#example holdsAt(location(football,garden),22).
+#example not holdsAt(location(football,bedroom),22).
+happensAt(drop(sandra,football),23).
+happensAt(travel(sandra,bedroom),24).
+#example holdsAt(location(football,garden),25).
+#example not holdsAt(location(football,bedroom),25).
+#example holdsAt(location(football,garden),24).
+happensAt(travel(sandra,office),26).
+happensAt(move(mary,office),27).
+#example holdsAt(location(football,garden),28).
+#example not holdsAt(location(football,bedroom),28).
+#example holdsAt(location(football,garden),24).
+#example holdsAt(location(football,garden),25).
+#example holdsAt(location(football,garden),26).
+#example holdsAt(location(football,garden),27).
+happensAt(journey(sandra,bedroom),29).
+happensAt(move(john,bathroom),30).
+happensAt(go(john,office),31).
+happensAt(journey(sandra,garden),32).
+happensAt(grab(sandra,football),33).
+happensAt(move(mary,kitchen),34).
+happensAt(move(mary,office),35).
+happensAt(travel(john,kitchen),36).
+happensAt(travel(mary,kitchen),37).
+happensAt(goback(john,office),38).
+happensAt(journey(daniel,hallway),39).
+happensAt(go(sandra,office),40).
+happensAt(goback(daniel,garden),41).
+happensAt(go(daniel,kitchen),42).
+happensAt(journey(sandra,hallway),43).
+happensAt(discard(sandra,football),44).
+#example holdsAt(location(football,hallway),45).
+#example not holdsAt(location(football,garden),45).
+#example not holdsAt(location(football,bedroom),45).

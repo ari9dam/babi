@@ -1,0 +1,51 @@
+happensAt(travel(daniel,bathroom),1).
+happensAt(move(mary,office),2).
+happensAt(move(sandra,bathroom),3).
+happensAt(pickup(john,football),4).
+happensAt(putdown(john,football),5).
+happensAt(move(mary,bedroom),6).
+happensAt(go(mary,office),7).
+happensAt(take(john,football),8).
+happensAt(journey(sandra,bedroom),9).
+happensAt(travel(sandra,office),10).
+happensAt(move(sandra,bathroom),11).
+happensAt(discard(john,football),12).
+happensAt(take(mary,football),13).
+happensAt(travel(sandra,garden),14).
+happensAt(journey(sandra,bedroom),15).
+happensAt(move(sandra,hallway),16).
+happensAt(journey(daniel,kitchen),17).
+happensAt(goback(daniel,hallway),18).
+happensAt(leave(mary,football),19).
+happensAt(travel(john,bedroom),20).
+#example holdsAt(location(football,office),21).
+#example holdsAt(location(football,office),20).
+happensAt(grab(mary,football),22).
+happensAt(get(john,apple),23).
+happensAt(journey(daniel,office),24).
+happensAt(journey(sandra,bedroom),25).
+happensAt(move(john,kitchen),26).
+happensAt(discard(john,apple),27).
+#example holdsAt(location(apple,kitchen),28).
+happensAt(move(mary,kitchen),29).
+happensAt(journey(daniel,hallway),30).
+#example holdsAt(location(apple,kitchen),31).
+#example holdsAt(location(apple,kitchen),28).
+#example holdsAt(location(apple,kitchen),29).
+#example holdsAt(location(apple,kitchen),30).
+happensAt(journey(daniel,bedroom),32).
+happensAt(get(daniel,milk),33).
+#example holdsAt(location(apple,kitchen),34).
+#example holdsAt(location(apple,kitchen),28).
+#example holdsAt(location(apple,kitchen),29).
+#example holdsAt(location(apple,kitchen),30).
+#example holdsAt(location(apple,kitchen),31).
+#example holdsAt(location(apple,kitchen),32).
+#example holdsAt(location(apple,kitchen),33).
+happensAt(travel(mary,bathroom),35).
+happensAt(go(mary,garden),36).
+happensAt(drop(mary,football),37).
+happensAt(get(john,apple),38).
+#example holdsAt(location(football,garden),39).
+#example not holdsAt(location(football,office),39).
+#example holdsAt(location(football,garden),38).

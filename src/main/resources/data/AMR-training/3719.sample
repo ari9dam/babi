@@ -1,0 +1,332 @@
+lemma(1,this).
+glemma(1,this).
+pos(1,dt).
+lemma(2,morning).
+glemma(2,morning).
+pos(2,nn).
+lemma(3,fred).
+glemma(3,fred).
+pos(3,vbd).
+lemma(4,travel).
+glemma(4,travel).
+pos(4,vbn).
+lemma(5,to).
+glemma(5,to).
+pos(5,to).
+lemma(6,the).
+glemma(6,the).
+pos(6,dt).
+lemma(7,school).
+glemma(7,school).
+pos(7,nn).
+index(1..7).
+concept(negative).
+concept(relativeposition01).
+concept(domain).
+concept(belocatedat91).
+concept(fear).
+concept(school).
+concept(travel01).
+concept(fred).
+concept(morning).
+#example arg2(travel01,school) .
+#example arg1(travel01,fred) .
+#example time(travel01,morning) .
+#example not arg3(relativeposition01,negative) .
+#example not arg3(relativeposition01,either) .
+#example not arg3(relativeposition01,school) .
+#example not arg3(relativeposition01,fred) .
+#example not arg3(relativeposition01,morning) .
+#example not arg3(domain,negative) .
+#example not arg3(domain,either) .
+#example not arg3(domain,school) .
+#example not arg3(domain,fred) .
+#example not arg3(domain,morning) .
+#example not arg3(travel01,negative) .
+#example not arg3(travel01,either) .
+#example not arg3(travel01,school) .
+#example not arg3(travel01,fred) .
+#example not arg3(travel01,morning) .
+#example not arg3(pass01,negative) .
+#example not arg3(pass01,either) .
+#example not arg3(pass01,school) .
+#example not arg3(pass01,fred) .
+#example not arg3(pass01,morning) .
+#example not arg3(belocatedat91,negative) .
+#example not arg3(belocatedat91,either) .
+#example not arg3(belocatedat91,school) .
+#example not arg3(belocatedat91,fred) .
+#example not arg3(belocatedat91,morning) .
+#example not arg3(fear,negative) .
+#example not arg3(fear,either) .
+#example not arg3(fear,school) .
+#example not arg3(fear,fred) .
+#example not arg3(fear,morning) .
+#example not op2(relativeposition01,negative) .
+#example not op2(relativeposition01,either) .
+#example not op2(relativeposition01,school) .
+#example not op2(relativeposition01,fred) .
+#example not op2(relativeposition01,morning) .
+#example not op2(domain,negative) .
+#example not op2(domain,either) .
+#example not op2(domain,school) .
+#example not op2(domain,fred) .
+#example not op2(domain,morning) .
+#example not op2(travel01,negative) .
+#example not op2(travel01,either) .
+#example not op2(travel01,school) .
+#example not op2(travel01,fred) .
+#example not op2(travel01,morning) .
+#example not op2(pass01,negative) .
+#example not op2(pass01,either) .
+#example not op2(pass01,school) .
+#example not op2(pass01,fred) .
+#example not op2(pass01,morning) .
+#example not op2(belocatedat91,negative) .
+#example not op2(belocatedat91,either) .
+#example not op2(belocatedat91,school) .
+#example not op2(belocatedat91,fred) .
+#example not op2(belocatedat91,morning) .
+#example not op2(fear,negative) .
+#example not op2(fear,either) .
+#example not op2(fear,school) .
+#example not op2(fear,fred) .
+#example not op2(fear,morning) .
+#example not arg2(relativeposition01,negative) .
+#example not arg2(relativeposition01,either) .
+#example not arg2(relativeposition01,school) .
+#example not arg2(relativeposition01,fred) .
+#example not arg2(relativeposition01,morning) .
+#example not arg2(domain,negative) .
+#example not arg2(domain,either) .
+#example not arg2(domain,school) .
+#example not arg2(domain,fred) .
+#example not arg2(domain,morning) .
+#example not arg2(travel01,negative) .
+#example not arg2(travel01,either) .
+#example not arg2(travel01,fred) .
+#example not arg2(travel01,morning) .
+#example not arg2(pass01,negative) .
+#example not arg2(pass01,either) .
+#example not arg2(pass01,school) .
+#example not arg2(pass01,fred) .
+#example not arg2(pass01,morning) .
+#example not arg2(belocatedat91,negative) .
+#example not arg2(belocatedat91,either) .
+#example not arg2(belocatedat91,school) .
+#example not arg2(belocatedat91,fred) .
+#example not arg2(belocatedat91,morning) .
+#example not arg2(fear,negative) .
+#example not arg2(fear,either) .
+#example not arg2(fear,school) .
+#example not arg2(fear,fred) .
+#example not arg2(fear,morning) .
+#example not op1(relativeposition01,negative) .
+#example not op1(relativeposition01,either) .
+#example not op1(relativeposition01,school) .
+#example not op1(relativeposition01,fred) .
+#example not op1(relativeposition01,morning) .
+#example not op1(domain,negative) .
+#example not op1(domain,either) .
+#example not op1(domain,school) .
+#example not op1(domain,fred) .
+#example not op1(domain,morning) .
+#example not op1(travel01,negative) .
+#example not op1(travel01,either) .
+#example not op1(travel01,school) .
+#example not op1(travel01,fred) .
+#example not op1(travel01,morning) .
+#example not op1(pass01,negative) .
+#example not op1(pass01,either) .
+#example not op1(pass01,school) .
+#example not op1(pass01,fred) .
+#example not op1(pass01,morning) .
+#example not op1(belocatedat91,negative) .
+#example not op1(belocatedat91,either) .
+#example not op1(belocatedat91,school) .
+#example not op1(belocatedat91,fred) .
+#example not op1(belocatedat91,morning) .
+#example not op1(fear,negative) .
+#example not op1(fear,either) .
+#example not op1(fear,school) .
+#example not op1(fear,fred) .
+#example not op1(fear,morning) .
+#example not comparedto(relativeposition01,negative) .
+#example not comparedto(relativeposition01,either) .
+#example not comparedto(relativeposition01,school) .
+#example not comparedto(relativeposition01,fred) .
+#example not comparedto(relativeposition01,morning) .
+#example not comparedto(domain,negative) .
+#example not comparedto(domain,either) .
+#example not comparedto(domain,school) .
+#example not comparedto(domain,fred) .
+#example not comparedto(domain,morning) .
+#example not comparedto(travel01,negative) .
+#example not comparedto(travel01,either) .
+#example not comparedto(travel01,school) .
+#example not comparedto(travel01,fred) .
+#example not comparedto(travel01,morning) .
+#example not comparedto(pass01,negative) .
+#example not comparedto(pass01,either) .
+#example not comparedto(pass01,school) .
+#example not comparedto(pass01,fred) .
+#example not comparedto(pass01,morning) .
+#example not comparedto(belocatedat91,negative) .
+#example not comparedto(belocatedat91,either) .
+#example not comparedto(belocatedat91,school) .
+#example not comparedto(belocatedat91,fred) .
+#example not comparedto(belocatedat91,morning) .
+#example not comparedto(fear,negative) .
+#example not comparedto(fear,either) .
+#example not comparedto(fear,school) .
+#example not comparedto(fear,fred) .
+#example not comparedto(fear,morning) .
+#example not arg1(relativeposition01,negative) .
+#example not arg1(relativeposition01,either) .
+#example not arg1(relativeposition01,school) .
+#example not arg1(relativeposition01,fred) .
+#example not arg1(relativeposition01,morning) .
+#example not arg1(domain,negative) .
+#example not arg1(domain,either) .
+#example not arg1(domain,school) .
+#example not arg1(domain,fred) .
+#example not arg1(domain,morning) .
+#example not arg1(travel01,negative) .
+#example not arg1(travel01,either) .
+#example not arg1(travel01,school) .
+#example not arg1(travel01,morning) .
+#example not arg1(pass01,negative) .
+#example not arg1(pass01,either) .
+#example not arg1(pass01,school) .
+#example not arg1(pass01,fred) .
+#example not arg1(pass01,morning) .
+#example not arg1(belocatedat91,negative) .
+#example not arg1(belocatedat91,either) .
+#example not arg1(belocatedat91,school) .
+#example not arg1(belocatedat91,fred) .
+#example not arg1(belocatedat91,morning) .
+#example not arg1(fear,negative) .
+#example not arg1(fear,either) .
+#example not arg1(fear,school) .
+#example not arg1(fear,fred) .
+#example not arg1(fear,morning) .
+#example not degree(relativeposition01,negative) .
+#example not degree(relativeposition01,either) .
+#example not degree(relativeposition01,school) .
+#example not degree(relativeposition01,fred) .
+#example not degree(relativeposition01,morning) .
+#example not degree(domain,negative) .
+#example not degree(domain,either) .
+#example not degree(domain,school) .
+#example not degree(domain,fred) .
+#example not degree(domain,morning) .
+#example not degree(travel01,negative) .
+#example not degree(travel01,either) .
+#example not degree(travel01,school) .
+#example not degree(travel01,fred) .
+#example not degree(travel01,morning) .
+#example not degree(pass01,negative) .
+#example not degree(pass01,either) .
+#example not degree(pass01,school) .
+#example not degree(pass01,fred) .
+#example not degree(pass01,morning) .
+#example not degree(belocatedat91,negative) .
+#example not degree(belocatedat91,either) .
+#example not degree(belocatedat91,school) .
+#example not degree(belocatedat91,fred) .
+#example not degree(belocatedat91,morning) .
+#example not degree(fear,negative) .
+#example not degree(fear,either) .
+#example not degree(fear,school) .
+#example not degree(fear,fred) .
+#example not degree(fear,morning) .
+#example not time(relativeposition01,negative) .
+#example not time(relativeposition01,either) .
+#example not time(relativeposition01,school) .
+#example not time(relativeposition01,fred) .
+#example not time(relativeposition01,morning) .
+#example not time(domain,negative) .
+#example not time(domain,either) .
+#example not time(domain,school) .
+#example not time(domain,fred) .
+#example not time(domain,morning) .
+#example not time(travel01,negative) .
+#example not time(travel01,either) .
+#example not time(travel01,school) .
+#example not time(travel01,fred) .
+#example not time(pass01,negative) .
+#example not time(pass01,either) .
+#example not time(pass01,school) .
+#example not time(pass01,fred) .
+#example not time(pass01,morning) .
+#example not time(belocatedat91,negative) .
+#example not time(belocatedat91,either) .
+#example not time(belocatedat91,school) .
+#example not time(belocatedat91,fred) .
+#example not time(belocatedat91,morning) .
+#example not time(fear,negative) .
+#example not time(fear,either) .
+#example not time(fear,school) .
+#example not time(fear,fred) .
+#example not time(fear,morning) .
+#example not direction(relativeposition01,negative) .
+#example not direction(relativeposition01,either) .
+#example not direction(relativeposition01,school) .
+#example not direction(relativeposition01,fred) .
+#example not direction(relativeposition01,morning) .
+#example not direction(domain,negative) .
+#example not direction(domain,either) .
+#example not direction(domain,school) .
+#example not direction(domain,fred) .
+#example not direction(domain,morning) .
+#example not direction(travel01,negative) .
+#example not direction(travel01,either) .
+#example not direction(travel01,school) .
+#example not direction(travel01,fred) .
+#example not direction(travel01,morning) .
+#example not direction(pass01,negative) .
+#example not direction(pass01,either) .
+#example not direction(pass01,school) .
+#example not direction(pass01,fred) .
+#example not direction(pass01,morning) .
+#example not direction(belocatedat91,negative) .
+#example not direction(belocatedat91,either) .
+#example not direction(belocatedat91,school) .
+#example not direction(belocatedat91,fred) .
+#example not direction(belocatedat91,morning) .
+#example not direction(fear,negative) .
+#example not direction(fear,either) .
+#example not direction(fear,school) .
+#example not direction(fear,fred) .
+#example not direction(fear,morning) .
+#example not polarity(relativeposition01,negative) .
+#example not polarity(relativeposition01,either) .
+#example not polarity(relativeposition01,school) .
+#example not polarity(relativeposition01,fred) .
+#example not polarity(relativeposition01,morning) .
+#example not polarity(domain,negative) .
+#example not polarity(domain,either) .
+#example not polarity(domain,school) .
+#example not polarity(domain,fred) .
+#example not polarity(domain,morning) .
+#example not polarity(travel01,negative) .
+#example not polarity(travel01,either) .
+#example not polarity(travel01,school) .
+#example not polarity(travel01,fred) .
+#example not polarity(travel01,morning) .
+#example not polarity(pass01,negative) .
+#example not polarity(pass01,either) .
+#example not polarity(pass01,school) .
+#example not polarity(pass01,fred) .
+#example not polarity(pass01,morning) .
+#example not polarity(belocatedat91,negative) .
+#example not polarity(belocatedat91,either) .
+#example not polarity(belocatedat91,school) .
+#example not polarity(belocatedat91,fred) .
+#example not polarity(belocatedat91,morning) .
+#example not polarity(fear,negative) .
+#example not polarity(fear,either) .
+#example not polarity(fear,school) .
+#example not polarity(fear,fred) .
+#example not polarity(fear,morning) .
+concept(pass01).

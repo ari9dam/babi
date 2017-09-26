@@ -1,0 +1,35 @@
+time(1..74).
+arg3(apple;milk;football).
+arg2(hallway;garden;office;kitchen;bedroom;bathroom).
+arg1(daniel;sandra;mary;john).
+direction(east).
+
+fluent(location(X,Y)):-arg3(X),arg2(Y).
+fluent(location(X,Y)):-arg1(X),arg2(Y).
+fluent(carrying(X,Y)):-arg1(X),arg3(Y).
+
+holdsAt(F,T+1):- fluent(F),time(T), initiatedAt(F,T).
+holdsAt(F,T+1):- fluent(F),time(T), holdsAt(F,T), not terminatedAt(F,T).
+
+initiatedAt(carrying(V1,V2),V3):-happensAt(get(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+initiatedAt(carrying(V1,V2),V3):-happensAt(take(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+terminatedAt(carrying(V1,V2),V3):-happensAt(drop(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+initiatedAt(carrying(V1,V2),V3):-happensAt(pickup(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+initiatedAt(carrying(V1,V2),V3):-happensAt(grab(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+terminatedAt(carrying(V1,V2),V3):-happensAt(discard(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+terminatedAt(carrying(V1,V2),V3):-happensAt(putdown(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+terminatedAt(carrying(V1,V2),V3):-happensAt(leave(V1,V2),V3),arg1(V1),arg3(V2),time(V3).
+
+terminatedAt(location(V1,V2),V3):-happensAt(travel(V1,V4),V3),arg1(V1),arg2(V4),time(V3),arg2(V2).
+initiatedAt(location(V1,V2),V3):-happensAt(travel(V1,V2),V3),arg1(V1),arg2(V2),time(V3).
+terminatedAt(location(V1,V2),V3):-happensAt(go(V1,V4),V3),arg1(V1),arg2(V4),time(V3),arg2(V2).
+initiatedAt(location(V1,V2),V3):-happensAt(go(V1,V2),V3),arg1(V1),arg2(V2),time(V3).
+terminatedAt(location(V1,V2),V3):-happensAt(goback(V1,V4),V3),arg1(V1),arg2(V4),time(V3),arg2(V2).
+initiatedAt(location(V1,V2),V3):-happensAt(goback(V1,V2),V3),arg1(V1),arg2(V2),time(V3).
+terminatedAt(location(V1,V2),V3):-happensAt(move(V1,V4),V3),arg1(V1),arg2(V4),time(V3),arg2(V2).
+initiatedAt(location(V1,V2),V3):-happensAt(move(V1,V2),V3),arg1(V1),arg2(V2),time(V3).
+terminatedAt(location(V1,V2),V3):-happensAt(journey(V1,V4),V3),arg1(V1),arg2(V4),time(V3),arg2(V2).
+initiatedAt(location(V1,V2),V3):-happensAt(journey(V1,V2),V3),arg1(V1),arg2(V2),time(V3).
+
+:-holdsAt(location(X,Y),T),holdsAt(location(X,Z),T),Y!=Z,arg3(X),arg2(Y),arg2(Z).
+

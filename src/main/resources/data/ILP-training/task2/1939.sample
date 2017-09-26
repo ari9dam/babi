@@ -1,0 +1,56 @@
+happensAt(go(sandra,office),1).
+happensAt(move(daniel,bathroom),2).
+happensAt(goback(mary,garden),3).
+happensAt(move(mary,bedroom),4).
+happensAt(grab(mary,apple),5).
+happensAt(move(sandra,bathroom),6).
+happensAt(journey(sandra,garden),7).
+happensAt(move(daniel,office),8).
+happensAt(putdown(mary,apple),9).
+happensAt(travel(mary,office),10).
+#example holdsAt(location(apple,bedroom),11).
+#example holdsAt(location(apple,bedroom),10).
+happensAt(go(daniel,bedroom),12).
+happensAt(grab(daniel,apple),13).
+happensAt(go(daniel,bathroom),14).
+happensAt(go(daniel,bedroom),15).
+#example holdsAt(location(apple,bedroom),16).
+happensAt(discard(daniel,apple),17).
+happensAt(take(john,apple),18).
+happensAt(goback(sandra,bedroom),19).
+happensAt(goback(daniel,garden),20).
+happensAt(go(daniel,hallway),21).
+happensAt(go(daniel,office),22).
+happensAt(travel(mary,garden),23).
+happensAt(journey(sandra,bathroom),24).
+happensAt(putdown(john,apple),25).
+happensAt(take(john,apple),26).
+happensAt(move(daniel,kitchen),27).
+happensAt(drop(john,apple),28).
+happensAt(move(daniel,bedroom),29).
+happensAt(take(john,apple),30).
+happensAt(discard(john,apple),31).
+happensAt(goback(sandra,office),32).
+happensAt(pickup(john,apple),33).
+happensAt(journey(sandra,bedroom),34).
+happensAt(journey(john,kitchen),35).
+happensAt(discard(john,apple),36).
+#example holdsAt(location(apple,kitchen),37).
+#example not holdsAt(location(apple,bedroom),37).
+happensAt(journey(john,hallway),38).
+happensAt(go(sandra,garden),39).
+#example holdsAt(location(apple,kitchen),40).
+#example not holdsAt(location(apple,bedroom),40).
+#example holdsAt(location(apple,kitchen),37).
+#example holdsAt(location(apple,kitchen),38).
+#example holdsAt(location(apple,kitchen),39).
+happensAt(journey(mary,office),41).
+happensAt(grab(john,milk),42).
+#example holdsAt(location(apple,kitchen),43).
+#example not holdsAt(location(apple,bedroom),43).
+#example holdsAt(location(apple,kitchen),37).
+#example holdsAt(location(apple,kitchen),38).
+#example holdsAt(location(apple,kitchen),39).
+#example holdsAt(location(apple,kitchen),40).
+#example holdsAt(location(apple,kitchen),41).
+#example holdsAt(location(apple,kitchen),42).

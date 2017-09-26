@@ -1,0 +1,50 @@
+happensAt(journey(daniel,office),1).
+happensAt(go(sandra,kitchen),2).
+happensAt(take(sandra,football),3).
+happensAt(grab(john,apple),4).
+happensAt(drop(sandra,football),5).
+happensAt(get(john,football),6).
+happensAt(go(mary,bedroom),7).
+happensAt(travel(mary,bathroom),8).
+happensAt(journey(daniel,hallway),9).
+happensAt(travel(sandra,bathroom),10).
+happensAt(travel(mary,office),11).
+happensAt(goback(mary,kitchen),12).
+happensAt(leave(john,football),13).
+happensAt(drop(john,apple),14).
+happensAt(move(sandra,office),15).
+happensAt(travel(daniel,office),16).
+happensAt(travel(john,garden),17).
+happensAt(get(mary,apple),18).
+happensAt(journey(mary,garden),19).
+happensAt(travel(daniel,kitchen),20).
+#example holdsAt(location(apple,garden),21).
+#example holdsAt(location(apple,garden),20).
+happensAt(move(mary,bathroom),22).
+happensAt(travel(sandra,hallway),23).
+#example holdsAt(location(apple,bathroom),24).
+#example not holdsAt(location(apple,garden),24).
+#example holdsAt(location(apple,bathroom),23).
+happensAt(take(daniel,football),25).
+happensAt(move(sandra,office),26).
+happensAt(putdown(daniel,football),27).
+happensAt(leave(mary,apple),28).
+#example holdsAt(location(apple,bathroom),29).
+#example not holdsAt(location(apple,garden),29).
+happensAt(take(daniel,football),30).
+happensAt(journey(sandra,garden),31).
+#example holdsAt(location(apple,bathroom),32).
+#example not holdsAt(location(apple,garden),32).
+#example holdsAt(location(apple,bathroom),29).
+#example holdsAt(location(apple,bathroom),30).
+#example holdsAt(location(apple,bathroom),31).
+happensAt(putdown(daniel,football),33).
+happensAt(grab(daniel,football),34).
+#example holdsAt(location(apple,bathroom),35).
+#example not holdsAt(location(apple,garden),35).
+#example holdsAt(location(apple,bathroom),29).
+#example holdsAt(location(apple,bathroom),30).
+#example holdsAt(location(apple,bathroom),31).
+#example holdsAt(location(apple,bathroom),32).
+#example holdsAt(location(apple,bathroom),33).
+#example holdsAt(location(apple,bathroom),34).

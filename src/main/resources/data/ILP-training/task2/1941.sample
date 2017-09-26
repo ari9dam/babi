@@ -1,0 +1,53 @@
+happensAt(travel(daniel,office),1).
+happensAt(goback(mary,kitchen),2).
+happensAt(move(sandra,hallway),3).
+happensAt(move(daniel,kitchen),4).
+happensAt(journey(daniel,bedroom),5).
+happensAt(go(john,kitchen),6).
+happensAt(go(john,garden),7).
+happensAt(grab(john,football),8).
+happensAt(take(daniel,apple),9).
+happensAt(travel(mary,hallway),10).
+happensAt(drop(daniel,apple),11).
+happensAt(journey(john,bedroom),12).
+#example holdsAt(location(apple,bedroom),13).
+#example holdsAt(location(apple,bedroom),12).
+happensAt(journey(sandra,garden),14).
+happensAt(discard(john,football),15).
+#example holdsAt(location(football,bedroom),16).
+happensAt(move(mary,bathroom),17).
+happensAt(move(john,hallway),18).
+#example holdsAt(location(football,bedroom),19).
+#example holdsAt(location(football,bedroom),16).
+#example holdsAt(location(football,bedroom),17).
+#example holdsAt(location(football,bedroom),18).
+happensAt(travel(daniel,garden),20).
+happensAt(travel(mary,office),21).
+#example holdsAt(location(football,bedroom),22).
+#example holdsAt(location(football,bedroom),16).
+#example holdsAt(location(football,bedroom),17).
+#example holdsAt(location(football,bedroom),18).
+#example holdsAt(location(football,bedroom),19).
+#example holdsAt(location(football,bedroom),20).
+#example holdsAt(location(football,bedroom),21).
+happensAt(go(sandra,hallway),23).
+happensAt(go(daniel,kitchen),24).
+happensAt(goback(sandra,office),25).
+happensAt(get(daniel,milk),26).
+happensAt(travel(john,office),27).
+happensAt(go(sandra,bedroom),28).
+happensAt(go(sandra,kitchen),29).
+happensAt(travel(sandra,bathroom),30).
+happensAt(journey(daniel,hallway),31).
+happensAt(travel(john,bedroom),32).
+happensAt(travel(daniel,office),33).
+happensAt(journey(john,office),34).
+happensAt(journey(daniel,garden),35).
+happensAt(journey(daniel,hallway),36).
+happensAt(goback(daniel,bedroom),37).
+happensAt(goback(john,kitchen),38).
+happensAt(journey(mary,kitchen),39).
+happensAt(goback(john,hallway),40).
+happensAt(take(daniel,football),41).
+happensAt(leave(daniel,milk),42).
+#example holdsAt(location(milk,bedroom),43).
